@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="author" content="Fabio Caspirro">
+    <meta name="description" content="Confira já!! Portfólio do Desenvolvedor Junior - Fabio Caspirro">
+    <meta name="keywords" content="portfolio, front-end, desenvolvimento, dev, css, htm, javascript">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+
+    <title>Fabio Caspirro - Portfolio 2.0</title>
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.png">
+</head>
+
+<body>
+    <!-- SIDEBAR -->
+    <div class="nav_toggle" id="nav-toggle">
+        <i class="uil uil-bars"></i>
+    </div>
+    <aside class="sidebar" id="sidebar">
+        <nav class="nav">
+            <div class="nav_logo">
+                <a href="#" class="nav_logo-text"><img class="me" src="./assets/img/me.png"></a>
+            </div>
+
+            <div class="nav_menu">
+                <div class="menu">
+                    <ul class="nav_list">
+                        <li class="nav_item">
+                            <a href="#home" class="nav_link active-link">Ínicio</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#about" class="nav_link">Sobre Mim</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#qualification" class="nav_link">Carreira</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#skills" class="nav_link">Habilidades</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#project" class="nav_link">Projetos</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#services" class="nav_link">Ocupação</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#contact" class="nav_link">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="btn_share">
+                <a
+                    href="https://www.linkedin.com/sharing/share-offsite/?url=https://fcaspirro.github.io/portfolio-2.0/"><i
+                        class="uil uil-share-alt social_share"></i></a>
+            </div>
+
+            <div class="nav_close" id="nav-close">
+                <i class="uil uil-times"></i>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+        <!-- Home -->
+        <section class="home" id="home">
+            <div class="home_container container grid">
+                <div class="home_social">
+                    <div data-aos="fade-down" data-aos-delay="100" data-aos-duration="750">
+                        <p class="home_social-follow">Minhas Redes</p>
+                    </div>
+
+                    <div class="home_social-links">
+                        <div data-aos="fade-down" data-aos-delay="200" data-aos-duration="750">
+                            <a href="https://www.github.com/fcaspirro" title="github" alt="github icon" target="_blank"
+                                class="home_social-link">
+                                <i class="uil uil-github-alt"></i>
+                            </a>
+                        </div>
+
+                        <div data-aos="fade-down" data-aos-delay="300" data-aos-duration="750">
+                            <a href="https://www.linkedin.com/in/fabio-caspirro" title="linkedin" alt="linkedin icon"
+                                target="_blank" class="home_social-link">
+                                <i class="uil uil-linkedin-alt"></i>
+                            </a>
+                        </div>
+
+                        <div data-aos="fade-down" data-aos-delay="400" data-aos-duration="750">
+                            <a href="https://wa.me/5511994161781" title="whatsapp" alt="whatsapp icon" target="_blank"
+                                class="home_social-link">
+                                <i class="uil uil-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="flip-left" data-aos-delay="100" data-aos-duration="750" style="justify-self: center;">
+                    <img src="assets/img/home-img.png" alt="" class="home_img">
+                </div>
+
+                <div class="home_data">
+                    <div class="home_box">
+                        <div data-aos="fade-right" data-aos-easing="linear" data-aos-delay="200"
+                            data-aos-duration="750">
+                            <p class="home_introdution">Olá, Seja bem vindo!</p>
+                            <div data-aos="fade-right" data-aos-easing="linear" data-aos-delay="400"
+                                data-aos-duration="750">
+                                <h1 class="home_title">Eu sou, <span class="inputdescription"></span></h1>
+                            </div>
+                            <p class="home_description">Desenvolvo seu projeto com alta qualidade, e a curto prazo!</p>
+                        </div>
+                    </div>
+                    <div data-aos="zoom-out" data-aos-delay="500" data-aos-duration="750" class="aos-button">
+                        <a href="./assets/docs/cv-fabio-caspirro.pdf" target="_blank" class="button"><i
+                                class="uil uil-download-alt"></i>
+                            Baixar Currículo
+                        </a>
+                    </div>
+                </div>
+
+                <div class="my_info">
+                    <div data-aos="fade-right" data-aos-easing="linear" data-aos-delay="750" data-aos-duration="1500"
+                        id="aos-info">
+                        <div class="info_item">
+                            <i class="uil uil-envelope-edit info_icon"></i>
+                        </div>
+                        <div>
+                            <h3 class="info_title email">E-mail</h3>
+                            <span class="info_subtitle">fabio_caspirro@hotmail.com</span>
+                        </div>
+
+                        <div class="info_item">
+                            <i class="uil uil-thumbs-up info_icon"></i>
+                        </div>
+                        <div>
+                            <h3 class="info_title tks">Obrigado pela sua visita!</h3>
+                            <span class="info_subtitle">Volte sempre que puder :)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="about section" id="about">
+            <div data-aos="fade-down" data-aos-delay="100">
+                <h2 data-heading="About Me" class="section_title">Sobre Mim.</h2>
+            </div>
+
+            <div class="about_container container grid">
+                <div data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
+                    <div class="img">
+                        <img src="assets/img/about-img.jpg" title="Foto" alt="Foto Fabio Caspirro" class="about_img">
+                    </div>
+                </div>
+
+                <div data-aos="fade-down" data-aos-delay="250">
+                    <div class="about_data">
+                        <h2 class="about_heading"> Olá, me chamo Fabio Caspirro.</h2>
+                        <p class="about_description"> Estou no 4º periodo do curso de Análise e Desenvolvimento de
+                            Sistemas, trabalhando arduamente na expansão do meu portfólio com projetos para aprendizado,
+                            mas também desenvolvendo profissionalmente como freelance. Em busca de oportunidade como
+                            <b>Desenvolvedor Front-End Júnior.</b></p>
+                        <div class="about_info grid">
+                            <div data-aos="fade-down" data-aos-delay="350" data-aos-duration="250">
+                                <div class="about_box">
+                                    <i class="uil uil-map-marker about_icon"></i>
+                                    <h3 class="about_title">Localização</h3>
+                                    <span class="about_subtitle">São Paulo</span>
+                                </div>
+                            </div>
+
+                            <div data-aos="fade-down" data-aos-delay="450" data-aos-duration="500">
+                                <div class="about_box">
+                                    <i class="uil uil-suitcase about_icon"></i>
+                                    <h3 class="about_title">Completo</h3>
+                                    <span class="about_subtitle">+10 Projetos</span>
+                                </div>
+                            </div>
+
+                            <div data-aos="fade-down" data-aos-delay="550" data-aos-duration="750">
+                                <div class="about_box">
+                                    <i class="uil uil-headphones-alt about_icon"></i>
+                                    <h3 class="about_title">Suporte</h3>
+                                    <span class="about_subtitle">Online 24/7</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-aos="zoom-out" data-aos-delay="550" data-aos-duration="750">
+                            <a href="https://wa.me/5511994161781" target="_blank" class="button"><i
+                                    class="uil uil-phone-alt"></i>Me contate agora mesmo!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fadeBottom"></div>
+        </section>
+
+        <!-- Qualification -->
+        <section class="qualification section" id="qualification">
+            <div data-aos="fade-down" data-aos-delay="100">
+                <h2 data-heading="Qualification" class="section_title">Carreira</h2>
+            </div>
+
+            <div>
+                <div class="qualification_container container grid">
+                    <div class="education">
+                        <h3 class="qualification_title">
+                            <div data-aos="zoom-out" data-aos-delay="250" data-aos-duration="500">
+                                <i class="uil uil-graduation-cap"></i>
+                                Educação
+                            </div>
+                        </h3>
+
+                        <div class="timeline">
+                            <div data-aos="fade-right" data-aos-delay="400" data-aos-duration="750">
+                                <div class="timeline_item">
+                                    <div class="circle_dot"></div>
+                                    <h3 class="timeline_title">Análise e Desenv. de Sistemas</h3>
+                                    <p class="timeline_text">Superior Técnologo</p>
+                                    <span class="timeline_date"><i class="uil uil-calendar-alt"></i>
+                                        2021 - o momento</i></span>
+                                </div>
+                            </div>
+
+                            <div data-aos="fade-right" data-aos-delay="600" data-aos-duration="750">
+                                <div class="timeline_item">
+                                    <div class="circle_dot"></div>
+                                    <h3 class="timeline_title">Engenharia de Software</h3>
+                                    <p class="timeline_text">MBA - Especialização</p>
+                                    <span class="timeline_date"><i class="uil uil-calendar-alt"></i>
+                                        2021 - <i class="uil uil-lock"></i></span>
+                                </div>
+                            </div>
+
+                            <div data-aos="fade-right" data-aos-delay="800" data-aos-duration="750">
+                                <div class="timeline_item">
+                                    <div class="circle_dot"></div>
+                                    <h3 class="timeline_title">Engenharia Mecânica</h3>
+                                    <p class="timeline_text">Superior Bacharel</p>
+                                    <span class="timeline_date"><i class="uil uil-calendar-alt"></i>
+                                        2016 - 2020</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="experience">
+                        <h3 class="qualification_title">
+                            <div data-aos="zoom-out" data-aos-delay="100">
+                                <div class="timeline_box">
+                                    <i class="uil uil-cog"></i>
+                                    Experience
+                                </div>
+                            </div>
+                        </h3>
+
+                        <div class="timeline">
+                            <div data-aos="fade-left" data-aos-delay="1000" data-aos-duration="750">
+                                <div class="timeline_box">
+                                    <div class="timeline_item">
+                                        <div class="circle_dot"></div>
+                                        <h3 class="timeline_title">Freelance de Desenvolvimento</h3>
+                                        <p class="timeline_text">Workana</p>
+                                        <span class="timeline_date"><i class="uil uil-calendar-alt"></i>
+                                            2022 - o momento</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fadeBottom"></div>
+        </section>
+
+        <!-- Skills -->
+        <section class="skills section" id="skills">
+            <div data-aos="fade-down" data-aos-delay="100">
+                <h2 data-heading="Skills" class="section_title">Habilidades</h2>
+            </div>
+
+            <div class="skills_container container grid">
+                <div class="skills_tabs">
+                    <div data-aos="fade-right" data-aos-delay="250" data-aos-duration="750">
+                        <div class="skills_header skills_active" data-target="#frontend">
+                            <i class="uil uil-brackets-curly skills_icon"></i>
+                            <div>
+                                <h2 class="skills_title"> Front-End</h2>
+                            </div>
+                            <i class="uil uil-angle-down skills_arrow"></i>
+                        </div>
+
+                        <div class="skills_header" data-target="#backend">
+                            <i class="uil uil-server-network-alt skills_icon"></i>
+                            <div>
+                                <h2 class="skills_title">Back-End</h2>
+                            </div>
+                            <i class="uil uil-angle-down skills_arrow"></i>
+                        </div>
+
+                        <div class="skills_header" data-target="#design">
+                            <i class="uil uil-palette skills_icon"></i>
+                            <div>
+                                <h2 class="skills_title">UI/UX Design</h2>
+                            </div>
+                            <i class="uil uil-angle-down skills_arrow"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left" data-aos-delay="250" data-aos-duration="1250">
+                    <div class="skills_content">
+                        <div class="skills_group skills_active" data-content id="frontend">
+                            <div class="skills_list grid">
+                                <div class="skills_data">
+                                    <div class="skills_titles">
+                                        <h3 class="skills_name">CSS</h3>
+                                        <span class="skills_number">80%</span>
+                                    </div>
+
+                                    <div class="skills_bar">
+                                        <span class="skills_percentage" style="max-width: 80%;"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills_data">
+                                    <div class="skills_titles">
+                                        <h3 class="skills_name">HTML</h3>
+                                        <span class="skills_number">75%</span>
+                                    </div>
+
+                                    <div class="skills_bar">
+                                        <span class="skills_percentage" style="max-width: 75%;"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills_data">
+                                    <div class="skills_titles">
+                                        <h3 class="skills_name">Javascript</h3>
+                                        <span class="skills_number">55%</span>
+                                    </div>
+
+                                    <div class="skills_bar">
+                                        <span class="skills_percentage" style="max-width: 55%;"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills_data">
+                                    <div class="skills_titles">
+                                        <h3 class="skills_name">Tailwind CSS</h3>
+                                        <span class="skills_number">35%</span>
+                                    </div>
+
+                                    <div class="skills_bar">
+                                        <span class="skills_percentage" style="max-width: 35%;"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills_data">
+                                    <div class="skills_titles">
+                                        <h3 class="skills_name">React</h3>
+                                        <span class="skills_number">25%</span>
+                                    </div>
+
+                                    <div class="skills_bar">
+                                        <span class="skills_percentage" style="max-width: 25%;"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills_data">
+                                    <div class="skills_titles">
+                                        <h3 class="skills_name">React Native</h3>
+                                        <span class="skills_number">15%</span>
+                                    </div>
+
+                                    <div class="skills_bar">
+                                        <span class="skills_percentage" style="max-width: 15%;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skills_group" data-content id="backend">
+                            <div class="skills_list grid">
+                                <div class="skills_data">
+                                    <div class="skills_titles">
+                                        <h3 class="skills_name">SQLite</h3>
+                                        <span class="skills_number">20%</span>
+                                    </div>
+
+                                    <div class="skills_bar">
+                                        <span class="skills_percentage" style="max-width: 20%;"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills_data">
+                                    <div class="skills_titles">
+                                        <h3 class="skills_name">Node.JS</h3>
+                                        <span class="skills_number">10%</span>
+                                    </div>
+
+                                    <div class="skills_bar">
+                                        <span class="skills_percentage" style="max-width: 10%;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skills_group" data-content id="design">
+                            <div class="skills_list grid">
+                                <div class="skills_data">
+                                    <div class="skills_titles">
+                                        <h3 class="skills_name">Adobe Photoshop</h3>
+                                        <span class="skills_number">90%</span>
+                                    </div>
+
+                                    <div class="skills_bar">
+                                        <span class="skills_percentage" style="max-width: 90%;"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills_data">
+                                    <div class="skills_titles">
+                                        <h3 class="skills_name">Adobe Illustrator</h3>
+                                        <span class="skills_number">60%</span>
+                                    </div>
+
+                                    <div class="skills_bar">
+                                        <span class="skills_percentage" style="max-width: 60%;"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills_data">
+                                    <div class="skills_titles">
+                                        <h3 class="skills_name">Figma</h3>
+                                        <span class="skills_number">35%</span>
+                                    </div>
+
+                                    <div class="skills_bar">
+                                        <span class="skills_percentage" style="max-width: 35%;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fadeBottom"></div>
+        </section>
+
+        <!-- Projects -->
+        <section class="project section" id="project">
+            <div data-aos="fade-down" data-aos-delay="100">
+                <h2 data-heading="Portfolio" class="section_title">Projetos Recentes</h2>
+            </div>
+
+            <div class="project_filters">
+                <div data-aos="fade-down" data-aos-delay="200" data-aos-duration="750">
+                    <span class="project_item active_project" data-filter="all">Todos</span>
+                </div>
+
+                <div data-aos="fade-down" data-aos-delay="300" data-aos-duration="750">
+                    <span class="project_item" data-filter=".web">Web</span>
+                </div>
+
+                <div data-aos="fade-down" data-aos-delay="400" data-aos-duration="750">
+                    <span class="project_item" data-filter=".app">App</span>
+                </div>
+            </div>
+
+            <div data-aos="fade-down" data-aos-anchor-placement="top-bottom" data-aos-delay="200"
+                data-aos-duration="1000">
+                <div class="project_container container grid">
+                    <div class="project_card mix web">
+                        <img src="assets/projects/web/project-web-1.jpg" title="API de anúncios"
+                            alt="Projeto Ignite eSports Web" class="project_img">
+                        <h3 class="project_title">API de Anúncio</h3>
+                        <span class="project_button">Demo
+                            <i class="uil uil-rocket project_button-icon"></i>
+                        </span>
+                        <div class="portfolio_item-details">
+                            <h3 class="details_title">Aplicação eSports</h3>
+                            <p class="details_description">Aplicação web que permite registrar anúncios de jogos que
+                                você gosta para encontrar sua dupla usando uma conta do Discord.</p>
+                            <ul class="details_info">
+                                <li>Status: <span>Finalizado.</span></li>
+                                <li>Atualizado em: <span>28 set 2022</span></li>
+                                <li>Tecnologias: <span>HTML, Node.js, Typescript, React.js, Tailwind CSS, PostCSS, Vite,
+                                        Radix UI, Chocolatey.</span></li>
+                                <li>Stack: <span>Front-End e Back-End.</span></li>
+                                <li class="link">Ver <i class="uil uil-eye"></i> - <span><a
+                                            href="https://github.com/Fcaspirro/web-nlw-ignite" target="_blank">Rep.
+                                            Github - Front-End</a></span></li>
+                                <li>Ver <i class="uil uil-eye"></i> - <span><a
+                                            href="https://github.com/Fcaspirro/server-nlw-ignite" target="_blank">Rep.
+                                            Github - Back-End</a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project_card mix app">
+                        <img src="assets/projects/mobile/project-mobile-1.jpg" title="API de anúncios"
+                            alt="Projeto Ignite eSports Mobile" class="project_img">
+                        <h3 class="project_title">API de Anúncio</h3>
+                        <span class="project_button">Demo
+                            <i class="uil uil-rocket project_button-icon"></i>
+                        </span>
+                        <div class="portfolio_item-details">
+                            <h3 class="details_title">Aplicação eSports</h3>
+                            <p class="details_description">Aplicação mobile que permite registrar anúncios de jogos que
+                                você gosta para encontrar sua dupla usando uma conta do Discord.</p>
+                            <ul class="details_info">
+                                <li>Status: <span>Finalizado.</span></li>
+                                <li>Atualizado em: <span>28 set 2022</span></li>
+                                <li>Tecnologias: <span>Node.js, Typescript, React Native, Tailwind CSS, Babel,
+                                        Expo.</span></li>
+                                <li>Stack: <span>Front-End e Back-End.</span></li>
+                                <li class="link">Ver <i class="uil uil-eye"></i> - <span><a
+                                            href="https://github.com/Fcaspirro/mobile-nlw-ignite" target="_blank">Rep.
+                                            Github - Front-End</a></span></li>
+                                <li>Ver<i class="uil uil-eye"></i> - <span><a
+                                            href="https://github.com/Fcaspirro/server-nlw-ignite" target="_blank">Rep.
+                                            Github - Back-End</a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project_card mix web">
+                        <img src="assets/projects/web/project-web-2.jpg" title="Hub de Entretenimento"
+                            alt="Projeto Explorer eSports" class="project_img">
+                        <h3 class="project_title">Hub de Entretenimento</h3>
+                        <span class="project_button">Demo
+                            <i class="uil uil-rocket project_button-icon"></i>
+                        </span>
+                        <div class="portfolio_item-details">
+                            <h3 class="details_title">Aplicação eSports</h3>
+                            <p class="details_description">O Projeto tem como finalidade ser um hub onde ficam seus
+                                jogos e streamers da Twitch favoritos.</p>
+                            <ul class="details_info">
+                                <li>Status: <span>Finalizado.</span></li>
+                                <li>Atualizado em: <span>9 dez 2022</span></li>
+                                <li>Tecnologias: <span>HTML, CSS.</span></li>
+                                <li>Stack: <span>Front-End.</span></li>
+                                <li class="link">Ver <i class="uil uil-eye"></i> - <span><a
+                                            href="https://github.com/Fcaspirro/web-nlw-explorer"
+                                            target="_blank">Repositório Github</a></span></li>
+                                <li>Ver <i class="uil uil-eye"></i> - <span><a href="web-nlw-explorer.vercel.app/"
+                                            target="_blank">Página Web</a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project_card mix web">
+                        <img src="assets/projects/web/project-web-3.jpg" title="Operação Matemática"
+                            alt="Projeto de calculadora com dark/light mode" class="project_img">
+                        <h3 class="project_title">Operação Matemática</h3>
+                        <span class="project_button">Demo
+                            <i class="uil uil-rocket project_button-icon"></i>
+                        </span>
+                        <div class="portfolio_item-details">
+                            <h3 class="details_title">Calculadora com modo claro e escuro</h3>
+                            <p class="details_description">Projeto desenvolvido funcional de uma calculadora com
+                                operações básicas de soma, subtração, divisão e multiplicação. Contando também swift
+                                light/dark mode..></p>
+                            <ul class="details_info">
+                                <li>Status: <span>Finalizado.</span></li>
+                                <li>Atualizado em: <span>02 set 2022</span></li>
+                                <li>Tecnologias: <span>HTML, CSS, Javascript.</span></li>
+                                <li>Stack: <span>Front-End.</span></li>
+                                <li class="link">Ver <i class="uil uil-eye"></i> - <span><a
+                                            href="https://github.com/Fcaspirro/calculadora-light-and-dark-mode"
+                                            target="_blank">Repositório Github</a></span></li>
+                                <li>Ver <i class="uil uil-eye"></i> - <span><a
+                                            href="https://fcaspirro.github.io/calculadora-light-and-dark-mode/"
+                                            target="_blank">Página Web</a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project_card mix web">
+                        <img src="assets/projects/web/project-web-4.jpg" title="Clone Modelo"
+                            alt="Projeto Netflix Clone" class="project_img">
+                        <h3 class="project_title">Clone Modelo</h3>
+                        <span class="project_button">Demo
+                            <i class="uil uil-rocket project_button-icon"></i>
+                        </span>
+                        <div class="portfolio_item-details">
+                            <h3 class="details_title">Netflix Clone</h3>
+                            <p class="details_description">Projeto desenvolvido com a proposta de clonar a homepage da
+                                netflix o mais original e detalhadamente possível.</p>
+                            <ul class="details_info">
+                                <li>Status: <span>Finalizado.</span></li>
+                                <li>Atualizado em: <span>25 set 2022</span></li>
+                                <li>Tecnologias: <span>HTML, CSS, Javascript.</span></li>
+                                <li>Stack: <span>Front-End.</span></li>
+                                <li class="link">Ver <i class="uil uil-eye"></i> - <span><a
+                                            href="https://github.com/Fcaspirro/clone-netflix"
+                                            target="_blank">Repositório Github</a></span></li>
+                                <li>Ver<i class="uil uil-eye"></i> - <span><a href="fcaspirro.github.io/clone-netflix/"
+                                            target="_blank">Página Web</a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project_card mix web">
+                        <img src="assets/projects/web/project-web-5.jpg" title="Mini Game"
+                            alt="Projeto Cassino Game - Jackpot" class="project_img">
+                        <h3 class="project_title">Mini Game</h3>
+                        <span class="project_button">Demo
+                            <i class="uil uil-rocket project_button-icon"></i>
+                        </span>
+                        <div class="portfolio_item-details">
+                            <h3 class="details_title">Cassino Game - Jackpot</h3>
+                            <p class="details_description">O projeto desenvolvido teve o objetivo de realizar um dos
+                                tipos de jogos de cassino mais conhecidos, chamado de "Jackpot",
+                                a fim de praticar o aprendizado de JavaScript e o seletor @Keyframe do CSS.</p>
+                            <ul class="details_info">
+                                <li>Status: <span>Finalizado.</span></li>
+                                <li>Atualizado em: <span>09 set 2022</span></li>
+                                <li>Tecnologias: <span>HTML, CSS, Javascript.</span></li>
+                                <li>Stack: <span>Front-End.</span></li>
+                                <li class="link">Ver <i class="uil uil-eye"></i> - <span><a
+                                            href="https://github.com/Fcaspirro/casino-game" target="_blank">Repositório
+                                            Github</a></span></li>
+                                <li>Ver <i class="uil uil-eye"></i> - <span><a
+                                            href="https://fcaspirro.github.io/casino-game/" target="_blank">Página
+                                            Web</a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project_card mix web">
+                        <img src="assets/projects/web/project-web-6.jpg" title="Clone Modelo" alt="Projeto Landing Page"
+                            class="project_img">
+                        <div>
+                            <h3 class="project_title">Clone Modelo</h3>
+                        </div>
+                        <span class="project_button">Demo
+                            <i class="uil uil-rocket project_button-icon"></i>
+                        </span>
+                        <div class="portfolio_item-details">
+                            <h3 class="details_title">Landing Page modelo - Lorem Ipsum</h3>
+                            <p class="details_description">Projeto desenvolvido como minha primeira landing page.
+                                Desafio que realizei há algum tempo atrás em uma vaga aberta de estágio de tecnologia.
+                            </p>
+                            <ul class="details_info">
+                                <li>Status: <span>Finalizado./span></li>
+                                <li>Atualizado em: <span>24 ago 2022</span></li>
+                                <li>Tecnologias: <span>HTML, CSS.</span></li>
+                                <li>Stack: <span>Front-End.</span></li>
+                                <li class="link">Ver <i class="uil uil-eye"></i> - <span><a
+                                            href="https://github.com/Fcaspirro/landing_page-lorem"
+                                            target="_blank">Repositório Github</a></span></li>
+                                <li>Ver <i class="uil uil-eye"></i> - <span><a
+                                            href="https://fcaspirro.github.io/landing_page-lorem" target="_blank">Página
+                                            Web</a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fadeBottom"></div>
+        </section>
+        <!-- Portfolio Popup -->
+        <div class="portfolio_modal">
+            <div class="portfolio_modal-inner">
+                <div class="portfolio_modal-content grid">
+                    <span class="portfolio_modal-close"><i class="uil uil-times"></i></span>
+                    <div class="modal_thumbnail">
+                        <img src="assets/projects/project-web-1.png" title="Imagem do Projeto" alt="Imagem do Projeto"
+                            class="portfolio_modal-img">
+                    </div>
+                    <div class="portfolio_modal-info">
+                        <div class="portfolio_modal-subtitle"> Tipo - <span>Modelo do Projeto</span></div>
+                        <div class="portfolio_modal-body">
+                            <h3 class="details_title">Título</h3>
+                            <p class="details_description">Lorem Ipsum, dolor site amet consectetur adipiscing elit.
+                                Earum impedit voluptatibus minima.></p>
+                            <ul class="details_info">
+                                <li>Status: <span>Versão do Projeto.</span>
+                                <li>
+                                <li>Atualizado em - <span>Data</span></li>
+                                <li>Tecnologias - <span>Ferramentas.</span></li>
+                                <li>Stack - <span>Tecnologias.</span></li>
+                                <li class="link">Ver <i class="uil uil-eye"></i> - <span><a
+                                            href="https://github.com/Fcaspirro">Repositório Github</a></span></li>
+                                <li>Ver <i class="uil uil-eye"></i> - <span><a
+                                            href="https://fcaspirro.github.io/portfolio">Página Web</a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Services -->
+        <section class="services section" id="services">
+            <div data-aos="fade-down" data-aos-delay="100">
+                <h2 data-heading="Services" class="section_title">O que eu ofereço?</h2>
+            </div>
+
+            <div class="services_container container grid">
+
+                <!-- Card 1 -->
+
+                <div data-aos="fade-down" data-aos-delay="200" data-aos-duration="750">
+                    <div class="services_content">
+                        <i class="uil uil-web-grid services_icon"></i>
+                        <h3 class="services_title"><br>Desenvolvimento</br></h3>
+
+                        <span class="services_button">
+                            Ver mais <i class="uil uil-arrow-right services_button-icon"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="services_modal">
+                    <div class="services_modal-content">
+                        <i class="uil uil-times services_modal-close"></i>
+
+                        <h3 class="services_modal-title">Desenvolvimento</h3>
+                        <p class="services_modal-description">Desenvolvo sua página com código limpo e de acordo com seu
+                            projeto e suas necessidades, com foco em proporcionar a melhor experiência do usuário
+                            através de página moderna e conversiva.</p>
+
+                        <ul class="services_modal-services grid">
+                            <li class="services_modal-service">
+                                <i class="uil uil-check-circle services_modal-icon"></i>
+                                <p class="services_modal-info">Desenvolvimento Web:</p>
+                            </li>
+                            <p class="services_modal-examples">• E-commerce, landing page, dashboards, portfólio,
+                                aplicações, blog, marketplace e mais..</p>
+                            <li class="services_modal-service">
+                                <i class="uil uil-check-circle services_modal-icon"></i>
+                                <p class="services_modal-info">Desenvolvimento Mobile;</p>
+                            </li>
+                            <li class="services_modal-service">
+                                <i class="uil uil-check-circle services_modal-icon"></i>
+                                <p class="services_modal-info">Conceito Mobile First Web.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <!-- Card 2 -->
+                <div data-aos="fade-down" data-aos-delay="400" data-aos-duration="750">
+                    <div class="services_content">
+                        <i class="uil uil-swatchbook services_icon"></i>
+                        <h3 class="services_title"><br>Design</br></h3>
+
+                        <span class="services_button">
+                            Ver mais <i class="uil uil-arrow-right services_button-icon"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="services_modal">
+                    <div class="services_modal-content">
+                        <i class="uil uil-times services_modal-close"></i>
+
+                        <h3 class="services_modal-title">Design</h3>
+                        <p class="services_modal-description">Modelagem e Prototipação de layout, design web e mobile.
+                            Rebranding de marcas. Criação de identidade visual e/ou redesign de aplicações.</p>
+
+                        <ul class="services_modal-services grid">
+                            <li class="services_modal-service">
+                                <i class="uil uil-check-circle services_modal-icon"></i>
+                                <p class="services_modal-info">Layout Design:</p>
+                            </li>
+                            <p class="services_modal-examples">• E-commerce, landing page, dashboards, portfólio,
+                                aplicações, blog, marketplace e mais..</p>
+                            <li class="services_modal-service">
+                                <i class="uil uil-check-circle services_modal-icon"></i>
+                                <p class="services_modal-info">Identidade Visual:</p>
+                            </li>
+                            <p class="services_modal-examples">• Logotipo, banner, card, thumbnail, mockup, ebook,
+                                panfleto, tag, adesivo, cartão de visita, anúncio, mídias sociais e mais.. </p>
+
+                            <li class="services_modal-service">
+                                <i class="uil uil-check-circle services_modal-icon"></i>
+                                <p class="services_modal-info">Design de Interface e Usuário;</p>
+                            </li>
+                            <li class="services_modal-service">
+                                <i class="uil uil-check-circle services_modal-icon"></i>
+                                <p class="services_modal-info">Psicologia das Cores;</p>
+                            </li>
+                            <li class="services_modal-service">
+                                <i class="uil uil-check-circle services_modal-icon"></i>
+                                <p class="services_modal-info">Alinhamento e escala;</p>
+                            </li>
+                            <li class="services_modal-service">
+                                <i class="uil uil-check-circle services_modal-icon"></i>
+                                <p class="services_modal-info">Tipografia.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+
+                <div data-aos="fade-down" data-aos-delay="600" data-aos-duration="750">
+                    <div class="services_content">
+                        <i class="uil uil-shield-check services_icon"></i>
+                        <h3 class="services_title"><br>Suporte</br></h3>
+
+                        <span class="services_button">
+                            Ver mais <i class="uil uil-arrow-right services_button-icon"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="services_modal">
+                    <div class="services_modal-content">
+                        <i class="uil uil-times services_modal-close"></i>
+
+                        <h3 class="services_modal-title">Suporte</h3>
+                        <p class="services_modal-description">Disponibilidade total de 24 horas, 7 dias por semana para
+                            qualquer eventualidade ou dúvidas. </p>
+
+                        <ul class="services_modal-services grid">
+                            <li class="services_modal-service">
+                                <i class="uil uil-check-circle services_modal-icon"></i>
+                                <p class="services_modal-info">Estruturação, Planejamento e Alinhamento de Projetos;</p>
+                            </li>
+                            <li class="services_modal-service">
+                                <i class="uil uil-check-circle services_modal-icon"></i>
+                                <p class="services_modal-info">Feedbacks;</p>
+                            </li>
+                            <li class="services_modal-service">
+                                <i class="uil uil-check-circle services_modal-icon"></i>
+                                <p class="services_modal-info">Relatórios;</p>
+                            </li>
+                            <li class="services_modal-service">
+                                <i class="uil uil-check-circle services_modal-icon"></i>
+                                <p class="services_modal-info">Segurança e Qualidade;</p>
+                            </li>
+                            <li class="services_modal-service">
+                                <i class="uil uil-check-circle services_modal-icon"></i>
+                                <p class="services_modal-info">Entrega a curto prazo com preço justo.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="fadeBottom"></div>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact section" id="contact">
+            <div data-aos="fade-down" data-aos-delay="100">
+                <h2 data-heading="Contact" class="section_title">Contato?</h2>
+            </div>
+
+            <div class="contact_container container grid">
+                <div class="contact_content">
+                    <div class="contact_info">
+                        <div data-aos="fade-right" data-aos-delay="200" data-aos-duration="750">
+                            <div class="contact_card">
+                                <i class="uil uil-whatsapp contact_card-icon"></i>
+                                <h3 class="contact_card-title">Whatsapp</h3>
+                                <span class="contact_card-data">+55 (11) 99416-1781</span>
+                            </div>
+                        </div>
+
+                        <div data-aos="fade-right" data-aos-delay="600" data-aos-duration="750">
+                            <div class="contact_card">
+                                <i class="uil uil-envelope-edit contact_card-icon"></i>
+                                <h3 class="contact_card-title">E-mail</h3>
+                                <span class="contact_card-data">fabio_caspirro@hotmail.com</span>
+                            </div>
+                        </div>
+
+                        <div data-aos="fade-right" data-aos-delay="1000" data-aos-duration="750">
+                            <div class="contact_card">
+                                <i class="uil uil-linkedin contact_card-icon"></i>
+                                <h3 class="contact_card-title">Linkedin</h3>
+                                <span class="contact_card-data">linkedin.com/in/fabio-caspirro</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact_content">
+                    <form action="https://formsubmit.co/fabio_caspirro@hotmail.com" method="POST" class="contact_form">
+                        <input type="hidden" name="_next" value="https://fcaspirro.github.io/portfolio-2.0/tks-page.html">
+                        <input type="hidden" name="_autoresponse"
+                            value="Acabei de receber sua mensagem :) - Obrigado pelo contato. Retornarei o mais rápido possível!">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+
+                        <div data-aos="fade-left" data-aos-delay="200" data-aos-duration="750">
+                            <div class="input_container">
+                                <input type="text" name="name" class="input">
+                                <label for="">Nome</label>
+                                <span>Nome</span>
+                            </div>
+                        </div>
+
+                        <div data-aos="fade-left" data-aos-delay="400" data-aos-duration="750">
+                            <div class="input_container">
+                                <input type="email" name="email" class="input">
+                                <label for="">E-mail</label>
+                                <span>E-mail</span>
+                            </div>
+                        </div>
+
+                        <div data-aos="fade-left" data-aos-delay="600" data-aos-duration="750">
+                            <div class="input_container">
+                                <input type="tel" name="tel" class="input">
+                                <label for="">Telefone</label>
+                                <span>Telefone</span>
+                            </div>
+                        </div>
+
+                        <div data-aos="fade-left" data-aos-delay="800" data-aos-duration="750">
+                            <div class="input_container textarea">
+                                <textarea name="message" id="" class="input"></textarea>
+                                <label for="">Mensagem</label>
+                                <span>Mensagem</span>
+                            </div>
+                        </div>
+                        <div data-aos="zoom-out" data-aos-delay="1000" data-aos-duration="1000">
+                            <button type="submit" class="button"><i class="uil uil-navigator button_icon"></i>
+                                Enviar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scroll to Top -->
+        <span class="scrollTop"><i class="uil uil-angle-double-up"></i></span>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="container">
+                <div class="copy">
+                    &copy
+                    <script>
+                        document.write(new Date().getFullYear());
+                    </script> - Todos Direitos Reservados - <span>Fabio Caspirro</span>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    AOS.init();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<script src="assets/js/mixitup.min.js"></script>
+
+<script src="assets/js/main.js"></script>
+
+</html>
