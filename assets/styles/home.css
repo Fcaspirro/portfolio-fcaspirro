@@ -1000,6 +1000,11 @@
     transition: .3s;
 }
 
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 50px var(--body-color) inset; 
+    -webkit-text-fill-color: var(--title-color);
+}
+
 textarea.input {
     padding: .8rem 1.2rem;
     min-height: 140px;
