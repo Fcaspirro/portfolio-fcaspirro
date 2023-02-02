@@ -605,7 +605,7 @@
     grid-template-columns: repeat(3, 330px);
     gap: 1.0rem;
     justify-content: center;
-    margin-top: 2rem;;
+    margin-top: 2rem;
     margin-bottom: 4rem;
 }
 
@@ -754,6 +754,14 @@
     margin-bottom: var(--mb-2);
     text-align: justify;
     hyphens: none;
+}
+
+.details_description a {
+    color: var(--skin-color);
+}
+
+.details_description a:hover {
+    text-decoration: underline;
 }
 
 .details_info li {
