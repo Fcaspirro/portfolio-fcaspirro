@@ -32,9 +32,9 @@
 
 <div align="center">
 
-  <img width="500px" alt="Demo Gif" title="demo" src="./assets/github/demo-medium-devices.jpg"/>
+  <img height="500px" width="675" alt="Demo Gif" title="demo" src="./assets/github/demo-medium-devices.jpg"/>
 
-  <img width="500px" alt="Demo Gif" title="demo" src="./assets/github/demo-small-devices.jpg"/>
+  <img height="500px" alt="Demo Gif" title="demo" src="./assets/github/demo-small-devices.jpg"/>
 
 </div><br>
 
