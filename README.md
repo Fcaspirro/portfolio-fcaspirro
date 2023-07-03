@@ -178,7 +178,7 @@ Link para página Web:
     <tr>
       <td align="center">
         <a href="https://github.com/fcaspirro">
-          <img src="https://media.licdn.com/dms/image/C4D03AQGlcrWXe7bxnw/profile-displayphoto-shrink_800_800/0/1656467776634?e=1677110400&v=beta&t=ddw98O9uyGR21pXSxjQodDVhD3RBAo4tJ4viJ1SXl8o" width="100px;" title="Autor Fabio Caspirro" alt="Foto de Perfil do GitHub - Fabio Caspirro"/><br>
+          <img src="https://avatars.githubusercontent.com/u/89426460?v=4" width="100px;" title="Autor Fabio Caspirro" alt="Foto de Perfil do GitHub - Fabio Caspirro"/><br>
           <sub>
             <b>Fabio Caspirro</b>
           </sub>
