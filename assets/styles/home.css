@@ -31,20 +31,20 @@
 /* SIDEBAR */
 .sidebar {
     position: fixed;
-    width: 100px;
-    height: 100vh;
+    width: 100vw;
+    height: 100px;
     background-color: var(--body-color);
-    border-right: 2px solid #004d46;   
+    border-bottom: 2px solid #004d46;
+    z-index: 999;
 }
 
 .nav_logo {
     position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.8rem;
+    left: 30px;
+    top: 1.25rem;
     border-radius: 50%;
     text-align: center;
-    margin: auto;   
+    margin: auto;
 }
 
 .me {
@@ -56,9 +56,7 @@
 
 .nav_menu {
     position: fixed;
-    transform: rotate(-90deg) translateX(-100%);
-    transform-origin: left top;
-    width: 100vh;
+    width: 100vw;
 }
 
 .menu {
@@ -67,7 +65,6 @@
 
 .nav_list {
     display: flex;
-    flex-direction: row-reverse;
     margin: -2px auto 0 auto;
 }
 
@@ -85,9 +82,8 @@
 
 .btn_share {
     position: absolute;
-    bottom: 1.8rem;
-    left: 0;
-    right: 0;
+    bottom: -85vh;
+    left: 32.5px;
     text-align: center;
 }
 
@@ -141,7 +137,7 @@
 
 /* MAIN */
 .main {
-    margin-left: 100px;
+    /* margin-left: 100px; */
 }
 
 /* Home Section */
@@ -154,14 +150,13 @@
 }
 
 .home_container {
-    position: relative;
     height: 100%;
 }
 
 .home_social {
     position: absolute;
     top: 2rem;
-    left: 0;
+    right: 0;
     display: flex;
     align-items: center;
     column-gap: 3.5rem;
@@ -170,21 +165,16 @@
 .home_social-follow {
     font-weight: var(--font-medium);
     position: relative;
-}
-
-.home_social-follow::after {
-    content: '';
-    position: absolute;
-    width: 1rem;
-    height: 2px;
-    background-color: var(--text-color);
-    right: -35%;
-    top: 50%;
+    right: 200px;
+    top: 100px;
 }
 
 .home_social-links {
-    display: inline-flex;
+    display: flex;
     column-gap: 1rem;
+    position: absolute;
+    right: 100px;
+    top: 97.5px;
 }
 
 .home_social-link {
@@ -235,11 +225,11 @@
 #aos-info {
     align-items: center;
     justify-items:center;
-    grid-template-columns: repeat(2, 1fr);  
+    grid-template-columns: repeat(2, 1fr);
     display: flex;
     column-gap: 0.5rem;
     position: absolute;
-    left: 0;
+    left: -20px;
     bottom: 6rem;
 }
 
@@ -271,6 +261,10 @@
     font-size: var(--small-font-size);
 }
 
+.first_email .info_subtitle {
+    color: white;
+    cursor: pointer;
+}
 
 .info_icon {
     font-size: 1.8rem;
@@ -291,6 +285,7 @@
     font-weight: var(--font-medium);
     position: relative;
     z-index: 1;
+    cursor: pointer;
 }
 
 .button::after {
@@ -1249,7 +1244,7 @@ input:-webkit-autofill {
     }
 
     .sidebar {
-        width: 100%;
+        height: 100%;
         z-index: 999;
         transform: translateX(-100%);
     }
@@ -1266,9 +1261,6 @@ input:-webkit-autofill {
     .nav_menu {
         height: 100%;
         width: 100%;
-        transform: rotate(0deg) translateX(0);
-        display: flex;
-        justify-content: center;
     }
 
     .nav_list {
@@ -1276,6 +1268,7 @@ input:-webkit-autofill {
         height: 100%;
         justify-content: center;
         align-items: center;
+        margin-top: 60px;
     }
 
     .nav_link {
@@ -1299,6 +1292,10 @@ input:-webkit-autofill {
 
     .main {
         margin-left: 0;
+    }
+
+    .home_social {
+        display: none;
     }
 
     .about_container {
