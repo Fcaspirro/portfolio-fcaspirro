@@ -22,7 +22,7 @@
 </h3>
 
 <h3 align="center">
-	<img width="690px" alt="Demo Gif" title="demo" src="./assets/github/demo-big-devices.jpeg"/>
+	<img width="690px" alt="Demo Gif" title="demo" src="./assets/github/demo-big-devices.jpg"/>
 </h3><br>
 
 <h3 align="center"> 
@@ -32,9 +32,9 @@
 
 <div align="center">
 
-  <img width="500px" alt="Demo Gif" title="demo" src="./assets/github/demo-medium-devices.jpeg"/>
+  <img width="500px" alt="Demo Gif" title="demo" src="./assets/github/demo-medium-devices.jpg"/>
 
-  <img width="500px" alt="Demo Gif" title="demo" src="./assets/github/demo-small-devices.jpeg"/>
+  <img width="500px" alt="Demo Gif" title="demo" src="./assets/github/demo-small-devices.jpg"/>
 
 </div><br>
 
