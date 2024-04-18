@@ -124,7 +124,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 [Typed.JS](https://github.com/mattboldt/typed.js)
 
-[MixItUp](https://mixitupapp.com/)
+[MixItUp](https://www.kunkalabs.com/mixitup/)
 
 [Aos](https://michalsnik.github.io/aos/)
 
