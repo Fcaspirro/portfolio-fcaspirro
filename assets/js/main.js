@@ -26,9 +26,9 @@ document.querySelectorAll(".nav_item").forEach((elemento) => {
 
 /* INTRODUTION */
 let typed = new Typed (".inputdescription", {
-    strings: [" Fabio Caspirro.", "Desenvolvedor Web.", "Desenvolvedor Mobile.", "Designer Gráfico."],
-    typeSpeed: 80,
-    backSpeed: 50,
+    strings: [" Fabio Caspirro.", "Desenvolvedor Web.", "Desenvolvedor Mobile.", "UX/UI Designer."],
+    typeSpeed: 75,
+    backSpeed: 25,
     loop: true
 }); 
 

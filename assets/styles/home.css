@@ -281,6 +281,7 @@
     background-color: var(--skin-color);
     color: var(--title-color);
     padding: .75rem 1.4rem;
+    border: 2px solid transparent;
     border-radius: .25rem;
     font-weight: var(--font-medium);
     position: relative;
@@ -299,7 +300,6 @@
     z-index: -1;
     transform-origin: center;
     transform: scale(0);
-    border: 2px solid var(--skin-color);
     border-radius: .25rem;
     transition: .3s;
 }
