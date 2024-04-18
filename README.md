@@ -119,7 +119,8 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
   
 </p><br>
 
-### 🚀 API <br>
+### 🚀 Bibliotecas
+><i>Libraries</i> 
 
 [Typed.JS](https://github.com/mattboldt/typed.js)
 
