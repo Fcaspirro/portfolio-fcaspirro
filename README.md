@@ -11,8 +11,8 @@
 </h5> 
 
 <p align="center">
- <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/fcaspirro/portfolio-2.0">
- <img alt="GitHub repo size in bytes" src="https://img.shields.io/github/repo-size/fcaspirro/portfolio-2.0?color=green">
+ <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/fcaspirro/portfolio-fcaspirro">
+ <img alt="GitHub repo size in bytes" src="https://img.shields.io/github/repo-size/fcaspirro/portfolio-fcaspirro?color=green">
 </p>
 
 ---
@@ -151,7 +151,7 @@ Para copiar o projeto, utilize os comandos:
 
 ```bash
   # Clonar o repositório | Clone repositories
-  » git clone https://github.com/fcaspirro/portfolio-2.0.git
+  » git clone https://github.com/fcaspirro/portfolio-fcaspirro.git
 
 ```
 
@@ -164,7 +164,7 @@ Link para página Web:
   
 ```bash  
   # Link Github Pages
-  » https://fcaspirro.github.io/portfolio-2.0/
+  » https://fcaspirro.github.io/portfolio-fcaspirro/
   
 ```
   
