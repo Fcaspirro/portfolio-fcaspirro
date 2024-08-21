@@ -91,49 +91,51 @@ body {
 }
 
 /***** Dots *****/
-.dots {
+.star {
   position: fixed;
   left: 50%;
   top: 50%;
   width: 0.4vw;
   height: 0.4vw;
   margin: -0.2vw 0 0 9.8vw;
-  animation: ease 200s alternate infinite;
+  animation: ease 200s alternate infinite, spin 30s linear infinite;
   pointer-events: none;
   z-index: 2;
+  font-size: 1vw;
+  color: #ffffff;
 }
 
-.dots::before, .dots::after {
-  content: "";
+.star::before, .star::after {
+  content: "\2726";
   position: absolute;
   width: 100%;
   height: 100%;
-  border-radius: 50%;
-  transform-origin: -10vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: center;
 }
 
-.dots::before {
-  background: #27272a;
-  opacity: 0.4;
+.star::before {
+  opacity: 0.05;
   animation: move ease alternate infinite;
 }
 
-.dots::after {
-  background: #e2e8f0;
+.star::after {
   opacity: 0;
   box-shadow: 0 0 0vw 0vw #f8fafc;
   animation: move ease alternate infinite, pulse ease infinite;
 }
 
-.dots:nth-child(1) {
+.star:nth-child(1) {
   animation-name: move1;
 }
 
-.dots:nth-child(1)::before {
+.star:nth-child(1)::before {
   animation-duration: 25s;
 }
 
-.dots:nth-child(1)::after {
+.star:nth-child(1)::after {
   animation-duration: 25s, 20001ms;
   animation-delay: 0ms, 14973ms;
 }
@@ -201,15 +203,15 @@ body {
   }
 }
 
-.dots:nth-child(2) {
+.star:nth-child(2) {
   animation-name: move2;
 }
 
-.dots:nth-child(2)::before {
+.star:nth-child(2)::before {
   animation-duration: 22s;
 }
 
-.dots:nth-child(2)::after {
+.star:nth-child(2)::after {
   animation-duration: 22s, 9778ms;
   animation-delay: 0ms, 5585ms;
 }
@@ -271,15 +273,15 @@ body {
   }
 }
 
-.dots:nth-child(3) {
+.star:nth-child(3) {
   animation-name: move3;
 }
 
-.dots:nth-child(3)::before {
+.star:nth-child(3)::before {
   animation-duration: 14s;
 }
 
-.dots:nth-child(3)::after {
+.star:nth-child(3)::after {
   animation-duration: 14s, 6945s;
   animation-delay: 0ms, 3992ms;
 }
@@ -368,15 +370,15 @@ body {
   }
 }
 
-.dots:nth-child(4) {
+.star:nth-child(4) {
   animation-name: move4;
 }
 
-.dots:nth-child(4)::before {
+.star:nth-child(4)::before {
   animation-duration: 15s;
 }
 
-.dots:nth-child(4)::after {
+.star:nth-child(4)::after {
   animation-duration: 15s, 8599ms;
   animation-delay: 0ms, 6424ms;
 }
@@ -474,15 +476,15 @@ body {
   }
 }
 
-.dots:nth-child(5) {
+.star:nth-child(5) {
   animation-name: move5;
 }
 
-.dots:nth-child(5)::before {
+.star:nth-child(5)::before {
   animation-duration: 14s;
 }
 
-.dots:nth-child(5)::after {
+.star:nth-child(5)::after {
   animation-duration: 14s, 8343ms;
   animation-delay: 0ms, 7420ms;
 }
@@ -553,15 +555,15 @@ body {
   }
 }
 
-.dots:nth-child(6) {
+.star:nth-child(6) {
   animation-name: move6;
 }
 
-.dots:nth-child(6)::before {
+.star:nth-child(6)::before {
   animation-duration: 22s;
 }
 
-.dots:nth-child(6)::after {
+.star:nth-child(6)::after {
   animation-duration: 22s, 14212ms;
   animation-delay: 0ms, 12421ms;
 }
@@ -638,15 +640,15 @@ body {
   }
 }
 
-.dots:nth-child(7) {
+.star:nth-child(7) {
   animation-name: move7;
 }
 
-.dots:nth-child(7)::before {
+.star:nth-child(7)::before {
   animation-duration: 18s;
 }
 
-.dots:nth-child(7)::after {
+.star:nth-child(7)::after {
   animation-duration: 18s, 14169ms;
   animation-delay: 0ms, 10388ms;
 }
@@ -720,15 +722,15 @@ body {
   }
 }
 
-.dots:nth-child(8) {
+.star:nth-child(8) {
   animation-name: move8;
 }
 
-.dots:nth-child(8)::before {
+.star:nth-child(8)::before {
   animation-duration: 16s;
 }
 
-.dots:nth-child(8)::after {
+.star:nth-child(8)::after {
   animation-duration: 16s, 7460ms;
   animation-delay: 0ms, 2767ms;
 }
@@ -814,15 +816,15 @@ body {
   }
 }
 
-.dots:nth-child(9) {
+.star:nth-child(9) {
   animation-name: move9;
 }
 
-.dots:nth-child(9)::before {
+.star:nth-child(9)::before {
   animation-duration: 15s;
 }
 
-.dots:nth-child(9)::after {
+.star:nth-child(9)::after {
   animation-duration: 15s, 12269ms;
   animation-delay: 0ms, 9477ms;
 }
@@ -914,15 +916,15 @@ body {
   }
 }
 
-.dots:nth-child(10) {
+.star:nth-child(10) {
   animation-name: move10;
 }
 
-.dots:nth-child(10)::before {
+.star:nth-child(10)::before {
   animation-duration: 12s;
 }
 
-.dots:nth-child(10)::after {
+.star:nth-child(10)::after {
   animation-duration: 12s, 10744ms;
   animation-delay: 0ms, 8133ms;
 }
@@ -1010,5 +1012,14 @@ body {
   10% {
     opacity: 1;
     box-shadow: 0 0 2vw 0.4vw #f8fafc;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
