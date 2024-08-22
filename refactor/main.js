@@ -33,18 +33,34 @@ const updateCursor = () => {
 
 updateCursor();
 
+// Hidden cursor on hover
 $(document).ready(function() {
-  $('.nav-btn').on('click', function(event) {
-    event.preventDefault();
-    let targetId = $(this).data('target');
-    $('.content-nav li a').removeClass('active-nav');
-    $('section').removeClass('active-section');
-    $(this).addClass('active-nav');  
-    $('#' + targetId).addClass('active-section');
-  });
+  $('.content-nav li a').hover(
+    function() {
+      gsap.to('.cursor', { opacity: 0, duration: 0.3 });
+    }, 
+    function() {
+      gsap.to('.cursor', { opacity: 1, duration: 0.3 });
+    }
+  );
 });
 
+// Header nav
+$('.nav-btn').on('click', function(event) {
+  event.preventDefault();
+  let targetId = $(this).data('target');
+  $('.content-nav li a').removeClass('active-nav');
+  $('section').removeClass('active-section');
+  $(this).addClass('active-nav');  
+  $('#' + targetId).addClass('active-section');
+});
 
-
-
-
+// Footer nav
+$('.footer-nav-btn').on('click', function(event) {
+  event.preventDefault();
+  let $this = $(this);
+  $this.addClass('active-footer-nav');
+  setTimeout(function() {
+    $this.removeClass('active-footer-nav');
+  }, 5000);
+});

@@ -1008,11 +1008,11 @@ body {
 @keyframes pulse {
   0%, 25%, 100% {
     opacity: 0;
-    box-shadow: 0 0 0vw 0vw #f8fafc;
+    box-shadow: 0 0 0vw 0vw #f4f4f5;
   }
   10% {
     opacity: 1;
-    box-shadow: 0 0 2vw 0.4vw #f8fafc;
+    box-shadow: 0 0 2vw 0.4vw #f4f4f5;
   }
 }
 
@@ -1064,8 +1064,7 @@ nav {
   display: flex;
   margin: 0 auto;
   border: 1px solid rgba(24, 24, 27, 0.75);
-  padding: 1rem 2rem;
-  border-radius: 5rem;
+  border-radius: 0.8rem;
 }
 
 .content-nav li {
@@ -1076,41 +1075,86 @@ nav {
   text-align: center;
 }
 
-.content-nav li a {
-  float: left;
-  width: 6rem;
-  text-align: center;
-  font-size: 2.0rem;
-  color: #edf5e1;
-  text-decoration: none;
+.content-nav li:first-child a,
+.content-nav li:last-child a,
+.content-nav li a.active-nav {
+  transition: all .3s ease;
+}
+
+.content-nav li a.active-nav {
+  border-color: #f4f4f5;
+  border-radius: 0.8rem;
+}
+
+.active-footer-nav {
+  border: 1px solid #f4f4f5;
+}
+
+.content-nav li.active-footer-nav a i {
+  color: #f4f4f5;
+}
+
+.content-nav li:first-child a:hover,
+.content-nav li:first-child a.active-nav,
+.content-nav li.active-footer-nav:first-child {
+  border-top-left-radius: 0.8rem;
+  border-bottom-left-radius: 0.8rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  transition: all .3s ease;
+}
+
+.content-nav li:last-child a:hover,
+.content-nav li:last-child a.active-nav,
+.content-nav li.active-footer-nav:last-child {
+  border-top-right-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  transition: all .3s ease;
+}
+
+.content-nav li a:hover {
+  border-color: #f4f4f5;
+}
+
+.content-nav li.active-footer-nav a:hover {
+  border-color: transparent;
 }
 
 .content-nav li a .title {
   font-size: 0rem;
+  transition: 0.3s;
+  color: #f4f4f5;
 }
 
+.content-nav li.active-footer-nav .title,
 .content-nav li a:hover .title,
 .content-nav li a.active-nav .title {
   transform: translateY(0rem);
   font-size: 1.0rem;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .content-nav li a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.6rem;
-  color: white;
+  color: #a1a1aa;
   cursor: none;
+  font-size: 2rem;
+  width: 8rem;
+  padding: 1.2rem;
   text-decoration: none;
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease;
 }
 
 .content-nav li a:hover i,
 .content-nav li a.active-nav i {
   transform: translateY(0rem);
-  color: rgba(211, 200, 200, 0.8);
-  transition: 0.5s;
+  color: #f4f4f5;
+  transition: 0.3s;
 }
 
 .bg-std.active-section {
@@ -1139,5 +1183,11 @@ section.active-section {
 
 .bg-std {
   padding: 10rem 4rem;
-  color: white;
+  color: #f4f4f5;
+}
+
+footer {
+  position: relative;
+  bottom: 2rem;
+  z-index: 9;
 }
