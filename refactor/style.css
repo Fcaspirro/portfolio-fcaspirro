@@ -10,6 +10,7 @@
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
   margin: 0;
   padding: 0;
 }
@@ -44,7 +45,7 @@ body {
   z-index: 999;
 }
 .cursor--large {
-  --size: 2.4rem;
+  --size: 2.0rem;
   border: 1px solid #52525b;
 }
 .cursor--small {
@@ -1022,4 +1023,121 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+
+/***** Navigation *****/
+header {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 10rem;
+  left: 0;
+  top: 0;
+  height: 8rem;
+  z-index: 9;
+}
+
+nav {
+  position: relative;
+  max-height: calc(8rem - 2rem);
+  display: flex;
+  top: 1rem;
+}
+
+.background {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: 0.75s;
+}
+
+.content-nav {
+  list-style-type: none;
+}
+
+.content-nav {
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  border: 1px solid rgba(24, 24, 27, 0.75);
+  padding: 1rem 2rem;
+  border-radius: 5rem;
+}
+
+.content-nav li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.content-nav li a {
+  float: left;
+  width: 6rem;
+  text-align: center;
+  font-size: 2.0rem;
+  color: #edf5e1;
+  text-decoration: none;
+}
+
+.content-nav li a .title {
+  font-size: 0rem;
+}
+
+.content-nav li a:hover .title,
+.content-nav li a.active-nav .title {
+  transform: translateY(0rem);
+  font-size: 1.0rem;
+  transition: 0.5s;
+}
+
+.content-nav li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  color: white;
+  cursor: none;
+  text-decoration: none;
+}
+
+.content-nav li a:hover i,
+.content-nav li a.active-nav i {
+  transform: translateY(0rem);
+  color: rgba(211, 200, 200, 0.8);
+  transition: 0.5s;
+}
+
+.bg-std.active-section {
+  background: transparent;
+  z-index: 8;
+}
+
+main {
+  width: 100%;
+  height: 100vh; 
+}
+
+section {
+  height: 100vh; 
+  width: 100vw;
+  position: absolute; 
+  top: 0;
+  left: 0;
+  display: none;
+  overflow: auto;
+}
+
+section.active-section {
+  display: flex;
+}
+
+.bg-std {
+  padding: 10rem 4rem;
+  color: white;
 }

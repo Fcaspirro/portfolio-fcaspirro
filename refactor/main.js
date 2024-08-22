@@ -32,3 +32,19 @@ const updateCursor = () => {
 };
 
 updateCursor();
+
+$(document).ready(function() {
+  $('.nav-btn').on('click', function(event) {
+    event.preventDefault();
+    let targetId = $(this).data('target');
+    $('.content-nav li a').removeClass('active-nav');
+    $('section').removeClass('active-section');
+    $(this).addClass('active-nav');  
+    $('#' + targetId).addClass('active-section');
+  });
+});
+
+
+
+
+
