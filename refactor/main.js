@@ -1,15 +1,15 @@
-// Config cursor
+// Config gsap
 const { gsap } = window;
 
+// Initial Loading
 window.addEventListener('load', () => {
-  // Esconde o cursor durante o .initial-loader
   gsap.set('.cursor', { opacity: 0 });
   document.querySelector('.initial-loader').style.display = 'flex';
 
   setTimeout(() => {
     gsap.to('.initial-loader', { 
       autoAlpha: 0, 
-      duration: 1,  // Desaparece lentamente em 3 segundos
+      duration: 1, 
       ease: "power1.inOut",
       onComplete: () => {
         document.querySelector('.initial-loader').style.display = 'none';
@@ -23,6 +23,7 @@ window.addEventListener('load', () => {
   }, 6000); 
 });
 
+// Config cursor
 const cursorOuter = document.querySelector(".cursor--large");
 const cursorInner = document.querySelector(".cursor--small");
 let mouse = { x: -100, y: -100 };
@@ -66,6 +67,25 @@ $(document).ready(function() {
       gsap.to('.cursor', { opacity: 1, duration: 0.3 });
     }
   );
+});
+
+// Song
+$(document).ready(function() {
+  $('.button-song button').addClass('inactive');
+  $('#onSong').css('display', 'none');
+
+  $('.button-song button').on('click', function() {
+      const offSong = $('#offSong');
+      const onSong = $('#onSong');
+
+      offSong.toggle();
+      onSong.toggle();
+      if (offSong.is(':visible')) {
+          $(this).removeClass('active').addClass('inactive');
+      } else {
+          $(this).removeClass('inactive').addClass('active');
+      }
+  });
 });
 
 // Header nav

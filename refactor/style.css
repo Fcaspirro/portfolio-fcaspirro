@@ -1030,19 +1030,51 @@ header {
   position: fixed;
   display: flex;
   width: 100%;
+  align-items: center;
   justify-content: center;
-  gap: 10rem;
+  gap: 4rem;
   left: 0;
-  top: 0;
   height: 8rem;
+  top: 0;
   z-index: 9;
+}
+
+.button-song button {
+  position: relative;
+  padding: 1.8rem;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid #27272a;
+  color: #71717a;
+  transition: all .3s ease;
+  cursor: none;
+}
+
+.button-song button i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 1.4rem;
+  transform: translate(-50%, -50%);
+  transition: all .3s ease;
+}
+
+.button-song button.inactive:hover {
+  color: white;
+  border-color: #71717a;
+  transition: all .3s ease;
+}
+
+.button-song button.active {
+  color: white;
+  border-color: #71717a;
+  transition: all .3s ease;
 }
 
 nav {
   position: relative;
   max-height: calc(8rem - 2rem);
   display: flex;
-  top: 1rem;
 }
 
 .background {
@@ -1198,12 +1230,11 @@ section.active-section {
 
 footer {
   position: relative;
-  bottom: 2rem;
   z-index: 7;
 }
 
 footer nav {
-  top: 0;
+  bottom: 1rem;
 }
 
 .wrapper-options {
