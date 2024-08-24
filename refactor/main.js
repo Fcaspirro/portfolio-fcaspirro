@@ -116,6 +116,17 @@ $('.footer-nav-btn.downloader').on('click', function(event) {
   }
 });
 
+gsap.fromTo("#circle", {
+  autoAlpha: 0,        
+  opacity: 0            
+}, {
+  autoAlpha: 1,         
+  opacity: 1,          
+  duration: 10,       
+  ease: "power1.inOut"  
+});
+
+
 // Download
 $('.wrapper-options button').on('click', function() {
   let fileUrl = $(this).data('url');

@@ -1260,3 +1260,95 @@ footer nav {
   border-color: #71717a;
   transition: border .3s ease;
 }
+
+.initial-loader {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  z-index: 99;
+}
+
+.content-loader {
+  position: relative;
+}
+
+#circle {
+  position: absolute;
+  top: -50%;
+  left: -30%;
+  width: 240px;
+  height: 240px;
+  animation: rotate-circle 5s infinite linear;
+  font-family:
+  "Quicksand", sans-serif;
+  letter-spacing: 1.5rem;
+  font-weight: 300;
+}
+
+@keyframes rotate-circle {
+  0% {
+    transform: rotate(0turn);
+  }
+
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+#signature {
+  fill: none;
+  stroke: white;
+  stroke-linecap: round;
+  stroke-width: 2px;
+  fill-rule: evenodd;
+  stroke-dasharray: 359.2961120605469; 
+  stroke-dashoffset: 359.2961120605469; 
+  animation: signature 10s ease forwards;
+}
+
+#signatureSVG {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes signature {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.loading-bar {
+  display: flex;
+  position: relative;
+  top: 8rem;
+  left: 0%;
+  height: 0.6rem;
+  width: 100%;
+  min-width: 15rem;
+  box-shadow: inset 0px 0px 0px 1px black;
+  border: 1px solid #71717a;
+  box-shadow: 0px 0px 6rem 1px rgb(255, 255, 255, 1);
+  border-radius: 0.2rem;
+  overflow: hidden;
+}
+
+.progress-bar {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background: white;
+  animation: progress-animation 10s ease;
+}
+  
+@keyframes progress-animation {
+  0% {width: 0%;}
+  20% {width: 10%;}
+  40% {width: 30%;}
+  50% {width: 60%;}
+  100% {width: 100%;}
+}
