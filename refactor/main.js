@@ -1,6 +1,28 @@
 // Config cursor
 const { gsap } = window;
 
+window.addEventListener('load', () => {
+  // Esconde o cursor durante o .initial-loader
+  gsap.set('.cursor', { opacity: 0 });
+  document.querySelector('.initial-loader').style.display = 'flex';
+
+  setTimeout(() => {
+    gsap.to('.initial-loader', { 
+      autoAlpha: 0, 
+      duration: 1,  // Desaparece lentamente em 3 segundos
+      ease: "power1.inOut",
+      onComplete: () => {
+        document.querySelector('.initial-loader').style.display = 'none';
+        gsap.set('.cursor', { opacity: 1, duration: 1 });
+        gsap.fromTo('body', { autoAlpha: 1 }, { 
+          duration: 1, 
+          ease: "power1.inOut" 
+        });
+      }
+    });
+  }, 6000); 
+});
+
 const cursorOuter = document.querySelector(".cursor--large");
 const cursorInner = document.querySelector(".cursor--small");
 let mouse = { x: -100, y: -100 };
@@ -74,7 +96,6 @@ $('.footer-nav-btn').not('.downloader').on('click', function(event) {
   $this.addClass('active-footer-nav');
 });
 
-
 // Footer nav downloader
 $('.footer-nav-btn.downloader').on('click', function(event) {
   event.preventDefault();
@@ -125,7 +146,6 @@ gsap.fromTo("#circle", {
   duration: 10,       
   ease: "power1.inOut"  
 });
-
 
 // Download
 $('.wrapper-options button').on('click', function() {

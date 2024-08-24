@@ -133,11 +133,11 @@ body {
 }
 
 .star:nth-child(1)::before {
-  animation-duration: 25s;
+  animation-duration: 24s;
 }
 
 .star:nth-child(1)::after {
-  animation-duration: 25s, 20001ms;
+  animation-duration: 24s, 20001ms;
   animation-delay: 0ms, 14973ms;
 }
 
@@ -283,7 +283,7 @@ body {
 }
 
 .star:nth-child(3)::after {
-  animation-duration: 14s, 6945s;
+  animation-duration: 14s, 6944s;
   animation-delay: 0ms, 3992ms;
 }
 
@@ -376,11 +376,11 @@ body {
 }
 
 .star:nth-child(4)::before {
-  animation-duration: 15s;
+  animation-duration: 14s;
 }
 
 .star:nth-child(4)::after {
-  animation-duration: 15s, 8599ms;
+  animation-duration: 14s, 8599ms;
   animation-delay: 0ms, 6424ms;
 }
 
@@ -822,11 +822,11 @@ body {
 }
 
 .star:nth-child(9)::before {
-  animation-duration: 15s;
+  animation-duration: 14s;
 }
 
 .star:nth-child(9)::after {
-  animation-duration: 15s, 12269ms;
+  animation-duration: 14s, 12269ms;
   animation-delay: 0ms, 9477ms;
 }
 
@@ -1052,7 +1052,7 @@ nav {
   right: 0;
   bottom: 0;
   left: 0;
-  transition: 0.75s;
+  transition: 0.74s;
 }
 
 .content-nav {
@@ -1282,7 +1282,7 @@ footer nav {
   left: -30%;
   width: 240px;
   height: 240px;
-  animation: rotate-circle 5s infinite linear;
+  animation: rotate-circle 6s infinite linear;
   font-family:
   "Quicksand", sans-serif;
   letter-spacing: 1.5rem;
@@ -1307,7 +1307,7 @@ footer nav {
   fill-rule: evenodd;
   stroke-dasharray: 359.2961120605469; 
   stroke-dashoffset: 359.2961120605469; 
-  animation: signature 10s ease forwards;
+  animation: signature 6s ease forwards;
 }
 
 #signatureSVG {
@@ -1342,7 +1342,7 @@ footer nav {
   height: 100%;
   width: 100%;
   background: white;
-  animation: progress-animation 10s ease;
+  animation: progress-animation 6s ease;
 }
   
 @keyframes progress-animation {
