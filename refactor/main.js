@@ -177,12 +177,14 @@ function updateContent(langData) {
 function changeLanguage(lang) {
   localStorage.setItem('language', lang);
   $.getJSON(`assets/languages/${lang}.json`).done(updateContent);
-  $('.wrapper-lang').hide();
+  $('.wrapper-lang').hide(); 
+  $('#selector').removeClass('active'); 
 }
 
 // Handle language button clicks
 $('#language-selector button').on('click', function() {
-  changeLanguage($(this).attr('id').replace('lang_', ''));
+  const lang = $(this).attr('id').replace('lang_', '');
+  changeLanguage(lang);
 });
 
 // Toggle the language selector dropdown
