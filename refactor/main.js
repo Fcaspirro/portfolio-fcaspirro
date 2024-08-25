@@ -177,3 +177,33 @@ $('.wrapper-options button').on('click', function() {
     console.error('Arquivo não encontrado!');
   }
 });
+
+// Language
+function updateContent(langData) {
+  $('[data-i18n]').each(function() {
+    $(this).text(langData[$(this).data('i18n')]);
+  });
+}
+
+// Function to set language preference and fetch data
+function changeLanguage(lang) {
+  localStorage.setItem('language', lang);
+  $.getJSON(`assets/languages/${lang}.json`).done(updateContent);
+  $('.wrapper-lang').hide();
+}
+
+// Handle language button clicks
+$('#language-selector button').on('click', function() {
+  changeLanguage($(this).attr('id').replace('lang_', ''));
+});
+
+// Toggle the language selector dropdown
+$('#selector a').on('click', function() {
+  $('.wrapper-lang').toggle();
+  $(this).parent().toggleClass('active');
+});
+
+// Set the initial language and update content
+const initialLanguage = $('html').attr('lang');
+$(`#language-selector button#lang_${initialLanguage}`).addClass('active');
+$.getJSON(`assets/languages/${initialLanguage}.json`).done(updateContent);
