@@ -57,18 +57,6 @@ const updateCursor = () => {
 
 updateCursor();
 
-// Hidden cursor on hover
-$(document).ready(function() {
-  $('.content-nav li a').hover(
-    function() {
-      gsap.to('.cursor', { opacity: 0, duration: 0.3 });
-    }, 
-    function() {
-      gsap.to('.cursor', { opacity: 1, duration: 0.3 });
-    }
-  );
-});
-
 // Song
 $(document).ready(function() {
   $('.button-song button').addClass('inactive');
