@@ -1,4 +1,11 @@
 {
-  "home": "Home",
-  "about-me": "About me"
+  "home-nav-header": "Home",
+  "about-me-nav-header": "About-me",
+  "carrer-nav-header": "Carrer",
+  "home-content": "Home",
+  "about-me-content": "About-me",
+  "carrer-content": "Carrer",
+  "mail": "Mail",
+  "tel": "Cell",
+  "resume": "Resume"
 }

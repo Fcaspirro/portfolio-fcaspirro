@@ -1,4 +1,11 @@
 {
-  "home": "Ínicio",
-  "about-me": "Sobre mim"
+  "home-nav-header": "Ínicio",
+  "about-me-nav-header": "Sobre mim",
+  "carrer-nav-header": "Carreira",
+  "home-content": "Ínicio",
+  "about-me-content": "Sobre mim",
+  "carrer-content": "Carreira",
+  "mail": "E-mail",
+  "tel": "Telefone",
+  "resume": "CV"
 }
