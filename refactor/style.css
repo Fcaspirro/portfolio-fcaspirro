@@ -1305,6 +1305,7 @@ footer nav {
 
 .content-loader {
   position: relative;
+  transform: translateY(-50%);
 }
 
 #circle {
