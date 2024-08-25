@@ -169,9 +169,18 @@ $('.wrapper-options button').on('click', function() {
 // Language
 function updateContent(langData) {
   $('[data-i18n]').each(function() {
-    $(this).text(langData[$(this).data('i18n')]);
+    const key = $(this).data('i18n');
+    const parts = key.split('.');
+    let value = langData;
+
+    for (const part of parts) {
+      value = value ? value[part] : '';
+    }
+
+    $(this).text(value);
   });
 }
+
 
 // Function to set language preference and fetch data
 function changeLanguage(lang) {
