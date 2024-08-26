@@ -23,6 +23,16 @@ window.addEventListener('load', () => {
   }, 6000); 
 });
 
+gsap.fromTo("#circle", {
+  autoAlpha: 0,        
+  opacity: 0            
+}, {
+  autoAlpha: 1,         
+  opacity: 1,          
+  duration: 6,       
+  ease: "power1.inOut"  
+});
+
 // Config cursor
 const cursorOuter = document.querySelector(".cursor--large");
 const cursorInner = document.querySelector(".cursor--small");
@@ -109,50 +119,17 @@ $('.footer-nav-btn.downloader').on('click', function(event) {
   event.preventDefault();
   let $this = $(this);
   let $wrapperOptions = $this.find('.wrapper-options');
-  
+
   if ($this.hasClass('active-downloader')) {
-    gsap.to($wrapperOptions, {
-      opacity: 0,
-      y: -20,
-      duration: 0.3,
-      onComplete: function() {
-        $this.removeClass('active-footer-nav active-downloader');
-        $wrapperOptions.css('display', 'none').attr('aria-hidden', 'true');
-      }
-    });
+    $this.removeClass('active-footer-nav active-downloader');
+    $wrapperOptions.css('display', 'none').attr('aria-hidden', 'true');
   } else {
     $('.footer-nav-btn.downloader').removeClass('active-footer-nav active-downloader');
-    $('.wrapper-options').each(function() {
-      gsap.to($(this), {
-        opacity: 0,
-        y: -20,
-        duration: 0.3,
-        onComplete: function() {
-          $(this).css('display', 'none').attr('aria-hidden', 'true');
-        }
-      });
-    });
+    $('.wrapper-options').css('display', 'none').attr('aria-hidden', 'true');
+
     $this.addClass('active-footer-nav active-downloader');
     $wrapperOptions.css('display', 'flex').attr('aria-hidden', 'false');
-    gsap.fromTo($wrapperOptions, {
-      opacity: 0,
-      y: -20
-    }, {
-      opacity: 1,
-      y: 0,
-      duration: 0.3
-    });
   }
-});
-
-gsap.fromTo("#circle", {
-  autoAlpha: 0,        
-  opacity: 0            
-}, {
-  autoAlpha: 1,         
-  opacity: 1,          
-  duration: 10,       
-  ease: "power1.inOut"  
 });
 
 // Download
@@ -181,11 +158,21 @@ function updateContent(langData) {
   });
 }
 
-
 // Function to set language preference and fetch data
 function changeLanguage(lang) {
   localStorage.setItem('language', lang);
   $.getJSON(`assets/languages/${lang}.json`).done(updateContent);
+
+  // Substitui o ícone pela imagem da bandeira correspondente
+  let flagImg = '';
+  if (lang === 'pt-br') {
+    flagImg = 'assets/img/brazil-flag.png';
+  } else if (lang === 'en-us') {
+    flagImg = 'assets/img/usa-flag.png';
+  }
+
+  $('#selector a').html(`<img src="${flagImg}" alt="Flag">`);
+
   $('.wrapper-lang').hide(); 
   $('#selector').removeClass('active'); 
 }
@@ -197,9 +184,15 @@ $('#language-selector button').on('click', function() {
 });
 
 // Toggle the language selector dropdown
-$('#selector a').on('click', function() {
+$('#selector').on('click', function() {
   $('.wrapper-lang').toggle();
-  $(this).parent().toggleClass('active');
+  $(this).toggleClass('active');
+});
+
+// Use event delegation for dynamically added elements
+$(document).on('click', '.content-lang button', function () {
+  $('.wrapper-lang').toggle();
+  $('#selector').removeClass('active'); 
 });
 
 // Set the initial language and update content
