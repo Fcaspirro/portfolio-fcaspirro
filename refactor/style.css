@@ -1468,6 +1468,11 @@ footer {
 /***** Carousel *****/
 .wrapper-project {
   max-width: 1440px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  justify-content: center;
 } 
 
 .content-project {
@@ -1536,21 +1541,40 @@ footer {
   }
 }
 
+.wrapper-techs {
+  position: relative;
+  width: 100%;
+  height: 36px;
+}
+
 .wrapper-project .tech-applyed img {
-  width: 24px;
-  position: absolute;
+  width: 36px;
+  padding: 0.6rem;
+  background: transparent;
+  border: 1px solid #f4f4f5;
+  border-radius: 50%;
   animation: float-tech 2s ease-in-out infinite alternate;
   z-index: 4;
 }
 
-.wrapper-project .tech-applyed img:first-child {
-  top: 10%;
-  left: 0;
+.tech-applyed {
+  position: absolute;
+  display: flex;
+  gap: 1rem;
+  left: 25%;
+  transform: translateX(-25%);
 }
 
-.wrapper-project .tech-applyed img:nth-child(2) {
-  right: 0;
-  bottom: 10%;
+@keyframes float-tech {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .gradient {
@@ -1571,18 +1595,6 @@ footer {
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-
-@keyframes float-tech {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-  100% {
-    transform: translateY(0);
   }
 }
 
