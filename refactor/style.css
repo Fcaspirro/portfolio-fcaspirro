@@ -1128,7 +1128,7 @@ header {
   justify-content: center;
   gap: 4rem;
   left: 0;
-  height: 8rem;
+  min-height: 8rem;
   top: 0;
   z-index: 9;
 }
@@ -1166,7 +1166,7 @@ header {
 
 nav {
   position: relative;
-  max-height: calc(8rem - 2rem);
+  min-height: 6rem;
   display: flex;
   gap: 4rem;
   align-items: center;
@@ -1188,6 +1188,7 @@ nav {
 
 .content-nav {
   position: relative;
+  min-height: 6rem;
   display: flex;
   margin: 0 auto;
   border: 1px solid rgba(24, 24, 27, 0.75);
@@ -1377,11 +1378,10 @@ section.active-section {
 
 footer {
   position: relative;
+  display: flex;
+  min-height: 8rem;
+  align-items: center;
   z-index: 7;
-}
-
-footer nav {
-  bottom: 1rem;
 }
 
 .wrapper-options,
