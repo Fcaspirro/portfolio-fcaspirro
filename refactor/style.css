@@ -27,6 +27,7 @@ body {
   justify-content: center;
   flex-direction: column;
   font-family: "Roboto Mono", Helvetica, sans-serif;
+  font-weight: 200;
   position: absolute;
   overflow: hidden;
   background-color: #09090b;
@@ -96,7 +97,7 @@ body {
 
 #signature {
   fill: none;
-  stroke: white;
+  stroke:  #f4f4f5;
   stroke-linecap: round;
   stroke-width: 2px;
   fill-rule: evenodd;
@@ -136,7 +137,7 @@ body {
   display: flex;
   height: 100%;
   width: 100%;
-  background: white;
+  background:  #f4f4f5;
   animation: progress-animation 6s ease;
 }
   
@@ -1154,13 +1155,13 @@ header {
 }
 
 .button-song button.inactive:hover {
-  border-color: #f4f4f5;
+  border-color:  #f4f4f5;
   transition: all .3s ease;
 }
 
 .button-song button.active {
-  color: white;
-  border-color: #f4f4f5;
+  color:  #f4f4f5;
+  border-color:  #f4f4f5;
   transition: all .3s ease;
 }
 
@@ -1340,6 +1341,7 @@ li#selector img {
 #home {
   background: transparent;
   display: flex;
+  justify-content: center;
   align-items: center;
   position: relative;
   z-index: 6;
@@ -1472,11 +1474,14 @@ footer {
 .content-project {
   display: flex;
   justify-content: space-between;
-  gap: 4rem;
+  gap: 6rem;
 }
 
 .desc-project {
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .wrapper-project .devices-project {
@@ -1489,7 +1494,9 @@ footer {
 }
 
 #desktop-screen {
+  position: relative;
   animation: float-desktop 8s ease-in-out infinite;
+  z-index: 2;
 }
 
 #mobile-screen {
@@ -1498,6 +1505,7 @@ footer {
   bottom: 0;
   right: 0;
   animation: float-mobile 8s ease-in-out infinite;
+  z-index: 3;
 }
 
 /* Animação para o desktop */
@@ -1524,4 +1532,109 @@ footer {
   100% {
     transform: translateY(0) rotate(0deg);
   }
+}
+
+.wrapper-project .tech-applyed img {
+  width: 24px;
+  position: absolute;
+  animation: float-tech 2s ease-in-out infinite alternate;
+  z-index: 4;
+}
+
+.wrapper-project .tech-applyed img:first-child {
+  top: 0;
+}
+
+.wrapper-project .tech-applyed img:nth-child(2) {
+  right: 0;
+  bottom: 0;
+}
+
+.gradient {
+  position: absolute;
+  top: 0;
+  left: calc(40% - (60% /2));
+  width: 60%;
+  height: 100%;
+  filter: blur(8rem);
+  background-image: linear-gradient(#4ddc9e, #5b37eb, #f1307e);
+  animation: rotate 10s cubic-bezier(0.6, 0.3, 0.3, 0.6) normal infinite;
+  border-radius: 30% 50% 70% 30%/30% 30% 70% 70%;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float-tech {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.desc-project .title {
+  letter-spacing: 1.2rem;
+  font-size: 8rem;
+}
+
+.desc-project .title {
+  position: relative;
+  text-transform: uppercase;
+  font-family: "Anton", Arial, sans-serif;
+  text-shadow: -5px 5px 10px #ced0d3;
+  margin-bottom: 4rem;
+  color:  #f4f4f5;
+  letter-spacing: -0.5rem;
+  font-size: 10rem;
+  line-height: 10rem;
+  transition: all 0.25s ease-out;
+}
+
+.desc-project .description {
+  font-size: 1.6rem;
+}
+
+.desc-project .description a {
+  color:  #f4f4f5;
+  transition: all .3s ease;
+}
+
+.desc-project .description a:hover {
+  transition: all .3s ease;
+}
+
+.useful-links {
+  display: flex;
+  gap: 2rem;
+  margin-top: 4.6rem;
+}
+
+.useful-links a {
+  padding: 0.6rem 1.5rem;
+  background: #f4f4f5;
+  border: 1px solid transparent;
+  color: #09090b;
+  font-weight: 400;
+  font-size: 1.4rem;
+  text-decoration: none;
+  border-radius: 4rem;
+  transition: all .3s ease;
+}
+
+.useful-links a:hover {
+  background: transparent;
+  border: 1px solid #f4f4f5;
+  color: white;
+  transition: all .3s ease;
 }
