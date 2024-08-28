@@ -13,5 +13,9 @@
     "mail": "E-mail",
     "tel": "Telefone",
     "resume": "CV"
+  },
+  "home": {
+   "desc-project": "Responsive landing page for desktop and mobile, called 'Plane'. This page represents a travel agency that promotes cultural immersion in various countries, highlighting tourist attractions and renowned restaurants.",
+   "desc-project-2": "The design was inspired by a combination of references found on the Behance platform."
   }
 }

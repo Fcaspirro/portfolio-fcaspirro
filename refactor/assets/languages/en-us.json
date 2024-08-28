@@ -1,17 +1,21 @@
 {
   "nav": {
     "home": "Home",
-    "about-me": "About me",
+    "about-me": "About Me",
     "career": "Career"
   },
   "content": {
     "home": "Home",
-    "about-me": "About me",
+    "about-me": "About Me",
     "career": "Career"
   },
   "contact": {
-    "mail": "Mail",
-    "tel": "Cell",
+    "mail": "Email",
+    "tel": "Phone",
     "resume": "Resume"
+  },
+  "home": {
+   "desc-project": "Landing page responsiva para desktop e mobile, chamada \"Plane\". Esta página representa a uma agência de viagens que promove a inserção cultural em diversos países, destacando pontos turísticos e restaurantes renomados.", 
+   "desc-project-2": "O design foi inspirado em uma combinação de referências encontradas na plataforma Behance." 
   }
 }
