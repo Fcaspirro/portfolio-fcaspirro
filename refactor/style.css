@@ -1486,15 +1486,19 @@ footer {
 
 .wrapper-project .devices-project {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 50%;
 }
 
 .wrapper-project .devices-project img {
   width: 100%;
+  object-fit: contain;
 }
 
 #desktop-screen {
-  position: relative;
+  position: absolute;
   animation: float-desktop 8s ease-in-out infinite;
   z-index: 2;
 }
@@ -1502,7 +1506,6 @@ footer {
 #mobile-screen {
   position: absolute;
   width: 30%;
-  bottom: 0;
   right: 0;
   animation: float-mobile 8s ease-in-out infinite;
   z-index: 3;
@@ -1542,12 +1545,13 @@ footer {
 }
 
 .wrapper-project .tech-applyed img:first-child {
-  top: 0;
+  top: 10%;
+  left: 0;
 }
 
 .wrapper-project .tech-applyed img:nth-child(2) {
   right: 0;
-  bottom: 0;
+  bottom: 10%;
 }
 
 .gradient {

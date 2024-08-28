@@ -15,7 +15,7 @@
     "resume": "Resume"
   },
   "home": {
-   "desc-project": "Landing page responsiva para desktop e mobile, chamada \"Plane\". Esta página representa a uma agência de viagens que promove a inserção cultural em diversos países, destacando pontos turísticos e restaurantes renomados.", 
-   "desc-project-2": "O design foi inspirado em uma combinação de referências encontradas na plataforma Behance." 
+    "desc-project": "Responsive landing page for desktop and mobile, named \"Plane\". This page belongs to a travel agency that promotes cultural immersion in various countries, highlighting tourist attractions and renowned restaurants.",
+    "desc-project-2": "The design was inspired by a combination of references found on the Behance platform."
   }
 }
