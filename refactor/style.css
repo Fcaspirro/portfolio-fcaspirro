@@ -28,7 +28,7 @@ body {
   flex-direction: column;
   font-family: "Roboto Mono", Helvetica, sans-serif;
   position: absolute;
-  overflow: hidden; 
+  overflow: hidden;
   background-color: #09090b;
   cursor: none;
 }
@@ -1121,7 +1121,7 @@ body {
 
 /***** Navigation *****/
 header {
-  position: fixed;
+  position: static;
   display: flex;
   width: 100%;
   align-items: center;
@@ -1352,8 +1352,8 @@ li#selector img {
 
 main {
   width: 100%;
+  position: relative;
   height: 100vh;
-  margin-top: 8rem;
 }
 
 section {
@@ -1370,6 +1370,7 @@ section.active-section {
 }
 
 .bg-std {
+  height: 100%;
   padding: 6rem 6rem;
   color: #f4f4f5;
 }
@@ -1377,10 +1378,12 @@ section.active-section {
 /***** Footer *****/
 
 footer {
-  position: relative;
+  position: static;
   display: flex;
+  width: 100%;
   min-height: 8rem;
   align-items: center;
+  justify-content: center;
   z-index: 7;
 }
 
@@ -1463,7 +1466,6 @@ footer {
 
 /***** Carousel *****/
 .wrapper-project {
-  position: relative;
   max-width: 1440px;
 } 
 
@@ -1504,7 +1506,7 @@ footer {
     transform: translateY(0) rotate(0deg);
   }
   50% {
-    transform: translateY(-10px) rotate(-2deg);
+    transform: translateY(-4px) rotate(-2deg);
   }
   100% {
     transform: translateY(0) rotate(0deg);
