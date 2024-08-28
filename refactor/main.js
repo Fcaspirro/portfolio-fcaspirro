@@ -199,10 +199,3 @@ $(document).on('click', '.content-lang button', function () {
 const initialLanguage = $('html').attr('lang');
 $(`#language-selector button#lang_${initialLanguage}`).addClass('active');
 $.getJSON(`assets/languages/${initialLanguage}.json`).done(updateContent);
-
-// Highlight text
-document.addEventListener("DOMContentLoaded", function () {
-	let wt = document.querySelector(".highlight-animate");
-
-	wt.style.setProperty("width", "100%");
-});
