@@ -199,3 +199,10 @@ $(document).on('click', '.content-lang button', function () {
 const initialLanguage = $('html').attr('lang');
 $(`#language-selector button#lang_${initialLanguage}`).addClass('active');
 $.getJSON(`assets/languages/${initialLanguage}.json`).done(updateContent);
+
+const swiper = new Swiper('.swiper-container', {
+  loop: false,
+  pagination: {
+    el: '.swiper-pagination',
+  },
+});
