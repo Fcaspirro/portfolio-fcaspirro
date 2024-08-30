@@ -1505,7 +1505,9 @@ footer {
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: white;
+  color: #f4f4f5;
+  cursor: none;
+
 }
 
 .swiper-pagination-bullet-active {
@@ -1734,6 +1736,6 @@ footer {
 .useful-links a:hover {
   background: transparent;
   border: 1px solid #f4f4f5;
-  color: white;
+  color: #f4f4f5;
   transition: all .3s ease;
 }
