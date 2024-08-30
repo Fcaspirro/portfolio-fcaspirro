@@ -1517,8 +1517,8 @@ footer {
 }
 
 .swiper-slide {
-  backface-visibility: hidden; /* Evita o efeito de "fantasma" na rotaÃƒÂ§ÃƒÂ£o */
-  transform-style: preserve-3d; /* MantÃƒÂ©m a perspectiva 3D */
+  backface-visibility: hidden; /* Evita o efeito de "fantasma" na rotaÃƒÆ’Ã‚Â§ÃƒÆ’Ã‚Â£o */
+  transform-style: preserve-3d; /* MantÃƒÆ’Ã‚Â©m a perspectiva 3D */
 }
 
 /***** Projects ******/
@@ -1649,6 +1649,7 @@ footer {
   font-size: 1.4rem !important;
   margin-top: 1.2rem !important;
   border: 1px solid #27272a !important;
+  color: #71717a !important;
 }
 
 .tech-applyed button::before {
