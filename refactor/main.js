@@ -72,16 +72,16 @@ $('.button-song button').addClass('inactive');
 $('#onSong').css('display', 'none');
 
 $('.button-song button').on('click', function() {
-    const offSong = $('#offSong');
-    const onSong = $('#onSong');
+  const offSong = $('#offSong');
+  const onSong = $('#onSong');
 
-    offSong.toggle();
-    onSong.toggle();
-    if (offSong.is(':visible')) {
-        $(this).removeClass('active').addClass('inactive');
-    } else {
-        $(this).removeClass('inactive').addClass('active');
-    }
+  offSong.toggle();
+  onSong.toggle();
+  if (offSong.is(':visible')) {
+    $(this).removeClass('active').addClass('inactive');
+  } else {
+    $(this).removeClass('inactive').addClass('active');
+  }
 });
 
 
@@ -153,7 +153,7 @@ $('.wrapper-options button').on('click', function() {
   }
 });
 
-// Language
+// Language update function
 function updateContent(langData) {
   $('[data-i18n]').each(function() {
     const key = $(this).data('i18n');
@@ -173,7 +173,7 @@ function changeLanguage(lang) {
   localStorage.setItem('language', lang);
   $.getJSON(`assets/languages/${lang}.json`).done(updateContent);
 
-  // Substitui o ícone pela imagem da bandeira correspondente
+  // Update flag icon
   let flagImg = '';
   if (lang === 'pt-br') {
     flagImg = 'assets/img/brazil-flag.png';
@@ -183,7 +183,7 @@ function changeLanguage(lang) {
 
   $('#selector a').html(`<img src="${flagImg}" alt="Flag">`);
 
-  $('.wrapper-lang').hide(); 
+  $('.wrapper-lang').fadeOut(); 
   $('#selector').removeClass('active'); 
 }
 
@@ -199,12 +199,9 @@ $('#selector').on('click', function() {
   const isVisible = wrapperLang.is(':visible');
 
   if (isVisible) {
-    // Se estiver visível, aplicar fadeOut
     fadeOut(wrapperLang);
-    // Definir a visibilidade após a animação
-    setTimeout(() => wrapperLang.hide(), 120); // 120ms para corresponder ao duration do fadeOut
+    setTimeout(() => wrapperLang.hide(), 120); 
   } else {
-    // Se não estiver visível, mostrar antes de aplicar fadeIn
     wrapperLang.show();
     fadeIn(wrapperLang);
   }
@@ -219,9 +216,10 @@ $(document).on('click', '.content-lang button', function () {
 });
 
 // Set the initial language and update content
-const initialLanguage = $('html').attr('lang');
+const initialLanguage = $('html').attr('lang') || 'en-us';
 $(`#language-selector button#lang_${initialLanguage}`).addClass('active');
 $.getJSON(`assets/languages/${initialLanguage}.json`).done(updateContent);
+
 
 const swiper = new Swiper('.swiper-container', {
   loop: false,

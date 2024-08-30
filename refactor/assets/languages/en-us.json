@@ -15,6 +15,7 @@
     "resume": "Resume"
   },
   "home": {
+    "info-text": "Last projects",
     "desc-portfolio-kaueGodoy": "Responsive personal portfolio project, designed entirely for a game developer.",
     "desc-portfolio-kaueGodoy-2": "The project features a soundtrack, personalized navigation with a retro gaming theme, and it is also possible to access the developed games, information about the games, and about the author.",
     "desc-plane": "Responsive landing page for desktop and mobile, named \"Plane\". This page belongs to a travel agency that promotes cultural immersion in various countries, highlighting tourist attractions and renowned restaurants.",

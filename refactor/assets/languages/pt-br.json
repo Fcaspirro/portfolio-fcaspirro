@@ -15,9 +15,10 @@
     "resume": "CV"
   },
   "home": {
+    "info-text": "Últimos projetos",
     "desc-portfolio-kaueGodoy": "Projeto responsivo de um portfólio pessoal, onde foi pensado inteiramente para um desenvolvedor de jogos.",
     "desc-portfolio-kaueGodoy-2": "O projeto consta com trilha sonora, navegação personalizada com tema de games retro, e também é possível ter acesso aos jogos desenvolvidos, informações sobre os jogos e sobre o autor.",
     "desc-plane": "Landing page responsiva para desktop e mobile, denominada \"Plane\", uma agência de viagens modelo para inserção cultural a diversos países, pontos turísticos, restaurantes renomados, pontos turísticos.",
-    "desc-plane-2": "Design inspirado em junção de referências disponíveis na plataforma Behance."
+    "desc-plane-2": "Design inspirado na combinação de referências disponíveis na plataforma Behance."
   }
 }

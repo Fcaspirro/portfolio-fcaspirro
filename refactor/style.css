@@ -1372,7 +1372,7 @@ section.active-section {
   color: #f4f4f5;
 }
 
-p.info-text {
+.info-text {
   max-width: 1440px;
   margin: 0 auto;
   display: flex;
