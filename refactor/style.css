@@ -1465,7 +1465,7 @@ footer {
 .swiper-container {
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .swiper-slide {
@@ -1487,6 +1487,12 @@ footer {
   background: #71717a;
 }
 
+.swiper-slide {
+  backface-visibility: hidden; /* Evita o efeito de "fantasma" na rotação */
+  transform-style: preserve-3d; /* Mantém a perspectiva 3D */
+}
+
+/***** Projects ******/
 .wrapper-project {
   max-width: 1440px;
   position: relative;

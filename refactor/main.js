@@ -204,5 +204,32 @@ const swiper = new Swiper('.swiper-container', {
   loop: false,
   pagination: {
     el: '.swiper-pagination',
+    clickable: true
   },
+  navigation: {
+    prevEl: '.swiper-button-prev', 
+    nextEl: '.swiper-button-next'
+  },
+  speed: 600, 
+  on: {
+    slideChangeTransitionStart: function () {
+      const slides = document.querySelectorAll('.swiper-slide');
+      const currentSlide = slides[swiper.activeIndex];
+      const prevSlide = slides[swiper.previousIndex];
+
+      gsap.set(slides, { clearProps: "all" });
+
+      gsap.to(prevSlide, {
+        opacity: 0,
+        scale: 0.9, 
+        duration: 3, 
+        ease: "power2.in"
+      });
+
+      gsap.fromTo(currentSlide,
+        { opacity: 0, scale: 1.1 }, 
+        { opacity: 1, scale: 1, duration: 3, ease: "power2.out" } 
+      );
+    }
+  }
 });
