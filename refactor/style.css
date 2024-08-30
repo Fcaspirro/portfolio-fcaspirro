@@ -1488,8 +1488,8 @@ footer {
 }
 
 .swiper-slide {
-  backface-visibility: hidden; /* Evita o efeito de "fantasma" na rotação */
-  transform-style: preserve-3d; /* Mantém a perspectiva 3D */
+  backface-visibility: hidden; /* Evita o efeito de "fantasma" na rotaÃ§Ã£o */
+  transform-style: preserve-3d; /* MantÃ©m a perspectiva 3D */
 }
 
 /***** Projects ******/
@@ -1601,7 +1601,33 @@ footer {
   height: 36px;
 }
 
-.wrapper-project .tech-applyed img {
+.tech-applyed {
+  position: absolute;
+  display: flex;
+  gap: 1rem;
+  left: 25%;
+  transform: translateX(-25%);
+}
+
+.tech-applyed button {
+  background: none;
+  border: transparent;
+}
+
+.tech-applyed button::after {
+  border-radius: 0.4rem !important;
+  background-color: #18181b !important;
+  font-size: 1.4rem !important;
+  margin-top: 1.2rem !important;
+  border: 1px solid #27272a !important;
+}
+
+.tech-applyed button::before {
+  border-bottom-color: #71717a !important;
+  border-width: 0.6rem !important;
+}
+
+.tech-applyed img {
   width: 36px;
   padding: 0.6rem;
   background: transparent;
@@ -1609,14 +1635,6 @@ footer {
   border-radius: 50%;
   animation: float-tech 2s ease-in-out infinite alternate;
   z-index: 4;
-}
-
-.tech-applyed {
-  position: absolute;
-  display: flex;
-  gap: 1rem;
-  left: 25%;
-  transform: translateX(-25%);
 }
 
 @keyframes float-tech {

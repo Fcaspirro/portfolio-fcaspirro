@@ -68,23 +68,22 @@ const updateCursor = () => {
 updateCursor();
 
 // Song
-$(document).ready(function() {
-  $('.button-song button').addClass('inactive');
-  $('#onSong').css('display', 'none');
+$('.button-song button').addClass('inactive');
+$('#onSong').css('display', 'none');
 
-  $('.button-song button').on('click', function() {
-      const offSong = $('#offSong');
-      const onSong = $('#onSong');
+$('.button-song button').on('click', function() {
+    const offSong = $('#offSong');
+    const onSong = $('#onSong');
 
-      offSong.toggle();
-      onSong.toggle();
-      if (offSong.is(':visible')) {
-          $(this).removeClass('active').addClass('inactive');
-      } else {
-          $(this).removeClass('inactive').addClass('active');
-      }
-  });
+    offSong.toggle();
+    onSong.toggle();
+    if (offSong.is(':visible')) {
+        $(this).removeClass('active').addClass('inactive');
+    } else {
+        $(this).removeClass('inactive').addClass('active');
+    }
 });
+
 
 // Header nav
 $('.nav-btn').on('click', function(event) {
@@ -114,6 +113,15 @@ $('.footer-nav-btn').not('.downloader').on('click', function(event) {
   $this.addClass('active-footer-nav');
 });
 
+function fadeIn(element) {
+  gsap.fromTo(element, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.12, ease: "power1.inOut" });
+}
+
+// Função para fadeOut com GSAP
+function fadeOut(element) {
+  gsap.fromTo(element, { autoAlpha: 1 }, { autoAlpha: 0, duration: 0.12, ease: "power1.inOut" });
+}
+
 // Footer nav downloader
 $('.footer-nav-btn.downloader').on('click', function(event) {
   event.preventDefault();
@@ -122,13 +130,15 @@ $('.footer-nav-btn.downloader').on('click', function(event) {
 
   if ($this.hasClass('active-downloader')) {
     $this.removeClass('active-footer-nav active-downloader');
-    $wrapperOptions.css('display', 'none').attr('aria-hidden', 'true');
+    fadeOut($wrapperOptions);
+    setTimeout(() => $wrapperOptions.css('display', 'none').attr('aria-hidden', 'true'), 120);
   } else {
     $('.footer-nav-btn.downloader').removeClass('active-footer-nav active-downloader');
     $('.wrapper-options').css('display', 'none').attr('aria-hidden', 'true');
 
     $this.addClass('active-footer-nav active-downloader');
     $wrapperOptions.css('display', 'flex').attr('aria-hidden', 'false');
+    fadeIn($wrapperOptions);
   }
 });
 
@@ -185,7 +195,20 @@ $('#language-selector button').on('click', function() {
 
 // Toggle the language selector dropdown
 $('#selector').on('click', function() {
-  $('.wrapper-lang').toggle();
+  const wrapperLang = $('.wrapper-lang');
+  const isVisible = wrapperLang.is(':visible');
+
+  if (isVisible) {
+    // Se estiver visível, aplicar fadeOut
+    fadeOut(wrapperLang);
+    // Definir a visibilidade após a animação
+    setTimeout(() => wrapperLang.hide(), 120); // 120ms para corresponder ao duration do fadeOut
+  } else {
+    // Se não estiver visível, mostrar antes de aplicar fadeIn
+    wrapperLang.show();
+    fadeIn(wrapperLang);
+  }
+
   $(this).toggleClass('active');
 });
 
