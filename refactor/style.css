@@ -1381,8 +1381,6 @@ section.active-section {
   justify-content: left;
   font-size: 1.4rem;
   color: #71717a;
-  position: relative;
-  top: 5rem;
 }
 
 .info-text i {
