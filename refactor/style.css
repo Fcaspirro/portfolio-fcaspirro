@@ -1372,6 +1372,35 @@ section.active-section {
   color: #f4f4f5;
 }
 
+p.info-text {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: left;
+  font-size: 1.4rem;
+  color: #71717a;
+  position: relative;
+  top: 5rem;
+}
+
+.info-text i {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-4px);
+  }
+  60% {
+    transform: translateY(-4px);
+  }
+}
+
 /***** Footer *****/
 footer {
   position: static;
@@ -1488,8 +1517,8 @@ footer {
 }
 
 .swiper-slide {
-  backface-visibility: hidden; /* Evita o efeito de "fantasma" na rotaÃ§Ã£o */
-  transform-style: preserve-3d; /* MantÃ©m a perspectiva 3D */
+  backface-visibility: hidden; /* Evita o efeito de "fantasma" na rotaÃƒÂ§ÃƒÂ£o */
+  transform-style: preserve-3d; /* MantÃƒÂ©m a perspectiva 3D */
 }
 
 /***** Projects ******/
