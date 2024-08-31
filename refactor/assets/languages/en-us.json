@@ -14,16 +14,20 @@
     "tel": "Phone",
     "resume": "Resume"
   },
+  "last-slide": {
+    "see-more": "See all the projects"
+  },
   "home": {
     "info-text": "Last projects",
     "desc-portfolio-kaueGodoy": "Responsive personal portfolio project, designed entirely for a game developer.",
     "desc-portfolio-kaueGodoy-2": "The project features a soundtrack, personalized navigation with a retro gaming theme, and it is also possible to access the developed games, information about the games, and about the author.",
     "desc-quizgame": "Responsive quiz game project. It's a movie genre quiz with a total of 6 multiple-choice questions, each having only one correct answer. At the end, it generates a complete result of correct and incorrect answers.",
     "desc-quizgame-2": "Two APIs were used together for the game to function: one for collecting the questions and answers, and another for translating the collected questions and answers.",
-    "desc-plane": "Responsive landing page for desktop and mobile, named \"Plane\". This page belongs to a travel agency that promotes cultural immersion in various countries, highlighting tourist attractions and renowned restaurants.",
-    "desc-plane-2": "The design was inspired by a combination of references found on the Behance platform."
-  },
-  "last-slide": {
-    "see-more": "See all the projects"
+    "desc-consultacnpj": "Responsive project for CNPJ consultation using the Brasil API. The system includes verification of potential errors during the CNPJ query and provides clear guidance to the user if any issues occur.",
+    "desc-consultacnpj-2": "This project allows users to enter a CNPJ, retrieve the corresponding company's data, and save this information, making business data management easier.",
+    "desc-songz": "Responsive music library project with the option to create playlists. The library allows users to add songs with name, artist, album, cover, and .mp3 file, as well as edit or remove tracks. Soon, it will be integrated with a music player to play the added tracks.",
+    "desc-songz-2": "Songs are stored in the browser, ensuring they don’t disappear when refreshing or closing the page. The project also includes a search field to filter tracks by name, artist, or album, making it easier to organize and create customized playlists.",
+    "desc-weatherapp": "Responsive project with a weather dashboard that provides accurate, real-time weather information, consuming the Accuweather and Mapbox APIs.", 
+    "desc-weatherapp-2": "The Accuweather API was used for all weather and location queries, and the Mapbox API for geolocation searches by city/state."
   }
 }

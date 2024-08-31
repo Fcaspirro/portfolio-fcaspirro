@@ -1533,7 +1533,10 @@ footer {
 }
 .see-more a:hover {
   background-position: right center;
+  background: linear-gradient(90deg, #1f11ce 0%, #e52b2b 100%);
 }
+
+
 
 /***** Projects ******/
 .wrapper-project {
@@ -1548,7 +1551,7 @@ footer {
 .content-project {
   display: flex;
   justify-content: space-between;
-  gap: 6rem;
+  gap: 12rem;
 }
 
 .desc-project {
@@ -1564,6 +1567,18 @@ footer {
   align-items: center;
   justify-content: center;
   width: 50%;
+}
+
+.devices-project .desktop-screen{
+  min-width: 675px;
+  min-height: 381px;
+  max-width: 690px;
+  max-height: 389px;
+}
+
+.devices-project .mobile-screen{
+  min-width: 210px;
+  min-height: 235px;
 }
 
 .wrapper-project .devices-project img {
@@ -1629,8 +1644,16 @@ footer {
   background-image: linear-gradient(#84cc16, #f8fafc, #ef4444);
 }
 
-.gradient.plane {
-  background-image: linear-gradient(#4ddc9e, #5b37eb, #f1307e);
+.gradient.consulta-cnpj {
+  background-image: linear-gradient(#e5e7eb, #f8fafc, #71717a);
+}
+
+.gradient.songz {
+  background-image: linear-gradient(#1f11ce, #f8fafc, #e52b2b);
+}
+
+.gradient.weatherapp {
+  background-image: linear-gradient(#3db1ef, #f8fafc, #FAE50B);
 }
 
 @keyframes rotate {
@@ -1698,11 +1721,6 @@ footer {
 }
 
 .desc-project .title {
-  letter-spacing: 1.2rem;
-  font-size: 8rem;
-}
-
-.desc-project .title {
   position: relative;
   text-transform: uppercase;
   font-family: "Anton", Arial, sans-serif;
@@ -1713,6 +1731,10 @@ footer {
   font-size: 10rem;
   line-height: 10rem;
   transition: all 0.25s ease-out;
+}
+
+.desc-project .title.large-title {
+  font-size: 8.5rem;
 }
 
 .desc-project .description {

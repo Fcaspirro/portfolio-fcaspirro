@@ -14,16 +14,20 @@
     "tel": "Telefone",
     "resume": "CV"
   },
+  "last-slide": {
+    "see-more": "Ver todos os projetos"
+  },
   "home": {
     "info-text": "Últimos projetos",
     "desc-portfolio-kaueGodoy": "Projeto responsivo de um portfólio pessoal, onde foi pensado inteiramente para um desenvolvedor de jogos.",
     "desc-portfolio-kaueGodoy-2": "O projeto consta com trilha sonora, navegação personalizada com tema de games retro, e também é possível ter acesso aos jogos desenvolvidos, informações sobre os jogos e sobre o autor.",
     "desc-quizgame":"Projeto responsivo de um game quiz, trata-se de um quiz com o genêro de filmes, com o total de 6 perguntas de múltiplas escolhas com apenas uma escolha correta. Ao final, gera um resultado completo de acertos e erros.",
     "desc-quizgame-2":"Utilizado duas APIs em conjunto para funcionamento do game, uma para a coleta das perguntas e respostas, e outra, para tradução das perguntas e respostas coletadas.",
-    "desc-plane": "Landing page responsiva para desktop e mobile, denominada \"Plane\", uma agência de viagens modelo para inserção cultural a diversos países, pontos turísticos, restaurantes renomados, pontos turísticos.",
-    "desc-plane-2": "Design inspirado na combinação de referências disponíveis na plataforma Behance."
-  },
-  "last-slide": {
-    "see-more": "Ver todos os projetos"
+    "desc-consultacnpj":"Projeto responsivo para consulta de CNPJ utilizando a Brasil API, o sistema conta com a verificação de possíveis erros durante a consulta do CNPJ inserido e oferece orientações claras para o usuário caso ocorra algum problema.",
+    "desc-consultacnpj-2":"Este projeto permite que os usuários insiram um CNPJ, consultem os dados da empresa correspondente e salvem essas informações, facilitando o gerenciamento de dados empresariais.",
+    "desc-songz":"Projeto responsivo de uma biblioteca de músicas com a opção de criação de playlists. A biblioteca permite adicionar músicas com nome, artista, álbum, capa e arquivo .mp3, além de editar ou remover faixas. Em breve, será integrado a um music player para tocar as faixas adicionadas.",
+    "desc-songz-2":"As músicas são armazenadas em seu navegador, garantindo que não desapareçam ao atualizar ou fechar a página.  O projeto também inclui um campo de busca para filtrar as faixas por nome, artista ou álbum, facilitando a organização e a criação de playlists personalizadas.",
+    "desc-weatherapp": "Projeto responsivo com um dashboard de clima tempo, onde fornece informações meteorológicas precisas e em tempo real, consumindo a API do Accuweather e Mapbox.",
+    "desc-weatherapp-2": "A API do Accuweather foi utilizado para realização de todas as consultas de tempo e local, e a API do Mapbox para consulta da geolocalização de busca por cidade/ estado."
   }
 }
