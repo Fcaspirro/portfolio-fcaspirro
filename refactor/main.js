@@ -67,7 +67,10 @@ const updateCursor = () => {
 
 updateCursor();
 
-// Song
+const audio = new Audio('assets/audio/sound.mp3');
+audio.volume = 0.2;
+audio.loop = true; 
+
 $('.button-song button').addClass('inactive');
 $('#onSong').css('display', 'none');
 
@@ -77,13 +80,15 @@ $('.button-song button').on('click', function() {
 
   offSong.toggle();
   onSong.toggle();
+
   if (offSong.is(':visible')) {
     $(this).removeClass('active').addClass('inactive');
+    audio.pause(); 
   } else {
     $(this).removeClass('inactive').addClass('active');
+    audio.play(); 
   }
 });
-
 
 // Header nav
 $('.nav-btn').on('click', function(event) {
