@@ -1571,13 +1571,13 @@ footer {
   object-fit: contain;
 }
 
-#desktop-screen {
+.wrapper-project .devices-project .desktop-screen {
   position: absolute;
   animation: float-desktop 8s ease-in-out infinite;
   z-index: 2;
 }
 
-#mobile-screen {
+.wrapper-project .devices-project .mobile-screen {
   position: absolute;
   width: 30%;
   right: 0;
@@ -1625,6 +1625,10 @@ footer {
   background-image: linear-gradient(#65a30d, #3b82f6, #eab308);
 }
 
+.gradient.quiz-game {
+  background-image: linear-gradient(#84cc16, #f8fafc, #ef4444);
+}
+
 .gradient.plane {
   background-image: linear-gradient(#4ddc9e, #5b37eb, #f1307e);
 }
@@ -1640,7 +1644,7 @@ footer {
 
 .wrapper-techs {
   position: relative;
-  width: 100%;
+  width: 50%;
   height: 36px;
 }
 
@@ -1648,8 +1652,8 @@ footer {
   position: absolute;
   display: flex;
   gap: 1rem;
-  left: 25%;
-  transform: translateX(-25%);
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .tech-applyed button {
