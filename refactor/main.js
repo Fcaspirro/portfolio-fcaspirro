@@ -242,6 +242,8 @@ const swiper = new Swiper('.swiper-container', {
       const slides = document.querySelectorAll('.swiper-slide');
       const currentSlide = slides[swiper.activeIndex];
       const prevSlide = slides[swiper.previousIndex];
+      let activeIndex = this.activeIndex;
+      let totalSlides = this.slides.length;
 
       gsap.set(slides, { clearProps: "all" });
 
@@ -256,6 +258,14 @@ const swiper = new Swiper('.swiper-container', {
         { opacity: 0, scale: 1.1 }, 
         { opacity: 1, scale: 1, duration: 3, ease: "power2.out" } 
       );
+
+      if (activeIndex === totalSlides - 1) {
+        // Aplica fadeOut no texto "Últimos projetos"
+        $('.info-text').fadeOut();
+      } else {
+        // Caso não seja o último slide, faz o fadeIn
+        $('.info-text').fadeIn();
+      }
     }
   }
 });
