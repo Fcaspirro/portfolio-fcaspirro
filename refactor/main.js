@@ -97,8 +97,15 @@ $('.nav-btn').on('click', function(event) {
   
   $('.content-nav li a').removeClass('active-nav');
   $('section').removeClass('active-section');
+  
   $(this).addClass('active-nav');  
   $('#' + targetId).addClass('active-section');
+
+  if (targetId === 'about-me' || targetId === 'career') {
+    $('footer').fadeOut();
+  } else {
+    $('footer').fadeIn();
+  }
 });
 
 // Footer nav
