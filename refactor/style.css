@@ -1136,7 +1136,7 @@ header {
   position: absolute;
   top: 50%;
   left: 50%;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   transform: translate(-50%, -50%);
   transition: all .3s ease;
 }
@@ -1303,7 +1303,7 @@ li#selector:hover, li#selector.active {
 
 li#selector i {
   color: #71717a;
-  font-size: 2.6rem;
+  font-size: 2rem;
   line-height: 2rem;
   position: absolute;
   top: 50%;
@@ -1359,6 +1359,10 @@ section.active-section {
 .bg-std {
   height: 100%;
   color: #f4f4f5;
+}
+
+i.ti {
+  font-size: 1.8rem;
 }
 
 .info-text {
