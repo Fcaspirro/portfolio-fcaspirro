@@ -1334,7 +1334,6 @@ li#selector img {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #09090b;
   z-index: 8;
 }
 
@@ -1776,4 +1775,78 @@ footer {
   border: 1px solid #f4f4f5;
   color: #f4f4f5;
   transition: all .3s ease;
+}
+
+/***** Sobre mim *****/
+.app {
+  position: relative;
+  z-index: 8;
+  width: 50%;
+}
+
+.tech-list {
+  width: 100%;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  gap: 2rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.loop-slider .inner {
+  display: flex;
+  width: fit-content;
+  animation-name: loop;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: var(--direction);
+  animation-duration: var(--duration);
+}
+
+.technologies {
+  display: flex;
+  align-items: center;
+  gap: 0 0.6rem;
+  color: #71717a;
+  font-size: 1.6rem;
+  border: 1px solid rgba(24, 24, 27, 0.75);
+  border-radius: 0.4rem;
+  padding: 1.8rem 2.4rem;
+  margin-right: 1rem;
+  backdrop-filter: blur(2px);
+  transition: all .3s ease;
+}
+
+.technologies i {
+  font-size: 2rem;
+  color: #71717a;
+  transition: all .3s ease;
+}
+
+.technologies:hover {
+  color: #f4f4f5;
+  border: 1px solid #f4f4f5;
+  transition: all .3s ease;
+}
+
+.technologies:hover i {
+  color: #f4f4f5;
+  transition: all .3s ease;
+}
+
+.fade {
+  pointer-events: none;
+  background: linear-gradient(90deg, #09090b, transparent 30%, transparent 70%, #09090b);
+  position: absolute;
+  inset: 0;
+}
+
+@keyframes loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
