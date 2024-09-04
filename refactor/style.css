@@ -1536,10 +1536,7 @@ footer {
 }
 .see-more a:hover {
   background-position: right center;
-  background: linear-gradient(90deg, #1f11ce 0%, #e52b2b 100%);
 }
-
-
 
 /***** Projects ******/
 .wrapper-project {
