@@ -1779,6 +1779,16 @@ footer {
 }
 
 /***** Sobre mim *****/
+#about-me {
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  gap: 6rem;
+  justify-items: center;
+  align-items: center;
+  padding: 6rem;
+}
+
 .app {
   position: relative;
   z-index: 8;
@@ -1850,4 +1860,133 @@ footer {
   100% {
     transform: translateX(-50%);
   }
+}
+
+.informations {
+  display: flex;
+  justify-content: left;
+  margin-bottom: 4rem;
+}
+
+.title.informations span {
+  position: relative;
+  text-transform: uppercase;
+  font-family: "Anton", Arial, sans-serif;
+  color:  #f4f4f5;
+  letter-spacing: -0.5rem;
+  font-size: 4.8rem;
+  line-height: 4.8rem;
+  text-shadow: -2px 2px 8px #ced0d3;
+}
+
+.content-informations {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  gap: 2rem;
+}
+
+.square-photo {
+  position: relative;
+  overflow: hidden;
+  margin: 7px;
+  padding: 6px;
+  min-width: 200px;
+  max-width: 280px;
+  width: 100%;
+  box-shadow: none !important;
+  transform: translateZ(0);
+  filter: grayscale(1);
+  transition: all .3s ease;
+}
+
+.square-photo:hover {
+  filter: grayscale(0);
+  transition: all .3s ease;
+}
+
+.square-photo img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+.square-photo .border {
+  position: absolute;
+  opacity: 0.45;
+}
+
+.square-photo .border:before,
+.square-photo .border:after,
+.square-photo .border div:before,
+.square-photo .border div:after {
+  background-color: #f4f4f5;
+  position: absolute;
+  content: "";
+  display: block;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.square-photo .border:before,
+.square-photo .border:after {
+  width: 0;
+  height: 1px;
+}
+
+.square-photo .border div:before,
+.square-photo .border div:after {
+  width: 1px;
+  height: 0;
+}
+
+.square-photo .border.one {
+  left: 0;
+  top: 0;
+  right: 12px;
+  bottom: 12px;
+}
+
+.square-photo .border.one:before,
+.square-photo .border.one div:before {
+  left: 0;
+  top: 0;
+}
+
+.square-photo .border.one:after,
+.square-photo .border.one div:after {
+  bottom: 0;
+  right: 0;
+}
+
+.square-photo .border.two {
+  left: 12px;
+  top: 12px;
+  right: 0;
+  bottom: 0;
+}
+
+.square-photo .border.two:before,
+.square-photo .border.two div:before {
+  right: 0;
+  top: 0;
+}
+
+.square-photo .border.two:after,
+.square-photo .border.two div:after {
+  bottom: 0;
+  left: 0;
+}
+
+.square-photo:hover .border:before,
+.square-photo.hover .border:before,
+.square-photo:hover .border:after,
+.square-photo.hover .border:after {
+  width: 100%;
+}
+
+.square-photo:hover .border div:before,
+.square-photo.hover .border div:before,
+.square-photo:hover .border div:after,
+.square-photo.hover .border div:after {
+  height: 100%;
 }

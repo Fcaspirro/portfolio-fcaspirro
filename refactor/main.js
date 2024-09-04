@@ -101,6 +101,24 @@ $('.nav-btn').on('click', function(event) {
   $(this).addClass('active-nav');  
   $('#' + targetId).addClass('active-section');
 
+  if (targetId === 'home') {
+    $('#home').css('display', 'flex');
+    $('#about-me').css('display', 'none');
+    $('#career').css('display', 'none');
+  }
+
+  if (targetId === 'about-me') {
+    $('#about-me').css('display', 'flex');
+    $('#home').css('display', 'none');
+    $('#career').css('display', 'none');
+  }
+
+  if (targetId === 'career') {
+    $('#career').css('display', 'flex');
+    $('#home').css('display', 'none');
+    $('#about-me').css('display', 'none');
+  }
+
   if (targetId === 'about-me' || targetId === 'career') {
     $('footer').fadeOut();
   } else {
@@ -276,3 +294,9 @@ const swiper = new Swiper('.swiper-container', {
     }
   }
 });
+
+$(".hover").mouseleave(
+  function () {
+    $(this).removeClass("hover");
+  }
+);
