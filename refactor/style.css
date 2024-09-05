@@ -1863,7 +1863,7 @@ footer {
 }
 
 .informations {
-  margin-bottom: 4rem;
+  margin: 0.4rem 0 4rem;
 }
 
 .title.informations span {
@@ -1879,15 +1879,104 @@ footer {
 
 .content-informations {
   display: flex;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
   font-size: 1.6rem;
-  gap: 2rem;
+  gap: 4rem;
+}
+
+.desc-me p:nth-child(2) {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.desc-me p:nth-child(2) i {
+  font-size: 2.6rem;
+  animation: wrench 2.5s infinite;
+}
+
+@keyframes wrench {
+  0% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg)
+  }
+
+  8% {
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg)
+  }
+
+  10% {
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg)
+  }
+
+  18% {
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg)
+  }
+
+  20% {
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg)
+  }
+
+  28% {
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg)
+  }
+
+  30% {
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg)
+  }
+
+  38% {
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg)
+  }
+
+  40% {
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg)
+  }
+
+  48% {
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg)
+  }
+
+  50% {
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg)
+  }
+
+  58% {
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg)
+  }
+
+  60% {
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg)
+  }
+
+  68% {
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg)
+  }
+
+  100%,75% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
 }
 
 .square-photo {
   position: relative;
   overflow: hidden;
-  margin: 7px;
+  /* margin: 7px; */
   padding: 6px;
   min-width: 200px;
   max-width: 280px;
