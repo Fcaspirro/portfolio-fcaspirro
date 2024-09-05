@@ -1863,8 +1863,6 @@ footer {
 }
 
 .informations {
-  display: flex;
-  justify-content: left;
   margin-bottom: 4rem;
 }
 
@@ -1874,8 +1872,8 @@ footer {
   font-family: "Anton", Arial, sans-serif;
   color:  #f4f4f5;
   letter-spacing: -0.5rem;
-  font-size: 4.8rem;
-  line-height: 4.8rem;
+  font-size: 6.4rem;
+  line-height: 6.4rem;
   text-shadow: -2px 2px 8px #ced0d3;
 }
 
@@ -1908,6 +1906,7 @@ footer {
 .square-photo img {
   max-width: 100%;
   vertical-align: top;
+  border-radius: 0.3rem;
 }
 
 .square-photo .border {
