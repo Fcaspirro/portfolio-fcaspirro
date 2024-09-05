@@ -29,5 +29,12 @@
     "desc-songz-2":"As músicas são armazenadas em seu navegador, garantindo que não desapareçam ao atualizar ou fechar a página.  O projeto também inclui um campo de busca para filtrar as faixas por nome, artista ou álbum, facilitando a organização e a criação de playlists personalizadas.",
     "desc-weatherapp": "Projeto responsivo com um dashboard de clima tempo, onde fornece informações meteorológicas precisas e em tempo real, consumindo a API do Accuweather e Mapbox.",
     "desc-weatherapp-2": "A API do Accuweather foi utilizado para realização de todas as consultas de tempo e local, e a API do Mapbox para consulta da geolocalização de busca por cidade/ estado."
+  },
+  "about-me": {
+    "desc-presentation":"Muito prazer e seja muito bem-vindo ao meu portfólio!",
+    "desc-information":"Tenho 25 anos e estou em busca de uma oportunidade que me permita contribuir como desenvolvedor.",
+    "desc-information-2":"Graduado em Engenharia Mecânica e formado em Análise e Desenvolvimento de Sistemas.",
+    "desc-information-3":"Estou sempre em constante evolução e aprendizado, movido pelo desejo de me superar a cada desafio.",
+    "desc-information-4":"Aqui, você encontrará os projetos mais recentes e o meu comprometimento e dedicação à tecnologia."
   }
 }

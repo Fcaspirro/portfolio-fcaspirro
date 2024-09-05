@@ -1885,13 +1885,13 @@ footer {
   gap: 4rem;
 }
 
-.desc-me p:nth-child(2) {
+.desc-me .presentation {
   display: flex;
   align-items: center;
   gap: 0.6rem;
 }
 
-.desc-me p:nth-child(2) i {
+.desc-me .presentation i {
   font-size: 2.6rem;
   animation: wrench 2.5s infinite;
 }

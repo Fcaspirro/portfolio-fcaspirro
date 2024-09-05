@@ -29,5 +29,12 @@
     "desc-songz-2": "Songs are stored in the browser, ensuring they don’t disappear when refreshing or closing the page. The project also includes a search field to filter tracks by name, artist, or album, making it easier to organize and create customized playlists.",
     "desc-weatherapp": "Responsive project with a weather dashboard that provides accurate, real-time weather information, consuming the Accuweather and Mapbox APIs.", 
     "desc-weatherapp-2": "The Accuweather API was used for all weather and location queries, and the Mapbox API for geolocation searches by city/state."
+  },
+  "about-me": {
+    "desc-presentation": "It's a pleasure to meet you, and welcome to my portfolio!",
+    "desc-information": "I am 25 years old and I am looking for an opportunity to contribute as a developer.",
+    "desc-information-2": "Graduated in Mechanical Engineering and trained in Systems Analysis and Development.",
+    "desc-information-3": "I am constantly evolving and learning, driven by the desire to surpass myself with every challenge.",
+    "desc-information-4": "Here, you'll find my most recent projects and my commitment and dedication to technology."
   }
 }
