@@ -2098,7 +2098,7 @@ footer {
   width: calc(100% / 2);
   height: 100vh;
   min-height: 600px;
-  color: #fff;
+  color: #f4f4f5;
   overflow: hidden;
   transition: width 0.5s ease;
 }
@@ -2167,12 +2167,18 @@ footer {
   font-size: 2.0rem;
   font-weight: bold;
   letter-spacing: 1.2px;
+  margin-bottom: 1rem;
+}
+
+.tl-content p {
+  margin-bottom: 0.6rem;
+  font-weight: 400;
 }
 
 .tl-content {
   display: flex;
   flex-direction: column;
-  margin: 2rem auto;
+  margin: 1rem auto;
   align-items: center;
   max-width: 75%;
   font-size: 1.2rem;
@@ -2185,8 +2191,8 @@ footer {
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   z-index: 1;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  border-top: 1px solid #f4f4f5;
+  border-bottom: 1px solid #f4f4f5;
   padding: 2rem;
 }
 
