@@ -1552,7 +1552,7 @@ footer {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 6rem;
+  gap: 4rem;
   justify-content: center;
 } 
 
@@ -1567,6 +1567,10 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+
+.devices-project {
+  display: flex;
 }
 
 .wrapper-project .devices-project {
@@ -1677,6 +1681,10 @@ footer {
   position: relative;
   width: 50%;
   height: 36px;
+}
+
+.tech-mobile-text {
+  display: none;
 }
 
 .tech-applyed {
@@ -2138,6 +2146,7 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  opacity: 0.5;
 }
 
 .tl-content h2 {
@@ -2210,7 +2219,7 @@ footer {
     min-width: 475px;
     min-height: 240px;
     max-width: 450px;
-    max-height: 254px;
+    max-height: 227px;
   }
 
   .devices-project .mobile-screen {
@@ -2220,6 +2229,7 @@ footer {
 
   .wrapper-project .devices-project .mobile-screen {
     width: 25%;
+    bottom: 25%;
   }
 
   .gradient {
@@ -2255,6 +2265,7 @@ footer {
   .title.informations span {
     font-size: 4.8rem;
     line-height: 4.8rem;
+    letter-spacing: -0.3rem;
   }
 
   .informations {
@@ -2274,7 +2285,141 @@ footer {
     max-width: 220px;
   }
 
+    /***** Career *****/
   .desc-me p {
-    margin-bottom: 1.4rem;
+    margin-bottom: 0.8rem;
   } 
+}
+
+@media (max-width: 1280px) {
+  /***** Home *****/
+  .desc-project {
+    max-width: 45%;
+  }
+
+  .wrapper-project .devices-project {
+    max-width: 40%;
+  }
+
+  .content-project {
+    justify-content: center;
+  }
+
+  .info-text {
+    justify-content: center;
+  }
+
+  /***** Career *****/
+  .tl-icon {
+    height: 75px;
+  }
+}
+
+@media (max-width: 1024px) {
+  /***** Home *****/
+  .content-project {
+    position: relative;
+    flex-direction: column;
+  }
+
+  .desc-project {
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .wrapper-techs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+
+  .tech-mobile-text {
+    display: flex;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .tech-applyed {
+    position: relative;
+    top: 0;
+    transform: none;
+    left: 0;
+  }
+
+  .devices-project {
+    display: none !important;
+  }
+
+  .wrapper-project {
+    align-items: flex-start;
+  }
+
+  .devices-project .desktop-screen {
+    min-width: 300px;
+    min-height: 151px;
+    max-width: 275px;
+    max-height: 138px;
+  }
+
+  .devices-project .mobile-screen {
+    min-width: 75px;
+    min-height: 84px;
+    max-width: 75px;
+    max-height: 84px;
+  }
+
+  .desc-project .title {
+    font-size: 4.8rem;
+    line-height: 4.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .desc-project .title.large-title {
+    font-size: 4.2rem;
+    line-height: 4.2rem;
+  }
+
+  .desc-project .description {
+    font-size: 1.4rem;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .useful-links {
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  /***** About-me *****/
+  .desc-me p {
+    font-size: 1.4rem;
+  }
+
+  .desc-me .presentation i {
+    font-size: 2rem;
+  }
+
+  .tech-list i {
+    font-size: 1.6rem;
+  }
+
+  .tech-list p {
+    font-size: 1.4rem;
+  }
+
+  .content-informations {
+    gap: 2rem;
+  }
+
+  .square-photo {
+    min-width: 145px;
+    max-width: 180px;
+  }
 }
