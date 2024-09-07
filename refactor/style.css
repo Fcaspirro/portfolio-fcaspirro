@@ -2056,7 +2056,7 @@ footer {
   min-height: 600px;
   color: #f4f4f5;
   overflow: hidden;
-  transition: width 0.5s ease;
+  transition: width 0.3s ease;
 }
 
 .tl-item:before, .tl-item:after {
@@ -2072,21 +2072,22 @@ footer {
 .tl-item:after {
   background: #27272a;
   opacity: 1;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.3s ease;
 }
 
 .tl-item:before {
   background: linear-gradient(to top, rgba(9, 9, 11, 0) 0%, rgb(9, 9, 11) 100%);
   z-index: 1;
   transform: translate3d(0, 0, 0) translateY(0%);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .tl-item:hover {
   width: 100% !important;
 }
 
-.tl-item:hover:after {
+.tl-item:hover:after,
+.tl-item:hover .tl-year {
   opacity: 0;
 }
 
@@ -2097,9 +2098,10 @@ footer {
 }
 
 .tl-item:hover .tl-content {
+  min-width: 100%;
   opacity: 1;
   transform: translateY(0);
-  transition: all 0.75s ease 0.5s;
+  transition: all 0.75s ease 0.3s;
 }
 
 .tl-item:hover .tl-bg {
@@ -2114,6 +2116,28 @@ footer {
   margin: 0 1.618em;
   top: 55%;
   opacity: 0;
+}
+
+.tl-wrapper {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 7;
+}
+
+.tl-icon {
+  position: relative;
+  max-width: fit-content;
+  height: 100px;
+  margin-bottom: 4rem;
+}
+
+.tl-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .tl-content h2 {
@@ -2172,7 +2196,7 @@ footer {
   left: 0;
   background-size: cover;
   background-position: center center;
-  transition: filter 0.5s ease;
+  transition: filter 0.3s ease;
   filter: grayscale(100%);
 }
 
