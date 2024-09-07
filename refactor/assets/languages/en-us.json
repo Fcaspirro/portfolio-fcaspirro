@@ -36,5 +36,25 @@
     "desc-information-2": "Graduated in Mechanical Engineering and trained in Systems Analysis and Development.",
     "desc-information-3": "I am constantly evolving and learning, driven by the desire to surpass myself with every challenge.",
     "desc-information-4": "Here, you'll find my most recent projects and my commitment and dedication to technology."
+  },
+  "career": {
+    "desc-freela": "Brand visual identity",
+    "desc-freela-2": "Mockup kit",
+    "desc-freela-3": "Logo design",
+    "desc-freela-4": "Social media",
+    "desc-freela-5": "Vectorization",
+    "desc-freela-6": "Brochures, billboards, stickers, banners, cards",
+    "title-crt": "Junior Developer",
+    "desc-crt": "Collaboration with the design team to ensure proper usability and styling of interfaces in Figma",
+    "desc-crt-2": "Generating dynamic content/functionality and server-side data manipulation with PHP",
+    "desc-crt-3": "Development of responsive layouts using HTML and CSS",
+    "desc-crt-4": "Implementation of interactive functionalities with Javascript and jQuery",
+    "desc-crt-5": "Database manipulation via MySQL",
+    "desc-crt-6": "Management and hosting via WordPress",
+    "desc-crt-7": "API integration and consumption",
+    "desc-crt-8": "Code versioning via Git",
+    "desc-crt-9": "Performance optimization and SEO",
+    "desc-crt-10": "Continuous code maintenance and updates",
+    "desc-crt-11": "Metrics and data management via GTM and GA4"  
   }
 }

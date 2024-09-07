@@ -36,5 +36,25 @@
     "desc-information-2":"Graduado em Engenharia Mecânica e formado em Análise e Desenvolvimento de Sistemas.",
     "desc-information-3":"Estou sempre em constante evolução e aprendizado, movido pelo desejo de me superar a cada desafio.",
     "desc-information-4":"Aqui, você encontrará os projetos mais recentes e o meu comprometimento e dedicação à tecnologia."
+  },
+  "career": {
+    "desc-freela":"Identidade visual de marca",
+    "desc-freela-2":"Mockup kit",
+    "desc-freela-3":"Design de logo",
+    "desc-freela-4":"Social media",
+    "desc-freela-5":"Vetorização",
+    "desc-freela-6":"Folders, outdoor, adesivos, banners, cards",
+    "title-crt": "Desenvolvedor Júnior",
+    "desc-crt":"Colaboração com time de design, para garantir usabilidade e estilização adequada as interfaces no Figma",
+    "desc-crt-2":"Geração de conteúdo/funcionalidade dinâmica e manipulação de dados no lado do servidor com PHP",
+    "desc-crt-3":"Desenvolvimento de layouts responsivos utilizando HTML e CSS",
+    "desc-crt-4":"Implementação de funcionalidades interativas com Javascript e jQuery",
+    "desc-crt-5":"Manipulação do banco de dados via MySQL",
+    "desc-crt-6":"Gerenciamento e hospedagem via WordPress",
+    "desc-crt-7":"Integração e consumo de API's",
+    "desc-crt-8":"Versionamento de código via Git",
+    "desc-crt-9":"Otimização de performance e SEO",
+    "desc-crt-10":"Manutenção e atualização continua de código",
+    "desc-crt-11":"Gerenciamento de métricas e dados via GTM e GA4"
   }
 }
