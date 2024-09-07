@@ -1895,8 +1895,12 @@ footer {
 
 .desc-me .presentation {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.6rem;
+}
+
+.desc-me p {
+  margin-bottom: 2rem;
 }
 
 .desc-me .presentation i {
@@ -1929,8 +1933,7 @@ footer {
 .square-photo {
   position: relative;
   overflow: hidden;
-  /* margin: 7px; */
-  padding: 6px;
+  padding: 0.6rem;
   min-width: 200px;
   max-width: 280px;
   width: 100%;
@@ -2152,7 +2155,7 @@ footer {
   z-index: 1;
   border-top: 1px solid #f4f4f5;
   border-bottom: 1px solid #f4f4f5;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .tl-year p {
@@ -2171,4 +2174,83 @@ footer {
   background-position: center center;
   transition: filter 0.5s ease;
   filter: grayscale(100%);
+}
+
+@media (max-width: 1440px) {
+  /***** home *****/
+  .content-project {
+    gap: 6rem;
+  }
+
+  .devices-project .desktop-screen {
+    min-width: 475px;
+    min-height: 240px;
+    max-width: 450px;
+    max-height: 254px;
+  }
+
+  .devices-project .mobile-screen {
+    min-width: 115px;
+    min-height: 129px;
+  }
+
+  .wrapper-project .devices-project .mobile-screen {
+    width: 25%;
+  }
+
+  .gradient {
+    width: 20%;
+    height: 60%;
+    top: calc((100% - 60%) / 2);
+    left: calc(50% - (20% /2));
+  }
+
+  #home {
+    padding: 0 6rem;
+  }
+
+  .tech-applyed {
+    top: -100%;
+  }
+
+  .desc-project .title {
+    font-size: 7.2rem;
+    line-height: 7.2rem;
+  }
+
+  .desc-project .title.large-title {
+    font-size: 6.4rem;
+    line-height: 6.4rem;
+  }
+
+  .see-more a {
+    font-size: 1.8rem;
+  }
+
+  /***** About-me *****/
+  .title.informations span {
+    font-size: 4.8rem;
+    line-height: 4.8rem;
+  }
+
+  .informations {
+    margin: 0.2rem 0 2rem;
+  }
+
+  .app {
+    width: 75%;
+  }
+
+  #about-me {
+    gap: 2rem;
+  }
+
+  .square-photo {
+    min-width: 175px;
+    max-width: 220px;
+  }
+
+  .desc-me p {
+    margin-bottom: 1.4rem;
+  } 
 }
