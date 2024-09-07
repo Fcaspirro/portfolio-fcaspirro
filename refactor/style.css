@@ -1278,6 +1278,14 @@ nav {
   color: #f4f4f5;
 }
 
+.content-nav li a:hover i {
+  animation: wrench .45s;
+}
+
+.content-nav li a.active-nav:hover i {
+  animation: none;
+}
+
 #selector a {
   cursor: none;
   position: relative;
@@ -1897,79 +1905,24 @@ footer {
 }
 
 @keyframes wrench {
-  0% {
-    -webkit-transform: rotate(-10deg);
-    transform: rotate(-10deg)
+  0%, 75%, 100% { 
+    transform: rotate(0deg); 
+  }
+  
+  8%, 28%, 48%, 68% { 
+    transform: rotate(20deg); 
   }
 
-  8% {
-    -webkit-transform: rotate(10deg);
-    transform: rotate(10deg)
+  10%, 30%, 50%, 70% { 
+    transform: rotate(20deg); 
   }
 
-  10% {
-    -webkit-transform: rotate(20deg);
-    transform: rotate(20deg)
+  18%, 38%, 58% { 
+    transform: rotate(-20deg); 
   }
 
-  18% {
-    -webkit-transform: rotate(-20deg);
-    transform: rotate(-20deg)
-  }
-
-  20% {
-    -webkit-transform: rotate(-20deg);
-    transform: rotate(-20deg)
-  }
-
-  28% {
-    -webkit-transform: rotate(20deg);
-    transform: rotate(20deg)
-  }
-
-  30% {
-    -webkit-transform: rotate(20deg);
-    transform: rotate(20deg)
-  }
-
-  38% {
-    -webkit-transform: rotate(-20deg);
-    transform: rotate(-20deg)
-  }
-
-  40% {
-    -webkit-transform: rotate(-20deg);
-    transform: rotate(-20deg)
-  }
-
-  48% {
-    -webkit-transform: rotate(20deg);
-    transform: rotate(20deg)
-  }
-
-  50% {
-    -webkit-transform: rotate(20deg);
-    transform: rotate(20deg)
-  }
-
-  58% {
-    -webkit-transform: rotate(-20deg);
-    transform: rotate(-20deg)
-  }
-
-  60% {
-    -webkit-transform: rotate(-20deg);
-    transform: rotate(-20deg)
-  }
-
-  68% {
-    -webkit-transform: rotate(20deg);
-    transform: rotate(20deg)
-  }
-
-  100%,75% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0)
+  20%, 40%, 60% { 
+    transform: rotate(-20deg); 
   }
 }
 
