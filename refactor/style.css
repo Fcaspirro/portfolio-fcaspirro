@@ -2461,6 +2461,10 @@ footer {
     display: none;
   }
 
+  .star::before, .star::after {
+    font-size: 1.2rem;
+  }
+
   /***** Home *****/
   header nav #language-selector {
     order: 1;
