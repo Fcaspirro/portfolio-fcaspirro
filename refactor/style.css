@@ -2408,15 +2408,6 @@ footer {
     margin-top: 2rem;
   }
 
-  footer {
-    margin-bottom: 1rem;
-  }
-
-  .footer-nav-btn {
-    border: 1px solid rgba(24, 24, 27, 0.75);
-    border-radius: 0.6rem;
-  }
-
   /***** About-me *****/
   #about-me {
     padding: 2rem;
@@ -2526,6 +2517,15 @@ footer {
 
   .swiper-pagination {
     display: none;
+  }
+
+  footer {
+    margin-bottom: 1rem;
+  }
+
+  .footer-nav-btn {
+    border: 1px solid rgba(24, 24, 27, 0.75);
+    border-radius: 0.6rem;
   }
 
   footer ul.content-nav {
