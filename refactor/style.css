@@ -2460,6 +2460,10 @@ footer {
 }
 
 @media (max-width: 728px) {
+  .cursor {
+    display: none;
+  }
+
   /***** Home *****/
   #home {
     padding: 0;
