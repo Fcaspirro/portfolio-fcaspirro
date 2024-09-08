@@ -1821,6 +1821,14 @@ footer {
   overflow: hidden;
 }
 
+.tech-list.web {
+  display: block;
+}
+
+.tech-list.mobile {
+  display: none;
+}
+
 .loop-slider .inner {
   display: flex;
   width: fit-content;
@@ -2154,7 +2162,7 @@ footer {
   font-family: "Anton", sans-serif;
   color: transparent;
   font-size: 2.4rem;
-  font-weight: 400;
+  line-height: 2.4rem;
   letter-spacing: 4.6px;
   -webkit-text-stroke-width: 0.6px;
   -webkit-text-stroke-color: #f4f4f5;
@@ -2184,6 +2192,8 @@ footer {
   position: absolute;
   top: 50%;
   left: 50%;
+  min-width: 150px;
+  text-align: center;
   transform: translateX(-50%) translateY(-50%);
   z-index: 1;
   border-top: 1px solid #f4f4f5;
@@ -2398,12 +2408,28 @@ footer {
   }
 
   /***** About-me *****/
+  #about-me {
+    padding: 2rem;
+  }
+
   .desc-me p {
     font-size: 1.4rem;
   }
 
   .desc-me .presentation i {
     font-size: 2rem;
+  }
+
+  .app {
+    width: 100%;
+  }
+
+  .tech-list.web {
+    display: none;
+  }
+
+  .tech-list.mobile {
+    display: block;
   }
 
   .tech-list i {
@@ -2421,5 +2447,10 @@ footer {
   .square-photo {
     min-width: 145px;
     max-width: 180px;
+  }
+
+  /***** Career *****/
+  .tl-year p {
+    font-size: 1.8rem;
   }
 }
