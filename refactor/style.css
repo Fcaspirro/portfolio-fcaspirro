@@ -2411,6 +2411,15 @@ footer {
     margin-top: 2rem;
   }
 
+  footer {
+    margin-bottom: 1rem;
+  }
+
+  .footer-nav-btn {
+    border: 1px solid rgba(24, 24, 27, 0.75);
+    border-radius: 0.6rem;
+  }
+
   /***** About-me *****/
   #about-me {
     padding: 2rem;
@@ -2465,6 +2474,14 @@ footer {
   }
 
   /***** Home *****/
+  header nav #language-selector {
+    order: 1;
+  }
+
+  header nav .content-nav {
+    order: 2;
+  }
+
   #home {
     padding: 0;
     margin: 2rem 0;
@@ -2512,15 +2529,6 @@ footer {
 
   .swiper-pagination {
     display: none;
-  }
-
-  footer {
-    margin-bottom: 1rem;
-  }
-
-  .footer-nav-btn {
-    border: 1px solid rgba(24, 24, 27, 0.75);
-    border-radius: 0.6rem;
   }
 
   footer ul.content-nav {
@@ -2597,12 +2605,11 @@ footer {
   header {
     gap: 1.4rem;
     margin-top: 1rem;
-    justify-content: space-evenly;
+    justify-content: center;
   }
 
   header nav {
     gap: 1.4rem;
-    flex-direction: column;
     min-height: auto;
   }
 
