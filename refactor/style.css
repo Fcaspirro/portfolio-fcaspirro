@@ -1596,12 +1596,9 @@ footer {
   min-height: 196px;
 }
 
-.wrapper-project .devices-project img {
+.wrapper-project .devices-project .desktop-screen {
   width: 100%;
   object-fit: contain;
-}
-
-.wrapper-project .devices-project .desktop-screen {
   position: absolute;
   animation: float-desktop 8s ease-in-out infinite;
   z-index: 2;
@@ -1610,7 +1607,7 @@ footer {
 .wrapper-project .devices-project .mobile-screen {
   position: absolute;
   width: 30%;
-  right: 0;
+  right: 0%;
   bottom: 0;
   animation: float-mobile 8s ease-in-out infinite;
   z-index: 3;
