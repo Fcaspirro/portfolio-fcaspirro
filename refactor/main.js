@@ -24,18 +24,16 @@ window.addEventListener('load', () => {
         gsap.fromTo('body', { autoAlpha: 1 }, { 
           duration: 1, 
           ease: "power1.inOut",
-          onComplete: () => {
-            // Redefinir overflow e height após o carregamento para telas menores
-            if (window.matchMedia('(max-width: 728px)').matches) {
-              document.body.style.overflow = 'auto';
-              document.body.style.height = 'auto';
-            }
-          }
         });
+        if (window.matchMedia('(max-width: 728px)').matches) {
+          document.body.style.overflow = 'auto';
+          document.body.style.height = 'auto';
+        }
       }
     });
   }, 6000); 
 });
+
 
 gsap.fromTo("#circle", {
   autoAlpha: 0,        
