@@ -20,7 +20,7 @@ body {
   font-family: "Manrope", sans-serif;
   font-weight: 300;
   position: absolute;
-  overflow: hidden;
+  overflow: hidden !important;
   background-color: #09090b;
 }
 
