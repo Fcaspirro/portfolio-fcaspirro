@@ -2663,7 +2663,7 @@ footer {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    margin-bottom: 20px;
+    margin-bottom: 4rem;
   }
   
   .tl-nav {
@@ -2694,7 +2694,6 @@ footer {
   
   #timeline-mobile .tl-content-career {
     display: none;
-    padding: 2rem;
     border-radius: 0.6rem;
     margin-bottom: 2rem;
   }
