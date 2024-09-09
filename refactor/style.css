@@ -2460,6 +2460,10 @@ footer {
 }
 
 @media (max-width: 728px) {
+  body {
+    justify-content: flex-start;
+  }
+
   .cursor {
     display: none;
   }

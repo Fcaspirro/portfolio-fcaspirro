@@ -3,9 +3,7 @@ const { gsap } = window;
 
 // Initial Loading
 window.addEventListener('load', () => {
-  // Verificar se a tela é menor que 728px
   if (window.matchMedia('(max-width: 728px)').matches) {
-    // Definir overflow e height no início para telas menores
     document.body.style.overflow = 'hidden';
     document.body.style.height = '100vh';
   }
@@ -296,10 +294,8 @@ const swiper = new Swiper('.swiper-container', {
       );
 
       if (activeIndex === totalSlides - 1) {
-        // Aplica fadeOut no texto "Últimos projetos"
         $('.info-text').fadeOut();
       } else {
-        // Caso não seja o último slide, faz o fadeIn
         $('.info-text').fadeIn();
       }
     }
