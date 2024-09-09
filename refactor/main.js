@@ -34,7 +34,6 @@ window.addEventListener('load', () => {
   }, 6000); 
 });
 
-
 gsap.fromTo("#circle", {
   autoAlpha: 0,        
   opacity: 0            
@@ -312,3 +311,11 @@ $(".hover").mouseleave(
     $(this).removeClass("hover");
   }
 );
+
+$('.tl-nav').click(function() {
+  $('.tl-nav').removeClass('active-nav-career');
+  $(this).addClass('active-nav-career');
+  var index = $(this).index();
+  $('.tl-content-career').removeClass('active-content-career');
+  $('.tl-content-career').eq(index).addClass('active-content-career');
+});
