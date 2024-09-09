@@ -20,7 +20,7 @@ body {
   font-family: "Manrope", sans-serif;
   font-weight: 300;
   position: absolute;
-  overflow: hidden !important;
+  overflow: hidden;
   background-color: #09090b;
 }
 
@@ -2687,7 +2687,7 @@ footer {
   }
   
   .tl-nav:hover {
-    background-color: #e0e0e0;
+    background-color: #18181b;
   }
   
   .tl-nav.active-nav-career {
