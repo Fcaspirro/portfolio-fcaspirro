@@ -127,15 +127,9 @@ $('.nav-btn').on('click', function(event) {
     $('#home').css('display', 'none');
     $('#about-me').css('display', 'none');
   }
-
-  if (targetId === 'about-me' || targetId === 'career') {
-    $('footer').fadeOut();
-  } else {
-    $('footer').fadeIn();
-  }
 });
 
-// Footer nav
+// Home footer nav
 $('.footer-nav-btn').not('.downloader').on('click', function(event) {
   let $this = $(this); 
 
@@ -161,7 +155,7 @@ function fadeOut(element) {
   gsap.fromTo(element, { autoAlpha: 1 }, { autoAlpha: 0, duration: 0.12, ease: "power1.inOut" });
 }
 
-// Footer nav downloader
+// Home footer nav downloader
 $('.footer-nav-btn.downloader').on('click', function(event) {
   event.preventDefault();
   let $this = $(this);

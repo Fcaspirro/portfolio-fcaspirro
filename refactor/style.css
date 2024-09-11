@@ -1337,6 +1337,7 @@ li#selector img {
 /***** Sections ******/
 #home {
   background: transparent;
+  flex-direction: column;
   z-index: 6;
 }
 
@@ -1404,7 +1405,7 @@ i.ti {
 }
 
 /***** Footer *****/
-footer {
+.nav-footer {
   position: static;
   display: flex;
   width: 100%;
@@ -1522,6 +1523,10 @@ footer {
 .swiper-slide {
   backface-visibility: hidden;
   transform-style: preserve-3d; 
+}
+
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 12vh;
 }
 
 .see-more {
@@ -2538,7 +2543,7 @@ footer {
     display: none;
   }
 
-  footer {
+  .nav-footer {
     margin-bottom: 1rem;
   }
 
@@ -2547,25 +2552,25 @@ footer {
     border-radius: 0.6rem;
   }
 
-  footer ul.content-nav {
+  .nav-footer ul.content-nav {
     border: none;
     justify-content: center;
     margin: 2rem;
     gap: 1.6rem;
   }
 
-  footer .content-nav li:first-child a:hover, 
-  footer .content-nav li:first-child a.active-nav, 
-  footer .content-nav li.active-footer-nav:first-child {
+  .nav-footer .content-nav li:first-child a:hover, 
+  .nav-footer .content-nav li:first-child a.active-nav, 
+  .nav-footer .content-nav li.active-footer-nav:first-child {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
 
-  footer .content-nav li:last-child a:hover, 
-  footer .content-nav li:last-child a.active-nav, 
-  footer .content-nav li.active-footer-nav:last-child {
+  .nav-footer .content-nav li:last-child a:hover, 
+  .nav-footer .content-nav li:last-child a.active-nav, 
+  .nav-footer .content-nav li.active-footer-nav:last-child {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     border-top-left-radius: 0;
