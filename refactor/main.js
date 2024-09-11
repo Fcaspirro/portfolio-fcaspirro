@@ -3,11 +3,6 @@ const { gsap } = window;
 
 // Initial Loading
 window.addEventListener('load', () => {
-  if (window.matchMedia('(max-width: 728px)').matches) {
-    document.body.style.overflow = 'hidden';
-    document.body.style.height = '100vh';
-  }
-
   gsap.set('.cursor', { opacity: 0 });
   document.querySelector('.initial-loader').style.display = 'flex';
 
@@ -21,12 +16,8 @@ window.addEventListener('load', () => {
         gsap.set('.cursor', { opacity: 1, duration: 1 });
         gsap.fromTo('body', { autoAlpha: 1 }, { 
           duration: 1, 
-          ease: "power1.inOut",
+          ease: "power1.inOut" 
         });
-        if (window.matchMedia('(max-width: 728px)').matches) {
-          document.body.style.overflow = 'auto';
-          document.body.style.height = 'auto';
-        }
       }
     });
   }, 6000); 
