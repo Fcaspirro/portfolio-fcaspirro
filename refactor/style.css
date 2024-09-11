@@ -2483,7 +2483,7 @@ i.ti {
 
 @media (max-width: 728px) {
   body {
-    justify-content: flex-start;
+    justify-content: space-between;
     overflow: auto;
   }
 
