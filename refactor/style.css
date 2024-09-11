@@ -1564,7 +1564,7 @@ i.ti {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2.6rem;
   justify-content: center;
 } 
 
@@ -2411,7 +2411,7 @@ i.ti {
   .desc-project .title {
     font-size: 4.8rem;
     line-height: 4.8rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
     text-shadow: -2.5px 2.5px 5px #ced0d3;
   }
 
@@ -2541,7 +2541,7 @@ i.ti {
   }
 
   .info-text {
-    margin-bottom: 4rem;
+    margin-bottom: 2.6rem;
   }
 
   .useful-links {
@@ -2550,7 +2550,7 @@ i.ti {
 
   .devices-project {
     display: flex !important;
-    min-height: 200px;
+    min-height: 160px;
   }
 
   .wrapper-project .devices-project {
@@ -2566,7 +2566,7 @@ i.ti {
   .gradient {
     width: 35%;
     height: 35%;
-    top: calc((100% - 17.5%) / 1.5);
+    top: calc((100% - 17.5%) / 2);
     left: calc(50% - (35% /2));
   }
 
@@ -2619,7 +2619,7 @@ i.ti {
   }
 
   .content-project {
-    gap: 3rem;
+    gap: 2.6rem;
     width: 100%;
   }
 
