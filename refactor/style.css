@@ -1500,6 +1500,10 @@ footer {
   transition: border .3s ease;
 }
 
+.footer-nav-btn.downloader.active-footer-nav {
+  border-color: #f4f4f5;
+}
+
 .nav-footer ul.content-nav {
   background: none;
   border: none;
