@@ -1111,7 +1111,7 @@ body {
 
 /***** Navigation *****/
 header {
-  position: static;
+  position: fixed;
   display: flex;
   width: 100%;
   align-items: center;
@@ -1188,9 +1188,6 @@ nav {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-  border: 1px solid rgba(24, 24, 27, 0.75);
-  background: #09090b;
-  border-radius: 0.8rem;
 }
 
 .content-nav li {
@@ -1200,6 +1197,21 @@ nav {
   align-items: center;
   justify-content: center;
   text-align: center;
+  background: #09090b;
+}
+
+.nav-footer ul.content-nav li:first-child {
+  border-top-left-radius: 0.6rem;
+  border-bottom-left-radius: 0.6rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.nav-footer ul.content-nav li:last-child {
+  border-top-left-radius: 0rem;
+  border-bottom-left-radius: 0rem;
+  border-top-right-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
 }
 
 .content-nav li:first-child a,
@@ -1208,6 +1220,7 @@ nav {
   transition: all .3s ease;
 }
 
+.content-nav li a:hover,
 .content-nav li a.active-nav {
   border-color: #f4f4f5;
 }
@@ -1236,18 +1249,13 @@ nav {
   transition: all .3s ease;
 }
 
-.content-nav li a:hover {
-  border-color: #f4f4f5;
-}
-
 .content-nav li.active-footer-nav a:hover {
   border-color: transparent;
 }
 
 .content-nav li a .title {
   font-size: 0rem;
-  transition: 0.3s;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   color: #71717a;
 }
 
@@ -1361,6 +1369,7 @@ main {
   width: 100%;
   position: relative;
   height: 100vh;
+  margin-top: 10rem;
 }
 
 section {
@@ -1412,6 +1421,10 @@ i.ti {
   }
 }
 
+#project-modal {
+  display: none;
+}
+
 /***** Footer *****/
 footer {
   position: static;
@@ -1420,7 +1433,7 @@ footer {
   min-height: 8rem;
   align-items: center;
   justify-content: center;
-  z-index: 7;
+  z-index: 8;
 }
 
 .wrapper-options,
@@ -1504,8 +1517,14 @@ footer {
   background: none;
 }
 
+.nav-footer ul.content-nav {
+  gap: 0.6rem;
+}
+
 .nav-footer ul.content-nav li {
   background: #09090b;
+  border: 1px solid rgba(24, 24, 27, 0.75);
+  border-radius: 0.6rem;
 }
 
 /***** Home *****/
@@ -1833,7 +1852,7 @@ footer {
   gap: 6rem;
   justify-items: center;
   align-items: center;
-  padding: 6rem;
+  padding: 0 6rem;
 }
 
 .app {
@@ -2082,7 +2101,7 @@ footer {
 #career {
   position: absolute;
   top: -8rem;
-  height: calc(100vh + 8rem);
+  height: 100vh;
 }
 
 #timeline-web {
