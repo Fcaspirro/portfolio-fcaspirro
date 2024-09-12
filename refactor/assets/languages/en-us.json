@@ -19,6 +19,8 @@
   },
   "home": {
     "info-text": "Last projects",
+    "tech-mobile-text": "Technologies used in the project:",
+    "useful-links": "Useful links",
     "desc-portfolio-kaueGodoy": "Responsive personal portfolio project, designed entirely for a game developer.",
     "desc-portfolio-kaueGodoy-2": "The project features a soundtrack, personalized navigation with a retro gaming theme, and it is also possible to access the developed games, information about the games, and about the author.",
     "desc-quizgame": "Responsive quiz game project. It's a movie genre quiz with a total of 6 multiple-choice questions, each having only one correct answer. At the end, it generates a complete result of correct and incorrect answers.",

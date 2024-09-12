@@ -1409,7 +1409,7 @@ i.ti {
 }
 
 #project-modal {
-  display: none;
+  display: none !important;
 }
 
 /***** Footer *****/
@@ -1834,6 +1834,15 @@ footer {
   border: 1px solid #f4f4f5;
   color: #f4f4f5;
   transition: all .3s ease;
+}
+
+.text-useful-link {
+  display: none;
+}
+
+.external-links {
+  display: flex;
+  gap: 1rem;
 }
 
 /***** Sobre mim *****/
@@ -2434,7 +2443,7 @@ footer {
   .desc-project .title {
     font-size: 4.8rem;
     line-height: 4.8rem;
-    margin-bottom: 0;
+    margin-bottom: 2rem;
     text-shadow: -2.5px 2.5px 5px #ced0d3;
   }
 
@@ -2451,6 +2460,8 @@ footer {
 
   .useful-links {
     flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     gap: 1rem;
     margin-top: 2rem;
   }
@@ -2555,6 +2566,10 @@ footer {
   .useful-links,
   .wrapper-techs {
     display: none;
+  }
+
+  .text-useful-link {
+    display: flex;
   }
 
   .see-more.view-desc-mobile {
@@ -2668,6 +2683,8 @@ footer {
 
   .modal-useful-links.useful-links {
     display: flex;
+    flex-direction: column;
+    gap: 0;
     margin-top: 0;
   }
 
@@ -2714,6 +2731,13 @@ footer {
     font-size: 1.4rem;
   }
 
+  .external-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
   .project-modal h3 {
     margin: 2rem 0 1rem;
     text-align: center;
@@ -2750,13 +2774,13 @@ footer {
   }
 
   header {
-    gap: 1.4rem;
+    gap: 1rem;
     margin-top: 1rem;
     justify-content: center;
   }
 
   header nav {
-    gap: 1.4rem;
+    gap: 1rem;
     min-height: auto;
   }
 

@@ -13,7 +13,7 @@ window.addEventListener('load', () => {
       ease: "power1.inOut",
       onComplete: () => {
         document.querySelector('.initial-loader').style.display = 'none';
-        gsap.set('.cursor', { opacity: 1, duration: 1 });
+        gsap.to('.cursor', { opacity: 1, duration: 1 });
         gsap.fromTo('body', { autoAlpha: 1 }, { 
           duration: 1, 
           ease: "power1.inOut" 
@@ -94,30 +94,12 @@ $('.button-song button').on('click', function() {
 $('.nav-btn').on('click', function(event) {
   event.preventDefault();
   let targetId = $(this).data('target');
-  
+
   $('.content-nav li a').removeClass('active-nav');
-  $('section').removeClass('active-section');
-  
-  $(this).addClass('active-nav');  
-  $('#' + targetId).addClass('active-section');
+  $('section').removeClass('active-section').hide(); 
 
-  if (targetId === 'home') {
-    $('#home').css('display', 'flex');
-    $('#about-me').css('display', 'none');
-    $('#career').css('display', 'none');
-  }
-
-  if (targetId === 'about-me') {
-    $('#about-me').css('display', 'flex');
-    $('#home').css('display', 'none');
-    $('#career').css('display', 'none');
-  }
-
-  if (targetId === 'career') {
-    $('#career').css('display', 'flex');
-    $('#home').css('display', 'none');
-    $('#about-me').css('display', 'none');
-  }
+  $(this).addClass('active-nav');
+  $('#' + targetId).css('display', 'flex').addClass('active-section');
 });
 
 // Home footer nav
@@ -312,7 +294,6 @@ $('.view-desc-mobile a').on('click', function (e) {
 
   $('#project-modal .modal-desc-content').html(
     '<div class="modal-description">' + descriptionContent + '</div>' +
-    '<h3>Links úteis</h3>' + 
     '<div class="modal-useful-links useful-links">' + usefulLinksContent + '</div>' +
     '<div class="modal-techs">' + techsContent + '</div>'
   );
