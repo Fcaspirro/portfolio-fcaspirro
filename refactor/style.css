@@ -21,7 +21,19 @@ body {
   font-weight: 300;
   position: absolute;
   overflow: hidden;
-  background-color: #09090b;
+  --s: 50px;
+  --c: #09090b;
+  --_s: calc(2*var(--s)) calc(2*var(--s));
+  --_g: 35.36% 35.36% at;
+  --_c: #0000 66%,rgba(24, 24, 27, 0.25) 68% 70%,#0000 75%;
+  background: 
+    radial-gradient(var(--_g) 100% 25%,var(--_c)) var(--s) var(--s)/var(--_s), 
+    radial-gradient(var(--_g) 0 75%,var(--_c)) var(--s) var(--s)/var(--_s), 
+    radial-gradient(var(--_g) 100% 25%,var(--_c)) 0 0/var(--_s), 
+    radial-gradient(var(--_g) 0 75%,var(--_c)) 0 0/var(--_s), 
+    repeating-conic-gradient(var(--c) 0 25%,#0000 0 50%) 0 0/var(--_s), 
+    radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s) var(--c);
+  background-attachment: fixed;
 }
 
 /***** Cursor *****/
@@ -138,41 +150,6 @@ body {
   40% {width: 30%;}
   50% {width: 60%;}
   100% {width: 100%;}
-}
-
-/***** Grid *****/
-.grid-bg{
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.ba-grid{
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-.ba-grid:before,
-.ba-grid:after {
-  content:'';
-  position: absolute;
-  z-index: 1;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
-  mix-blend-mode: overlay;
-}
-
-.ba-grid:before{
-  background-image: 
-    linear-gradient(rgba(24, 24, 27, 0.75), transparent 1px),
-    linear-gradient(to right, rgba(24, 24, 27, 0.75), transparent 1px);
-  background-size: 100% 2.5rem, 2.5rem 100%;
 }
 
 /***** Dots *****/
@@ -2564,6 +2541,10 @@ footer {
 
   .wrapper-project .devices-project {
     order: 2;
+  }
+
+  .desc-project .title {
+    margin: 0;
   }
 
   .desc-project .description,
