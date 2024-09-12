@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "home": "Início",
+    "about-me": "Sobre mim",
+    "career": "Carreira"
+  },
+  "content": {
+    "home": "Início",
+    "about-me": "Sobre mim",
+    "career": "Carreira"
+  },
+  "contact": {
+    "mail": "E-mail",
+    "tel": "Telefone",
+    "resume": "CV"
+  },
+  "last-slide": {
+    "see-more": "Ver todos os projetos"
+  },
+  "home": {
+    "info-text": "Últimos projetos",
+    "view-desc-mobile": "Ver detalhes do projeto",
+    "useful-links": "Links úteis",
+    "tech-mobile-text": "Tecnologias utilizadas no projeto:",
+    "desc-portfolio-kaueGodoy": "Projeto responsivo de um portfólio pessoal, onde foi pensado inteiramente para um desenvolvedor de jogos.",
+    "desc-portfolio-kaueGodoy-2": "O projeto consta com trilha sonora, navegação personalizada com tema de games retro, e também é possível ter acesso aos jogos desenvolvidos, informações sobre os jogos e sobre o autor.",
+    "desc-quizgame":"Projeto responsivo de um game quiz, trata-se de um quiz com o genêro de filmes, com o total de 6 perguntas de múltiplas escolhas com apenas uma escolha correta. Ao final, gera um resultado completo de acertos e erros.",
+    "desc-quizgame-2":"Utilizado duas APIs em conjunto para funcionamento do game, uma para a coleta das perguntas e respostas, e outra, para tradução das perguntas e respostas coletadas.",
+    "desc-consultacnpj":"Projeto responsivo para consulta de CNPJ utilizando a Brasil API, o sistema conta com a verificação de possíveis erros durante a consulta do CNPJ inserido e oferece orientações claras para o usuário caso ocorra algum problema.",
+    "desc-consultacnpj-2":"Este projeto permite que os usuários insiram um CNPJ, consultem os dados da empresa correspondente e salvem essas informações, facilitando o gerenciamento de dados empresariais.",
+    "desc-songz":"Projeto responsivo de uma biblioteca de músicas com com criação de playlists. Permite adicionar, editar e remover músicas com nome, artista, álbum, capa e arquivo .mp3. Futuramente, será integrado a um player de música.",
+    "desc-songz-2":"As músicas ficam armazenadas no navegador, permanecendo mesmo após fechar a página. Possui busca para filtrar por nome, artista ou álbum, facilitando a organização e criação de playlists personalizadas.",
+    "desc-weatherapp": "Projeto responsivo com um dashboard de clima tempo, onde fornece informações meteorológicas precisas e em tempo real, consumindo a API do Accuweather e Mapbox.",
+    "desc-weatherapp-2": "A API do Accuweather foi utilizado para realização de todas as consultas de tempo e local, e a API do Mapbox para consulta da geolocalização de busca por cidade/ estado."
+  },
+  "about-me": {
+    "desc-presentation":"Muito prazer e seja muito bem-vindo ao meu portfólio!",
+    "desc-information":"Tenho 25 anos e estou em busca de uma oportunidade que me permita contribuir como desenvolvedor.",
+    "desc-information-2":"Graduado em Engenharia Mecânica e formado em Análise e Desenvolvimento de Sistemas.",
+    "desc-information-3":"Estou sempre em constante evolução e aprendizado, movido pelo desejo de me superar a cada desafio.",
+    "desc-information-4":"Aqui, você encontrará os projetos mais recentes e o meu comprometimento e dedicação à tecnologia."
+  },
+  "career": {
+    "desc-freela":"Identidade visual de marca;",
+    "desc-freela-2":"Mockup kit;",
+    "desc-freela-3":"Design de logo;",
+    "desc-freela-4":"Social media;",
+    "desc-freela-5":"Vetorização;",
+    "desc-freela-6":"Folders, outdoor, adesivos, banners, cards.",
+    "title-position-crt": "Desenvolvedor Júnior",
+    "title-company-crt": "CRT Comunicação",
+    "desc-crt":"Colaboração com time de design, para garantir usabilidade e estilização adequada as interfaces no Figma;",
+    "desc-crt-2":"Geração de conteúdo/funcionalidade dinâmica e manipulação de dados no lado do servidor com PHP;",
+    "desc-crt-3":"Desenvolvimento de layouts responsivos utilizando HTML e CSS;",
+    "desc-crt-4":"Implementação de funcionalidades interativas com Javascript e jQuery;",
+    "desc-crt-5":"Manipulação do banco de dados via MySQL;",
+    "desc-crt-6":"Gerenciamento e hospedagem via WordPress;",
+    "desc-crt-7":"Integração e consumo de API's;",
+    "desc-crt-8":"Versionamento de código via Git;",
+    "desc-crt-9":"Otimização de performance e SEO;",
+    "desc-crt-10":"Manutenção e atualização continua de código;",
+    "desc-crt-11":"Gerenciamento de métricas e dados via GTM e GA4."
+  }
+}

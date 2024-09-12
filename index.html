@@ -1,1082 +1,764 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <meta name="author" content="Fabio Caspirro">
-    <meta name="description" content="Confira já!! Portfólio do Desenvolvedor Junior - Fabio Caspirro">
-    <meta name="keywords" content="portfolio, front-end, desenvolvimento, dev, css, html, javascript">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="./assets/styles/styles.css">
+  <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cooltipz-css/cooltipz.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+                
+  <link rel="stylesheet" href="style.css">
 
-    <title>Portfolio Fcaspirro</title>
-    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.png">
+  <title>Portfolio</title>
 </head>
 
 <body>
-    <!-- SIDEBAR -->
-    <div class="nav_toggle" id="nav-toggle">
-        <i class="uil uil-bars"></i>
+  <div class="initial-loader">
+    <div class="content-loader">
+      <svg id="circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 300">
+        <path id="path-circle" fill="none" stroke="none" d="M 32.550491,148.48008 A -108.15144,-108.15144 0 0 1 140.70194,40.328644 -108.15144,-108.15144 0 0 1 248.85338,148.48008 -108.15144,-108.15144 0 0 1 140.70194,256.63153 -108.15144,-108.15144 0 0 1 32.550491,148.48008 Z" />
+        <text font-size="14" fill="white">
+          <textPath xlink:href="#path-circle" side="left" startOffset="5">FABIO CASPIRRO ©2024</textPath>
+        </text>
+      </svg>     
+      <svg id="signatureSVG" xmlns="http://www.w3.org/2000/svg" width="91" height="113" viewBox="0 0 91 113">
+        <path id="signature" data-name="signature" d="M28,48A208.735,208.735,0,0,0,40,27a160.723,160.723,0,0,0,6-16,40.2,40.2,0,0,0,1-5c0.264-1.779.349-2.867,0-3-0.613-.234-2.244,2.6-3,4a49.581,49.581,0,0,0-4,11c-0.819,3.6-2.039,6.434-3,10a240.968,240.968,0,0,0-5,27c-0.758,5.395-1.292,10.6-2,16a100.045,100.045,0,0,0-1,21c0.559,8.185,2.309,18.026,4,18,1.221-.019,2.11-5.179,3-12a45.732,45.732,0,0,0,0-14,34.507,34.507,0,0,0-4-11,21.658,21.658,0,0,0-6-7,14.674,14.674,0,0,0-4.5-2.306c-4.28-1.126-8.81.418-12.5,3.307A105.227,105.227,0,0,1,55,55c3.973-4.133,7.776-7.063,10-6,2.053,0.981,1.951,5.008,2,5a5.215,5.215,0,0,0-4-5c-3.686-.646-7.48,4.41-9,8a12.112,12.112,0,0,0-1,5,7.437,7.437,0,0,0,1,4c1.446,1.649,4.934,1.823,11,0,7.964-2.393,15.739-7.027,23-13"/>
+      </svg> 
+      <div class="loading-bar">
+        <div class="progress-bar"></div>
+      </div>
     </div>
-    <aside class="sidebar" id="sidebar">
-        <nav class="nav">
-            <div class="nav_logo">
-                <img class="me" src="./assets/img/me.png">
-            </div>
+  </div>
 
-            <div class="nav_menu">
-                <div class="menu">
-                    <ul class="nav_list">
-                        <li class="nav_item">
-                            <a href="#home" class="nav_link active-link">Ínicio</a>
-                        </li>
-                        <li class="nav_item">
-                            <a href="#about" class="nav_link">Sobre Mim</a>
-                        </li>
-                        <li class="nav_item">
-                            <a href="#qualification" class="nav_link">Carreira</a>
-                        </li>
-                        <li class="nav_item">
-                            <a href="#skills" class="nav_link">Habilidades</a>
-                        </li>
-                        <li class="nav_item">
-                            <a href="#project" class="nav_link">Projetos</a>
-                        </li>
-                        <li class="nav_item">
-                            <a href="#services" class="nav_link">Ocupação</a>
-                        </li>
-                        <li class="nav_item">
-                            <a href="#contact" class="nav_link">Contato</a>
-                        </li>
-                    </ul>
+  <!-- Cursor -->
+  <div class="cursor">
+    <div class="cursor-inner cursor-large"></div>
+    <div class="cursor-inner cursor-small"></div>
+  </div>
+  
+  <!-- Stars -->
+  <div class="wrapper-stars">
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+  </div>
+
+  <header>
+    <div class="button-song">
+      <button>
+        <i class="ti ti-volume-3" id="offSong"></i>
+        <i class="ti ti-volume" id="onSong"></i>
+      </button>
+    </div>
+    <nav>
+      <ul class="content-nav">
+        <li>
+          <a href="javascript:void(0)" class="nav-btn active-nav" data-target="home">
+            <i class="ti ti-home"></i>
+            <span data-i18n="nav.home" class="title">Início</span>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)" class="nav-btn" data-target="about-me">
+            <i class="ti ti-user"></i>
+            <span data-i18n="nav.about-me" class="title">Sobre mim</span>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)" class="nav-btn" data-target="career">
+            <i class="ti ti-device-laptop"></i>
+            <span data-i18n="nav.career" class="title">Carreira</span>
+          </a>
+        </li>
+      </ul>
+      <ul id="language-selector">
+        <li id="selector">
+          <a href="javascript:void(0)">
+            <i class="ti ti-language"></i>
+          </a>
+          <div class="wrapper-lang" style="display: none;">
+            <div class="content-lang">
+              <button type="button" id="lang_pt-br">pt-br</button>
+              <button type="button" id="lang_en-us">en-us</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="bg-std active-section">
+      <div class="swiper-container">
+        <div class="info-text">
+          <p data-i18n="home.info-text">Últimos projetos</p>
+          <i class="ti ti-chevron-down"></i>
+        </div>
+        <div class="swiper-wrapper">
+    
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <div class="wrapper-project">
+              <div class="content-project">
+                <div class="devices-project">
+                  <img class="desktop-screen" src="assets/projects/portfolio-KaueGodoy-desktop.png" alt="Project desktop">
+                  <img class="mobile-screen" src="assets/projects/portfolio-KaueGodoy-mobile.png" alt="Project mobile">
+                  <div class="gradient portfolio"></div>
                 </div>
-            </div>
-
-            <div class="btn_share">
-                <a
-                    href="https://www.linkedin.com/sharing/share-offsite/?url=https://fcaspirro.github.io/portfolio-fcaspirro/"><i
-                        class="uil uil-share-alt social_share"></i></a>
-            </div>
-
-            <div class="nav_close" id="nav-close">
-                <i class="uil uil-times"></i>
-            </div>
-        </nav>
-    </aside>
-
-    <!-- MAIN -->
-    <main class="main">
-        <!-- Home -->
-        <section class="home" id="home">
-            <div class="home_container container grid">
-                <div class="home_social">
-                    <div data-aos="fade-down" data-aos-delay="100" data-aos-duration="750">
-                        <p class="home_social-follow">Minhas Redes</p>
-                    </div>
-
-                    <div class="home_social-links">
-                        <div data-aos="fade-down" data-aos-delay="200" data-aos-duration="750">
-                            <a href="https://www.github.com/fcaspirro" title="github" alt="github icon" target="_blank"
-                                class="home_social-link">
-                                <i class="uil uil-github-alt"></i>
-                            </a>
-                        </div>
-
-                        <div data-aos="fade-down" data-aos-delay="300" data-aos-duration="750">
-                            <a href="https://www.linkedin.com/in/fabio-caspirro" title="linkedin" alt="linkedin icon"
-                                target="_blank" class="home_social-link">
-                                <i class="uil uil-linkedin-alt"></i>
-                            </a>
-                        </div>
-
-                        <div data-aos="fade-down" data-aos-delay="400" data-aos-duration="750">
-                            <a href="https://wa.me/5511994161781" title="whatsapp" alt="whatsapp icon" target="_blank"
-                                class="home_social-link">
-                                <i class="uil uil-whatsapp"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div data-aos="flip-left" data-aos-delay="100" data-aos-duration="750" style="justify-self: center;">
-                    <img src="assets/img/home-img.png" alt="" class="home_img">
-                </div>
-
-                <div class="home_data">
-                    <div class="home_box">
-                        <div data-aos="fade-right" data-aos-easing="linear" data-aos-delay="200"
-                            data-aos-duration="750">
-                            <p class="home_introdution">Olá, Seja bem vindo!</p>
-                            <div data-aos="fade-right" data-aos-easing="linear" data-aos-delay="400"
-                                data-aos-duration="750">
-                                <h1 class="home_title">Eu sou, <span class="inputdescription"></span></h1>
-                            </div>
-                            <p class="home_description">Desenvolvo seu projeto com alta qualidade, e a curto prazo!</p>
-                        </div>
-                    </div>
-                    <div data-aos="zoom-out" data-aos-delay="500" data-aos-duration="750" class="aos-button">
-                        <a href="./assets/docs/cv-fabio-caspirro.pdf" target="_blank" class="button"><i
-                                class="uil uil-download-alt"></i>
-                            Baixar Currículo
+                <div class="desc-project">
+                  <div class="title"><span>P</span><span>o</span><span>r</span><span>t</span><span>f</span><span>o</span><span>l</span><span>i</span><span>o</span><span> .</span></div>
+                  <div class="description">
+                    <p data-i18n="home.desc-portfolio-kaueGodoy">Projeto responsivo de um portfólio pessoal, onde foi pensado inteiramente para um desenvolvedor de jogos.</p><br>
+                    <p data-i18n="home.desc-portfolio-kaueGodoy-2">O projeto consta com trilha sonora, navegação personalizada com tema de games retro, e também é possível ter acesso aos jogos desenvolvidos, informações sobre os jogos e sobre o autor.</p>
+                  </div>
+                  <div class="useful-links">
+                    <p class="tech-mobile-text text-useful-link" data-i18n="home.useful-links">Links úteis</p>
+                    <div class="external-links">
+                      <div class="github-view">
+                        <a href="https://github.com/KaueGodoy/PortfolioSite" target="_blank">
+                          <i class="ti ti-brand-github"></i> 
+                          Github
                         </a>
-                        <a href="./assets/pages/design/design-portfolio.html" target="_blank" class="button"><i
-                                class="uil uil-download-alt"></i>
-                            Portfólio Design
+                      </div>
+                      <div class="web-view">
+                        <a href="https://kauegodoy.github.io/PortfolioSite/" target="_blank">
+                          <i class="ti ti-eye"></i>
+                          Deploy
                         </a>
+                      </div>
                     </div>
+                  </div>
                 </div>
-
-                <div class="my_info">
-                    <div data-aos="fade-right" data-aos-easing="linear" data-aos-delay="750" data-aos-duration="1500"
-                        id="aos-info">
-                        <div class="info_item">
-                            <i class="uil uil-envelope-edit info_icon"></i>
-                        </div>
-                        <div class="first_email">
-                            <h3 class="info_title email">E-mail</h3>
-                            <a href="mailto:fabio_caspirro@hotmail.com" target="_blank"><span
-                                    class="info_subtitle">fabio_caspirro@hotmail.com</span></a>
-                        </div>
-
-                        <div class="info_item">
-                            <i class="uil uil-thumbs-up info_icon"></i>
-                        </div>
-                        <div>
-                            <h3 class="info_title tks">Obrigado pela sua visita!</h3>
-                            <span class="info_subtitle">Volte sempre que puder :&#41;</span>
-                        </div>
-                    </div>
+              </div>
+              <div class="wrapper-techs">
+                <p class="tech-mobile-text" data-i18n="home.tech-mobile-text">Tecnologias utilizadas no projeto:</p>
+                <div class="tech-applyed">
+                  <button data-cooltipz-dir="bottom" aria-label="HTML">
+                    <img src="assets/svg/html5.svg" alt="Ícone da tecnologia HTML">
+                  </button>
+                  <button data-cooltipz-dir="bottom" aria-label="CSS">
+                    <img src="assets/svg/css3.svg" alt="Ícone da tecnologia CSS">
+                  </button>
+                  <button data-cooltipz-dir="bottom" aria-label="JavasScript">
+                    <img src="assets/svg/javaScript.svg" alt="Ícone da tecnologia javasScript">
+                  </button>
+                  <button data-cooltipz-dir="bottom" aria-label="JQuery">
+                    <img src="assets/svg/jQuery.svg" alt="Ícone da tecnologia jQuery">
+                  </button>
+                  <button data-cooltipz-dir="bottom" aria-label="BootStrap">
+                    <img src="assets/svg/bootstrap.svg" alt="Ícone da tecnologia bootstrap">
+                  </button>   
                 </div>
+              </div>
+              <div class="see-more view-desc-mobile">
+                <a href="javascript:void(0)" data-i18n="home.view-desc-mobile">Ver detalhes do projeto</a>
+              </div>
             </div>
-        </section>
-
-        <!-- About -->
-        <section class="about section" id="about">
-            <div data-aos="fade-down" data-aos-delay="100">
-                <h2 data-heading="About Me" class="section_title">Sobre Mim.</h2>
+          </div>
+    
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <div class="wrapper-project">
+              <div class="content-project">
+                <div class="devices-project">
+                  <img class="desktop-screen" src="assets/projects/quiz-game-desktop.png" alt="Project desktop">
+                  <img class="mobile-screen" src="assets/projects/quiz-game-mobile.png" alt="Project mobile">
+                  <div class="gradient quiz-game"></div>
+                </div>
+                <div class="desc-project">
+                  <div class="title"><span>Q</span><span>u</span><span>i</span><span>z </span> G<span>a</span><span>m</span><span>e</span><span> .</span></div>
+                  <div class="description">
+                    <p data-i18n="home.desc-quizgame">Projeto responsivo de um game quiz, trata-se de um quiz com o genêro de filmes, com o total de 6 perguntas de múltiplas escolhas com apenas uma escolha correta. Ao final, gera um resultado completo de acertos e erros.</p><br>
+                    <p data-i18n="home.desc-quizgame-2">Utilizado duas APIs em conjunto para funcionamento do game, uma para a coleta das perguntas e respostas, e outra, para tradução das perguntas e respostas coletadas.</p>
+                  </div>
+                  <div class="useful-links">
+                    <p class="tech-mobile-text text-useful-link" data-i18n="home.useful-links">Links úteis</p>
+                    <div class="external-links">
+                      <div class="github-view">
+                        <a href="https://github.com/fcaspirro/quiz-game" target="_blank">
+                          <i class="ti ti-brand-github"></i> 
+                          Github
+                        </a>
+                      </div>
+                      <div class="web-view">
+                        <a href="https://opentdb.com/" target="_blank">
+                          <i class="ti ti-database"></i>
+                          API - Open Trivia DB
+                        </a>
+                      </div>
+                      <div class="web-view">
+                        <a href="https://rapidapi.com/dilbarov03-wgXDPgLAAhK/api/fast-translate-api1" target="_blank">
+                          <i class="ti ti-world"></i> 
+                          API - Fast Translate
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="wrapper-techs">
+                <p class="tech-mobile-text" data-i18n="home.tech-mobile-text">Tecnologias utilizadas no projeto:</p>
+                <div class="tech-applyed">
+                  <button data-cooltipz-dir="bottom" aria-label="HTML">
+                    <img src="assets/svg/html5.svg" alt="Ícone da tecnologia HTML">
+                  </button>
+                  <button data-cooltipz-dir="bottom" aria-label="CSS">
+                    <img src="assets/svg/css3.svg" alt="Ícone da tecnologia CSS">
+                  </button>
+                  <button data-cooltipz-dir="bottom" aria-label="JavasScript">
+                    <img src="assets/svg/javaScript.svg" alt="Ícone da tecnologia JavasScript">
+                  </button>
+                  <button data-cooltipz-dir="bottom" aria-label="JQuery">
+                    <img src="assets/svg/jQuery.svg" alt="Ícone da tecnologia jQuery">
+                  </button>
+                  <button data-cooltipz-dir="bottom" aria-label="BootStrap">
+                    <img src="assets/svg/bootstrap.svg" alt="Ícone da tecnologia BootStrap">
+                  </button>   
+                  <button data-cooltipz-dir="bottom" aria-label="Node.js">
+                    <img src="assets/svg/nodejs.svg" alt="Ícone da tecnologia Node.js">
+                  </button>   
+                  <button data-cooltipz-dir="bottom" aria-label="Vite.js">
+                    <img src="assets/svg/vitejs.svg" alt="Ícone da tecnologia Vite.js">
+                  </button>   
+                </div>
+              </div>
+              <div class="see-more view-desc-mobile">
+                <a href="javascript:void(0)" data-i18n="home.view-desc-mobile">Ver detalhes do projeto</a>
+              </div>
             </div>
+          </div>
 
-            <div class="about_container container grid">
-                <div data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
-                    <div class="img">
-                        <img src="assets/img/about-img.jpg" title="Foto" alt="Foto Fabio Caspirro" class="about_img">
-                    </div>
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <div class="wrapper-project">
+              <div class="content-project">
+                <div class="devices-project">
+                  <img class="desktop-screen" src="assets/projects/consultacnpj-desktop.png" alt="Project desktop">
+                  <img class="mobile-screen" src="assets/projects/consultacnpj-mobile.png" alt="Project mobile">
+                  <div class="gradient consulta-cnpj"></div>
                 </div>
-
-                <div data-aos="fade-down" data-aos-delay="250">
-                    <div class="about_data">
-                        <h2 class="about_heading"> Olá, me chamo Fabio Caspirro.</h2>
-                        <p class="about_description"> Formado em Análise e Desenvolvimento de Sistemas, 
-                            em busca de uma oportunidade de emprego como <b>Desenvolvedor Junior</b>. 
-                            Atualmente estou desenvolvendo projetos autorais e em conjunto atuando como Freelance
-                        </p>
-                        <div class="about_info grid">
-                            <div data-aos="fade-down" data-aos-delay="350" data-aos-duration="250">
-                                <div class="about_box">
-                                    <i class="uil uil-map-marker about_icon"></i>
-                                    <h3 class="about_title">Localização</h3>
-                                    <span class="about_subtitle">São Paulo</span>
-                                </div>
-                            </div>
-
-                            <div data-aos="fade-down" data-aos-delay="450" data-aos-duration="500">
-                                <div class="about_box">
-                                    <i class="uil uil-suitcase about_icon"></i>
-                                    <h3 class="about_title">Completo</h3>
-                                    <span class="about_subtitle">+15 Projetos</span>
-                                </div>
-                            </div>
-
-                            <div data-aos="fade-down" data-aos-delay="550" data-aos-duration="750">
-                                <div class="about_box">
-                                    <i class="uil uil-headphones-alt about_icon"></i>
-                                    <h3 class="about_title">Suporte</h3>
-                                    <span class="about_subtitle">Horário Comercial</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div data-aos="zoom-out" data-aos-delay="550" data-aos-duration="750">
-                            <a href="https://wa.me/5511994161781" target="_blank" class="button"><i
-                                    class="uil uil-phone-alt"></i>Me contate agora mesmo!</a>
-                        </div>
+                <div class="desc-project">
+                  <div class="title large-title"><span>C</span><span>o</span><span>n</span><span>s</span><span>u</span><span>l</span><span>t</span><span>a </span><span> C</span><span>N</span><span>P</span><span>J</span><span> .</span></div>
+                  <div class="description">
+                    <p data-i18n="home.desc-consultacnpj">Projeto responsivo para consulta de CNPJ utilizando a Brasil API, o sistema verifica se há algum erro na consulta e oferece orientações claras para o usuário caso ocorra algum problema.</p><br>
+                    <p data-i18n="home.desc-consultacnpj-2">Este projeto permite que os usuários insiram um CNPJ, consultem os dados da empresa correspondente e salvem essas informações, facilitando o gerenciamento de dados empresariais.</p>
+                  </div>
+                  <div class="useful-links">
+                    <p class="tech-mobile-text text-useful-link" data-i18n="home.useful-links">Links úteis</p>
+                    <div class="external-links">
+                      <div class="github-view">
+                        <a href="https://github.com/fcaspirro/consulta_cnpj" target="_blank">
+                          <i class="ti ti-brand-github"></i> 
+                          Github
+                        </a>
+                      </div>
+                      <div class="web-view">
+                        <a href="https://brasilapi.com.br/" target="_blank">
+                          <i class="ti ti-database"></i> 
+                          Brasil API
+                        </a>
+                      </div>
                     </div>
+                  </div>
                 </div>
+              </div>
+              <div class="wrapper-techs">
+                <p class="tech-mobile-text" data-i18n="home.tech-mobile-text">Tecnologias utilizadas no projeto:</p>
+                <div class="tech-applyed">
+                  <button data-cooltipz-dir="bottom" aria-label="HTML">
+                    <img src="assets/svg/html5.svg" alt="Ícone da tecnologia HTML">
+                  </button>
+                  <button data-cooltipz-dir="bottom" aria-label="CSS">
+                    <img src="assets/svg/css3.svg" alt="Ícone da tecnologia CSS">
+                  </button>
+                  <button data-cooltipz-dir="bottom" aria-label="JavasScript">
+                    <img src="assets/svg/javaScript.svg" alt="Ícone da tecnologia JavasScript">
+                  </button>  
+                </div>
+              </div>
+              <div class="see-more view-desc-mobile">
+                <a href="javascript:void(0)" data-i18n="home.view-desc-mobile">Ver detalhes do projeto</a>
+              </div>
             </div>
-            <div class="fadeBottom"></div>
-        </section>
+          </div>
 
-        <!-- Qualification -->
-        <section class="qualification section" id="qualification">
-            <div data-aos="fade-down" data-aos-delay="100">
-                <h2 data-heading="Qualification" class="section_title">Carreira</h2>
+          <!-- Slide 4 -->
+          <div class="swiper-slide">
+            <div class="wrapper-project">
+              <div class="content-project">
+                <div class="devices-project">
+                  <img class="desktop-screen" src="assets/projects/songz-desktop.png" alt="Project desktop">
+                  <img class="mobile-screen" src="assets/projects/songz-mobile.png" alt="Project mobile">
+                  <div class="gradient songz"></div>
+                </div>
+                <div class="desc-project">
+                  <div class="title"><span>S</span><span>o</span><span>n</span><span>g</span><span>z</span><span> .</span></div>
+                  <div class="description">
+                    <p data-i18n="home.desc-songz">Projeto responsivo de uma biblioteca de músicas com com criação de playlists. Permite adicionar, editar e remover músicas com nome, artista, álbum, capa e arquivo .mp3. Futuramente, será integrado a um player de música.</p><br>
+                    <p data-i18n="home.desc-songz-2">As músicas ficam armazenadas no navegador, permanecendo mesmo após fechar a página. Possui busca para filtrar por nome, artista ou álbum, facilitando a organização e criação de playlists personalizadas.</p>
+                  </div>
+                  <div class="useful-links">
+                    <p class="tech-mobile-text text-useful-link" data-i18n="home.useful-links">Links úteis</p>
+                    <div class="external-links">
+                      <div class="github-view">
+                        <a href="https://github.com/fcaspirro/songz" target="_blank">
+                          <i class="ti ti-brand-github"></i> 
+                          Github
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="wrapper-techs">
+                <p class="tech-mobile-text" data-i18n="home.tech-mobile-text">Tecnologias utilizadas no projeto:</p>
+                <div class="tech-applyed">
+                  <button data-cooltipz-dir="bottom" aria-label="HTML">
+                    <img src="assets/svg/html5.svg" alt="Ícone da tecnologia HTML">
+                  </button>
+                  <button data-cooltipz-dir="bottom" aria-label="CSS">
+                    <img src="assets/svg/css3.svg" alt="Ícone da tecnologia CSS">
+                  </button>
+                  <button data-cooltipz-dir="bottom" aria-label="JavasScript">
+                    <img src="assets/svg/javaScript.svg" alt="Ícone da tecnologia JavasScript">
+                  </button>  
+                  <button data-cooltipz-dir="bottom" aria-label="jQuery">
+                    <img src="assets/svg/jQuery.svg" alt="Ícone da tecnologia jQuery">
+                  </button>  
+                  <button data-cooltipz-dir="bottom" aria-label="BootStrap">
+                    <img src="assets/svg/bootstrap.svg" alt="Ícone da tecnologia BootStrap">
+                  </button>
+                </div>
+              </div>
+              <div class="see-more view-desc-mobile">
+                <a href="javascript:void(0)" data-i18n="home.view-desc-mobile">Ver detalhes do projeto</a>
+              </div>
             </div>
+          </div>
 
-            <div>
-                <div class="qualification_container container grid">
-                    <div class="education">
-                        <h3 class="qualification_title">
-                            <div data-aos="zoom-out" data-aos-delay="250" data-aos-duration="500">
-                                <i class="uil uil-graduation-cap"></i>
-                                Educação
-                            </div>
-                        </h3>
-
-                        <div class="timeline">
-                            <div data-aos="fade-right" data-aos-delay="400" data-aos-duration="750">
-                                <div class="timeline_item">
-                                    <div class="circle_dot"></div>
-                                    <h3 class="timeline_title">Análise e Desenv. de Sistemas</h3>
-                                    <p class="timeline_text">Superior Técnologo</p>
-                                    <span class="timeline_date"><i class="uil uil-calendar-alt"></i>
-                                        2021 - 2023</i></span>
-                                </div>
-                            </div>
-
-                            <div data-aos="fade-right" data-aos-delay="800" data-aos-duration="750">
-                                <div class="timeline_item">
-                                    <div class="circle_dot"></div>
-                                    <h3 class="timeline_title">Engenharia Mecânica</h3>
-                                    <p class="timeline_text">Superior Bacharel</p>
-                                    <span class="timeline_date"><i class="uil uil-calendar-alt"></i>
-                                        2016 - 2020</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="experience">
-                        <h3 class="qualification_title">
-                            <div data-aos="zoom-out" data-aos-delay="100">
-                                <div class="timeline_box">
-                                    <i class="uil uil-cog"></i>
-                                    Experiências
-                                </div>
-                            </div>
-                        </h3>
-
-                        <div class="timeline">
-                            <div data-aos="fade-left" data-aos-delay="1200" data-aos-duration="750">
-                                <div class="timeline_box">
-                                    <div class="timeline_item">
-                                        <div class="circle_dot"></div>
-                                        <h3 class="timeline_title">Desenvolvedor Júnior</h3>
-                                        <p class="timeline_text">Crt Comunicação</p>
-                                        <span class="timeline_date"><i class="uil uil-calendar-alt"></i>
-                                            2023 - 2024</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div data-aos="fade-left" data-aos-delay="1400" data-aos-duration="750">
-                                <div class="timeline_box">
-                                    <div class="timeline_item">
-                                        <div class="circle_dot"></div>
-                                        <h3 class="timeline_title">Freelance de Desenvolvimento</h3>
-                                        <p class="timeline_text">Workana</p>
-                                        <span class="timeline_date"><i class="uil uil-calendar-alt"></i>
-                                            2022</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          <!-- Slide 5 -->
+          <div class="swiper-slide">
+            <div class="wrapper-project">
+              <div class="content-project">
+                <div class="devices-project">
+                  <img class="desktop-screen" src="assets/projects/weatherapp-desktop.png" alt="Project desktop">
+                  <img class="mobile-screen" src="assets/projects/weatherapp-mobile.png" alt="Project mobile">
+                  <div class="gradient weatherapp"></div>
                 </div>
-                <div class="fadeBottom"></div>
-        </section>
-
-        <!-- Skills -->
-        <section class="skills section" id="skills">
-            <div data-aos="fade-down" data-aos-delay="100">
-                <h2 data-heading="Skills" class="section_title">Habilidades</h2>
+                <div class="desc-project">
+                  <div class="title"><span>W</span><span>e</span><span>a</span><span>t</span><span>h</span><span>e</span><span>r </span><span> A</span><span>p</span><span>p</span><span> .</span></div>
+                  <div class="description">
+                    <p data-i18n="home.desc-weatherapp">Projeto responsivo com um dashboard de clima tempo, consumindo a API do Accuweather e Mapbox.</p><br>
+                    <p data-i18n="home.desc-weatherapp-2">Accuweather para realização de todas as consultas de tempo e local, e mapbox para funcionamento da geolocalização de busca por cidade/ estado.</p>
+                  </div>
+                  <div class="useful-links">
+                    <p class="tech-mobile-text text-useful-link" data-i18n="home.useful-links">Links úteis</p>
+                    <div class="external-links">
+                      <div class="github-view">
+                        <a href="https://github.com/Fcaspirro/weather_app" target="_blank">
+                          <i class="ti ti-brand-github"></i> 
+                          Github
+                        </a>
+                      </div>
+                      <div class="web-view">
+                        <a href="https://developer.accuweather.com/apis" target="_blank">
+                          <i class="ti ti-cloud-storm"></i>
+                          API - Accuweather 
+                        </a>
+                      </div>
+                      <div class="web-view">
+                        <a href="https://www.mapbox.com/" target="_blank">
+                          <i class="ti ti-map-2"></i>
+                          API - MapBox
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="wrapper-techs">
+                <p class="tech-mobile-text" data-i18n="home.tech-mobile-text">Tecnologias utilizadas no projeto:</p>
+                <div class="tech-applyed">
+                  <button data-cooltipz-dir="bottom" aria-label="HTML">
+                    <img src="assets/svg/html5.svg" alt="Ícone da tecnologia HTML">
+                  </button>
+                  <button data-cooltipz-dir="bottom" aria-label="CSS">
+                    <img src="assets/svg/css3.svg" alt="Ícone da tecnologia CSS">
+                  </button>
+                  <button data-cooltipz-dir="bottom" aria-label="JavasScript">
+                    <img src="assets/svg/javaScript.svg" alt="Ícone da tecnologia JavasScript">
+                  </button>
+                </div>
+              </div>
+              <div class="see-more view-desc-mobile">
+                <a href="javascript:void(0)" data-i18n="home.view-desc-mobile">Ver detalhes do projeto</a>
+              </div>
             </div>
+          </div>
 
-            <div class="skills_container container grid">
-                <div class="skills_tabs">
-                    <div data-aos="fade-right" data-aos-delay="250" data-aos-duration="750">
-                        <div class="skills_header skills_active" data-target="#frontend">
-                            <i class="uil uil-brackets-curly skills_icon"></i>
-                            <div>
-                                <h2 class="skills_title"> Front-End</h2>
-                            </div>
-                            <i class="uil uil-angle-down skills_arrow"></i>
-                        </div>
+          <!-- Slide 6 -->
+          <div class="swiper-slide last-slide">
+            
+            <div class="see-more">
+                <a href="https://github.com/fcaspirro?tab=repositories" target="_blank" data-i18n="last-slide.see-more">Ver todos os projetos</a>
+            </div>  
 
-                        <div class="skills_header" data-target="#backend">
-                            <i class="uil uil-server-network-alt skills_icon"></i>
-                            <div>
-                                <h2 class="skills_title">Banco de Dados</h2>
-                            </div>
-                            <i class="uil uil-angle-down skills_arrow"></i>
-                        </div>
-
-                        <div class="skills_header" data-target="#design">
-                            <i class="uil uil-palette skills_icon"></i>
-                            <div>
-                                <h2 class="skills_title">UI/UX Design</h2>
-                            </div>
-                            <i class="uil uil-angle-down skills_arrow"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div data-aos="fade-left" data-aos-delay="250" data-aos-duration="1250">
-                    <div class="skills_content">
-                        <div class="skills_group skills_active" data-content id="frontend">
-                            <div class="skills_list grid">
-                                <div class="skills_data">
-                                    <div class="skills_titles">
-                                        <h3 class="skills_name">CSS</h3>
-                                        <span class="skills_number">90%</span>
-                                    </div>
-
-                                    <div class="skills_bar">
-                                        <span class="skills_percentage" style="max-width: 90%;"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills_data">
-                                    <div class="skills_titles">
-                                        <h3 class="skills_name">HTML</h3>
-                                        <span class="skills_number">90%</span>
-                                    </div>
-
-                                    <div class="skills_bar">
-                                        <span class="skills_percentage" style="max-width: 90%;"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills_data">
-                                    <div class="skills_titles">
-                                        <h3 class="skills_name">WordPress</h3>
-                                        <span class="skills_number">75%</span>
-                                    </div>
-
-                                    <div class="skills_bar">
-                                        <span class="skills_percentage" style="max-width: 75%;"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills_data">
-                                    <div class="skills_titles">
-                                        <h3 class="skills_name">Javascript</h3>
-                                        <span class="skills_number">60%</span>
-                                    </div>
-
-                                    <div class="skills_bar">
-                                        <span class="skills_percentage" style="max-width: 60%;"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills_data">
-                                    <div class="skills_titles">
-                                        <h3 class="skills_name">PHP</h3>
-                                        <span class="skills_number">50%</span>
-                                    </div>
-
-                                    <div class="skills_bar">
-                                        <span class="skills_percentage" style="max-width: 50%;"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills_data">
-                                    <div class="skills_titles">
-                                        <h3 class="skills_name">Bootstrap</h3>
-                                        <span class="skills_number">50%</span>
-                                    </div>
-
-                                    <div class="skills_bar">
-                                        <span class="skills_percentage" style="max-width: 50%;"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="skills_group" data-content id="backend">
-                            <div class="skills_list grid">
-                                <div class="skills_data">
-                                    <div class="skills_titles">
-                                        <h3 class="skills_name">MySQL</h3>
-                                        <span class="skills_number">50%</span>
-                                    </div>
-
-                                    <div class="skills_bar">
-                                        <span class="skills_percentage" style="max-width: 50%;"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="skills_group" data-content id="design">
-                            <div class="skills_list grid">
-                                <div class="skills_data">
-                                    <div class="skills_titles">
-                                        <h3 class="skills_name">Adobe Photoshop</h3>
-                                        <span class="skills_number">90%</span>
-                                    </div>
-
-                                    <div class="skills_bar">
-                                        <span class="skills_percentage" style="max-width: 90%;"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills_data">
-                                    <div class="skills_titles">
-                                        <h3 class="skills_name">Adobe Illustrator</h3>
-                                        <span class="skills_number">75%</span>
-                                    </div>
-
-                                    <div class="skills_bar">
-                                        <span class="skills_percentage" style="max-width: 75%;"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills_data">
-                                    <div class="skills_titles">
-                                        <h3 class="skills_name">Figma</h3>
-                                        <span class="skills_number">60%</span>
-                                    </div>
-
-                                    <div class="skills_bar">
-                                        <span class="skills_percentage" style="max-width: 60%;"></span>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          </div>
+        </div>
+    
+        <div class="swiper-button-prev" style="--swiper-navigation-size: 24px;"></div>
+        <div class="swiper-button-next" style="--swiper-navigation-size: 24px;"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    
+    <section id="about-me" class="bg-std">
+      <div class="informations">
+        <div class="content-informations">
+          <figure class="square-photo"><img src="./assets/img/me.png" title="Fabio Caspirro" alt="Foto de apresentação do Fabio Caspirro"/>
+            <div class="border one">
+              <div></div>
             </div>
-            <div class="fadeBottom"></div>
-        </section>
-
-        <!-- Projects -->
-        <section class="project section" id="project">
-            <div data-aos="fade-down" data-aos-delay="100">
-                <h2 data-heading="Portfolio" class="section_title">Projetos Recentes</h2>
+            <div class="border two">
+              <div></div>
             </div>
-
-            <div class="project_filters">
-                <div data-aos="fade-down" data-aos-delay="200" data-aos-duration="750">
-                    <span class="project_item active_project" data-filter="all">Todos</span>
-                </div>
-
-                <div data-aos="fade-down" data-aos-delay="300" data-aos-duration="750">
-                    <span class="project_item" data-filter=".web">Web</span>
-                </div>
-
-                <div data-aos="fade-down" data-aos-delay="400" data-aos-duration="750">
-                    <span class="project_item" data-filter=".app">App</span>
-                </div>
+          </figure> 
+          <div class="desc-me">
+            <div class="title informations"><span>F</span><span>a</span><span>b</span><span>i</span><span>o </span><span> C</span><span>a</span><span>s</span><span>p</span><span>i</span><span>r</span><span>r</span><span>o </span><span> .</span></div>
+            <div class="presentation">
+              <p data-i18n="about-me.desc-presentation"><b>Muito bem-vindo ao meu portfólio!</b></p>
+              <i class="ti ti-mood-tongue-wink"></i>
             </div>
-
-            <div data-aos="fade-down" data-aos-anchor-placement="top-bottom" data-aos-delay="200"
-                data-aos-duration="1000">
-                <div class="project_container container grid">
-                    <div class="project_card mix web">
-                        <img src="assets/projects/web/project-web-10.png" title="Songz"
-                            alt="Projeto Songz" class="project_img">
-                        <h3 class="project_title">Api de Músicas</h3>
-                        <span class="project_button">Demo
-                            <i class="uil uil-rocket project_button-icon"></i>
-                        </span>
-                        <div class="portfolio_item-details">
-                            <h3 class="details_title">Songz</h3>
-                            <p class="details_description">Projeto desenvolvido com intuito de criar uma biblioteca dinâmica de músicas, 
-                                com possibilidade de criação de playlist. Em breve interligarei a um music player.</p>
-                            <ul class="details_info">
-                                <li>Status: <span>Em andamento.</span></li>
-                                <li>Atualizado em: <span>15 abr 2024</span></li>
-                                <li>Tecnologias: <span>HTML, CSS, JS, Bootstrap</span></li>
-                                <li>Stack: <span>Front-End.</span></li>
-                                <li class="link">Ver <i class="uil uil-eye"></i> - <span><a
-                                            href="https://github.com/Fcaspirro/songz"
-                                            target="_blank">Repositório
-                                            Github</a></span></li>
-                                <li>Ver <i class="uil uil-eye"></i> - <span><a
-                                            href="https://fcaspirro.github.io/songz"
-                                            target="_blank">Página Web</a></span></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="project_card mix web">
-                        <img src="assets/projects/web/project-web-9.png" title="Landing Page"
-                            alt="Projeto Agência de Viagens Plane" class="project_img">
-                        <h3 class="project_title">Dashboard</h3>
-                        <span class="project_button">Demo
-                            <i class="uil uil-rocket project_button-icon"></i>
-                        </span>
-                        <div class="portfolio_item-details">
-                            <h3 class="details_title">Weather App</h3>
-                            <p class="details_description">Projeto desenvolvido com intuito de consumo de apis para construção de uma 
-                                dashboard do clima tempo atual consultando geolocalização e IP.</p>
-                            <ul class="details_info">
-                                <li>Status: <span>Finalizado.</span></li>
-                                <li>Atualizado em: <span>28 mar 2024</span></li>
-                                <li>Tecnologias: <span>HTML, CSS, JS</span></li>
-                                <li>Stack: <span>Front-End.</span></li>
-                                <li class="link">Ver <i class="uil uil-eye"></i> - <span><a
-                                            href="https://github.com/Fcaspirro/weather_app"
-                                            target="_blank">Repositório
-                                            Github</a></span></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="project_card mix web">
-                        <img src="assets/projects/web/project-web-8.png" title="Landing Page"
-                            alt="Projeto Agência de Viagens Plane" class="project_img">
-                        <h3 class="project_title">Landing Page</h3>
-                        <span class="project_button">Demo
-                            <i class="uil uil-rocket project_button-icon"></i>
-                        </span>
-                        <div class="portfolio_item-details">
-                            <h3 class="details_title">Plane</h3>
-                            <p class="details_description">Criação de Landing Page com tema de agência de viagens,
-                                denominada de Plane, a partir de referência de imagens postadas no <a target="_blank"
-                                    href="https://www.behance.net/"><i>behance</i></a>.</p>
-                            <ul class="details_info">
-                                <li>Status: <span>Finalizado.</span></li>
-                                <li>Atualizado em: <span>01 jan 2023</span></li>
-                                <li>Tecnologias: <span>HTML, CSS</span></li>
-                                <li>Stack: <span>Front-End.</span></li>
-                                <li class="link">Ver <i class="uil uil-eye"></i> - <span><a
-                                            href="https://github.com/Fcaspirro/travel-agency-plane"
-                                            target="_blank">Repositório
-                                            Github</a></span></li>
-                                <li>Ver <i class="uil uil-eye"></i> - <span><a
-                                            href="https://fcaspirro.github.io/travel-agency-plane"
-                                            target="_blank">Página Web</a></span></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="project_card mix web">
-                        <img src="assets/projects/web/project-web-7.png" title="Landing Page"
-                            alt="Projeto Ignite eSports Web" class="project_img">
-                        <h3 class="project_title">Landing Page</h3>
-                        <span class="project_button">Demo
-                            <i class="uil uil-rocket project_button-icon"></i>
-                        </span>
-                        <div class="portfolio_item-details">
-                            <h3 class="details_title">Digital Bank</h3>
-                            <p class="details_description">Criação de Landing Page simples de um Banco Digital Online
-                                denominado <b><i>Digital Bank</i></b>.</p>
-                            <ul class="details_info">
-                                <li>Status: <span>Versão Mobile - Pendente.</span></li>
-                                <li>Atualizado em: <span>01 fev 2023</span></li>
-                                <li>Tecnologias: <span>HTML, CSS, Javascript.</span></li>
-                                <li>Stack: <span>Front-End.</span></li>
-                                <li class="link">Ver <i class="uil uil-eye"></i> - <span><a
-                                            href="https://github.com/Fcaspirro/digital-bank" target="_blank">Repositório
-                                            Github</a></span></li>
-                                <li>Ver <i class="uil uil-eye"></i> - <span><a
-                                            href="https://fcaspirro.github.io/digital-bank" target="_blank">Página
-                                            Web</a></span></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="project_card mix web">
-                        <img src="assets/projects/web/project-web-6.png" title="API de anúncios"
-                            alt="Projeto Ignite eSports Web" class="project_img">
-                        <h3 class="project_title">API de Anúncio</h3>
-                        <span class="project_button">Demo
-                            <i class="uil uil-rocket project_button-icon"></i>
-                        </span>
-                        <div class="portfolio_item-details">
-                            <h3 class="details_title">Aplicação eSports</h3>
-                            <p class="details_description">Aplicação web que permite registrar anúncios de jogos que
-                                você gosta para encontrar sua dupla usando uma conta do Discord.</p>
-                            <ul class="details_info">
-                                <li>Status: <span>Finalizado.</span></li>
-                                <li>Atualizado em: <span>28 set 2022</span></li>
-                                <li>Tecnologias: <span>HTML, Node.js, Typescript, React.js, Tailwind CSS, PostCSS, Vite,
-                                        Radix UI, Chocolatey.</span></li>
-                                <li>Stack: <span>Front-End e Back-End.</span></li>
-                                <li class="link">Ver <i class="uil uil-eye"></i> - <span><a
-                                            href="https://github.com/Fcaspirro/web-nlw-ignite" target="_blank">Rep.
-                                            Github - Front-End</a></span></li>
-                                <li>Ver <i class="uil uil-eye"></i> - <span><a
-                                            href="https://github.com/Fcaspirro/server-nlw-ignite" target="_blank">Rep.
-                                            Github - Back-End</a></span></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="project_card mix app">
-                        <img src="assets/projects/mobile/project-mobile-1.png" title="API de anúncios"
-                            alt="Projeto Ignite eSports Mobile" class="project_img">
-                        <h3 class="project_title">API de Anúncio</h3>
-                        <span class="project_button">Demo
-                            <i class="uil uil-rocket project_button-icon"></i>
-                        </span>
-                        <div class="portfolio_item-details">
-                            <h3 class="details_title">Aplicação eSports</h3>
-                            <p class="details_description">Aplicação mobile que permite registrar anúncios de jogos que
-                                você gosta para encontrar sua dupla usando uma conta do Discord.</p>
-                            <ul class="details_info">
-                                <li>Status: <span>Finalizado.</span></li>
-                                <li>Atualizado em: <span>28 set 2022</span></li>
-                                <li>Tecnologias: <span>Node.js, Typescript, React Native, Tailwind CSS, Babel,
-                                        Expo.</span></li>
-                                <li>Stack: <span>Front-End e Back-End.</span></li>
-                                <li class="link">Ver <i class="uil uil-eye"></i> - <span><a
-                                            href="https://github.com/Fcaspirro/mobile-nlw-ignite" target="_blank">Rep.
-                                            Github - Front-End</a></span></li>
-                                <li>Ver<i class="uil uil-eye"></i> - <span><a
-                                            href="https://github.com/Fcaspirro/server-nlw-ignite" target="_blank">Rep.
-                                            Github - Back-End</a></span></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="project_card mix web">
-                        <img src="assets/projects/web/project-web-5.png" title="Hub de Entretenimento"
-                            alt="Projeto Explorer eSports" class="project_img">
-                        <h3 class="project_title">Hub de Entretenimento</h3>
-                        <span class="project_button">Demo
-                            <i class="uil uil-rocket project_button-icon"></i>
-                        </span>
-                        <div class="portfolio_item-details">
-                            <h3 class="details_title">Aplicação eSports</h3>
-                            <p class="details_description">O Projeto tem como finalidade ser um hub onde ficam seus
-                                jogos e streamers da Twitch favoritos.</p>
-                            <ul class="details_info">
-                                <li>Status: <span>Finalizado.</span></li>
-                                <li>Atualizado em: <span>01 fev 2023</span></li>
-                                <li>Tecnologias: <span>HTML, CSS.</span></li>
-                                <li>Stack: <span>Front-End.</span></li>
-                                <li class="link">Ver <i class="uil uil-eye"></i> - <span><a
-                                            href="https://github.com/Fcaspirro/web-nlw-explorer"
-                                            target="_blank">Repositório Github</a></span></li>
-                                <li>Ver <i class="uil uil-eye"></i> - <span><a
-                                            href="https://web-nlw-explorer.vercel.app/" target="_blank">Página
-                                            Web</a></span></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="project_card mix web">
-                        <img src="assets/projects/web/project-web-4.png" title="Operação Matemática"
-                            alt="Projeto de calculadora com dark/light mode" class="project_img">
-                        <h3 class="project_title">Operação Matemática</h3>
-                        <span class="project_button">Demo
-                            <i class="uil uil-rocket project_button-icon"></i>
-                        </span>
-                        <div class="portfolio_item-details">
-                            <h3 class="details_title">Calculadora com modo claro e escuro</h3>
-                            <p class="details_description">Projeto desenvolvido funcional de uma calculadora com
-                                operações básicas de soma, subtração, divisão e multiplicação. Contando também swift
-                                light/dark mode..></p>
-                            <ul class="details_info">
-                                <li>Status: <span>Finalizado.</span></li>
-                                <li>Atualizado em: <span>02 set 2022</span></li>
-                                <li>Tecnologias: <span>HTML, CSS, Javascript.</span></li>
-                                <li>Stack: <span>Front-End.</span></li>
-                                <li class="link">Ver <i class="uil uil-eye"></i> - <span><a
-                                            href="https://github.com/Fcaspirro/calculadora-light-and-dark-mode"
-                                            target="_blank">Repositório Github</a></span></li>
-                                <li>Ver <i class="uil uil-eye"></i> - <span><a
-                                            href="https://fcaspirro.github.io/calculadora-light-and-dark-mode/"
-                                            target="_blank">Página Web</a></span></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="project_card mix web">
-                        <img src="assets/projects/web/project-web-3.png" title="Clone Modelo"
-                            alt="Projeto Netflix Clone" class="project_img">
-                        <h3 class="project_title">Clone Modelo</h3>
-                        <span class="project_button">Demo
-                            <i class="uil uil-rocket project_button-icon"></i>
-                        </span>
-                        <div class="portfolio_item-details">
-                            <h3 class="details_title">Netflix Clone</h3>
-                            <p class="details_description">Projeto desenvolvido com a proposta de clonar a homepage da
-                                netflix o mais original e detalhadamente possível.</p>
-                            <ul class="details_info">
-                                <li>Status: <span>Finalizado.</span></li>
-                                <li>Atualizado em: <span>25 set 2022</span></li>
-                                <li>Tecnologias: <span>HTML, CSS, Javascript.</span></li>
-                                <li>Stack: <span>Front-End.</span></li>
-                                <li class="link">Ver <i class="uil uil-eye"></i> - <span><a
-                                            href="https://github.com/Fcaspirro/clone-netflix"
-                                            target="_blank">Repositório Github</a></span></li>
-                                <li>Ver<i class="uil uil-eye"></i> - <span><a
-                                            href="https://fcaspirro.github.io/clone-netflix/" target="_blank">Página
-                                            Web</a></span></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="project_card mix web">
-                        <img src="assets/projects/web/project-web-2.png" title="Mini Game"
-                            alt="Projeto Cassino Game - Jackpot" class="project_img">
-                        <h3 class="project_title">Mini Game</h3>
-                        <span class="project_button">Demo
-                            <i class="uil uil-rocket project_button-icon"></i>
-                        </span>
-                        <div class="portfolio_item-details">
-                            <h3 class="details_title">Cassino Game - Jackpot</h3>
-                            <p class="details_description">O projeto desenvolvido teve o objetivo de realizar um dos
-                                tipos de jogos de cassino mais conhecidos, chamado de "Jackpot",
-                                a fim de praticar o aprendizado de JavaScript e o seletor @Keyframe do CSS.</p>
-                            <ul class="details_info">
-                                <li>Status: <span>Finalizado.</span></li>
-                                <li>Atualizado em: <span>09 set 2022</span></li>
-                                <li>Tecnologias: <span>HTML, CSS, Javascript.</span></li>
-                                <li>Stack: <span>Front-End.</span></li>
-                                <li class="link">Ver <i class="uil uil-eye"></i> - <span><a
-                                            href="https://github.com/Fcaspirro/casino-game" target="_blank">Repositório
-                                            Github</a></span></li>
-                                <li>Ver <i class="uil uil-eye"></i> - <span><a
-                                            href="https://fcaspirro.github.io/casino-game/" target="_blank">Página
-                                            Web</a></span></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="project_card mix web">
-                        <img src="assets/projects/web/project-web-1.png" title="Clone Modelo" alt="Projeto Landing Page"
-                            class="project_img">
-                        <div>
-                            <h3 class="project_title">Clone Modelo</h3>
-                        </div>
-                        <span class="project_button">Demo
-                            <i class="uil uil-rocket project_button-icon"></i>
-                        </span>
-                        <div class="portfolio_item-details">
-                            <h3 class="details_title">Landing Page modelo - Lorem Ipsum</h3>
-                            <p class="details_description">Projeto desenvolvido como minha primeira landing page.
-                                Desafio que realizei há algum tempo atrás em uma vaga aberta de estágio de tecnologia.
-                            </p>
-                            <ul class="details_info">
-                                <li>Status: <span>Finalizado./span></li>
-                                <li>Atualizado em: <span>24 ago 2022</span></li>
-                                <li>Tecnologias: <span>HTML, CSS.</span></li>
-                                <li>Stack: <span>Front-End.</span></li>
-                                <li class="link">Ver <i class="uil uil-eye"></i> - <span><a
-                                            href="https://github.com/Fcaspirro/landing_page-lorem"
-                                            target="_blank">Repositório Github</a></span></li>
-                                <li>Ver <i class="uil uil-eye"></i> - <span><a
-                                            href="https://fcaspirro.github.io/landing_page-lorem" target="_blank">Página
-                                            Web</a></span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            <p data-i18n="about-me.desc-information">Tenho 25 anos e estou em busca de uma oportunidade que me permita contribuir como desenvolvedor.</p>
+            <p data-i18n="about-me.desc-information-2">Graduado em Engenharia Mecânica e formado em Análise e Desenvolvimento de Sistemas.</p>
+            <p data-i18n="about-me.desc-information-3">Estou sempre em constante evolução e aprendizado, movido pelo desejo de me superar a cada desafio.</p>
+            <p data-i18n="about-me.desc-information-4">Aqui, você encontrará os projetos mais recentes e o meu comprometimento e dedicação à tecnologia.</p>
+          </div>
+        </div>
+      </div>
+      <div class="app">
+        <div class="tech-list web">
+          <div class="loop-slider" style="--duration:45000ms; --direction:normal;"> <!--45 segundos-->
+            <div class="inner">
+              <div class="technologies"><i class="ti ti-brand-html5"></i><p>HTML</p></div>
+              <div class="technologies"><i class="ti ti-brand-css3"></i><p>CSS</p></div>
+              <div class="technologies"><i class="ti ti-brand-javascript"></i><p>JavaScript</p></div>
+              <div class="technologies"><i class="ti ti-script"></i><p>jQuery</p></div>
+              <div class="technologies"><i class="ti ti-brand-php"></i><p>PHP</p></div>
+              <div class="technologies"><i class="ti ti-brand-wordpress"></i><p>WordPress</p></div>
+              <div class="technologies"><i class="ti ti-brand-bootstrap"></i><p>Bootstrap</p></div>
+              <div class="technologies"><i class="ti ti-brand-mysql"></i><p>MySQL</p></div>
+              <div class="technologies"><i class="ti ti-brand-react"></i><p>React</p></div>
+              <div class="technologies"><i class="ti ti-brand-vite"></i><p>Vite</p></div>
+              <!-- duplicated content -->
+              <div class="technologies"><i class="ti ti-brand-html5"></i><p>HTML</p></div>
+              <div class="technologies"><i class="ti ti-brand-css3"></i><p>CSS</p></div>
+              <div class="technologies"><i class="ti ti-brand-javascript"></i><p>JavaScript</p></div>
+              <div class="technologies"><i class="ti ti-script"></i><p>jQuery</p></div>
+              <div class="technologies"><i class="ti ti-brand-php"></i><p>PHP</p></div>
+              <div class="technologies"><i class="ti ti-brand-wordpress"></i><p>WordPress</p></div>
+              <div class="technologies"><i class="ti ti-brand-bootstrap"></i><p>Bootstrap</p></div>
+              <div class="technologies"><i class="ti ti-brand-mysql"></i><p>MySQL</p></div>
+              <div class="technologies"><i class="ti ti-brand-react"></i><p>React</p></div>
+              <div class="technologies"><i class="ti ti-brand-vite"></i><p>Vite</p></div>
             </div>
-            <div class="fadeBottom"></div>
-        </section>
-        <!-- Portfolio Popup -->
-        <div class="portfolio_modal">
-            <div class="portfolio_modal-inner">
-                <div class="portfolio_modal-content grid">
-                    <span class="portfolio_modal-close"><i class="uil uil-times"></i></span>
-                    <div class="modal_thumbnail">
-                        <img src="assets/projects/project-web-1.png" title="Imagem do Projeto" alt="Imagem do Projeto"
-                            class="portfolio_modal-img">
-                    </div>
-                    <div class="portfolio_modal-info">
-                        <div class="portfolio_modal-subtitle"> Tipo - <span>Modelo do Projeto</span></div>
-                        <div class="portfolio_modal-body">
-                            <h3 class="details_title">Título</h3>
-                            <p class="details_description">Lorem Ipsum, dolor site amet consectetur adipiscing elit.
-                                Earum impedit voluptatibus minima.></p>
-                            <ul class="details_info">
-                                <li>Status: <span>Versão do Projeto.</span>
-                                <li>
-                                <li>Atualizado em - <span>Data</span></li>
-                                <li>Tecnologias - <span>Ferramentas.</span></li>
-                                <li>Stack - <span>Tecnologias.</span></li>
-                                <li class="link">Ver <i class="uil uil-eye"></i> - <span><a
-                                            href="https://github.com/Fcaspirro">Repositório Github</a></span></li>
-                                <li>Ver <i class="uil uil-eye"></i> - <span><a
-                                            href="https://fcaspirro.github.io/portfolio">Página Web</a></span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <div class="loop-slider" style="--duration:50000ms; --direction:reverse;"> <!--50 segundos-->
+            <div class="inner">
+              <div class="technologies"><i class="ti ti-brand-nodejs"></i><p>Node.js</p></div>
+              <div class="technologies"><i class="ti ti-brand-npm"></i><p>NPM</p></div>
+              <div class="technologies"><i class="ti ti-api"></i><p>API</p></div>
+              <div class="technologies"><i class="ti ti-json"></i><p>JSON</p></div>
+              <div class="technologies"><i class="ti ti-brand-git"></i><p>Git</p></div>
+              <div class="technologies"><i class="ti ti-brand-github"></i><p>GitHub</p></div>
+              <div class="technologies"><i class="ti ti-brand-figma"></i><p>Figma</p></div>
+              <div class="technologies"><i class="ti ti-brand-tailwind"></i><p>TailwindCSS</p></div>
+              <div class="technologies"><i class="ti ti-palette"></i><p>UI/UX</p></div>
+              <div class="technologies"><i class="ti ti-seo"></i><p>SEO</p></div>
+              <!-- duplicated content -->
+              <div class="technologies"><i class="ti ti-brand-nodejs"></i><p>Node.js</p></div>
+              <div class="technologies"><i class="ti ti-brand-npm"></i><p>NPM</p></div>
+              <div class="technologies"><i class="ti ti-api"></i><p>API</p></div>
+              <div class="technologies"><i class="ti ti-json"></i><p>JSON</p></div>
+              <div class="technologies"><i class="ti ti-brand-git"></i><p>Git</p></div>
+              <div class="technologies"><i class="ti ti-brand-github"></i><p>GitHub</p></div>
+              <div class="technologies"><i class="ti ti-brand-figma"></i><p>Figma</p></div>
+              <div class="technologies"><i class="ti ti-brand-tailwind"></i><p>TailwindCSS</p></div>
+              <div class="technologies"><i class="ti ti-palette"></i><p>UI/UX</p></div>
+              <div class="technologies"><i class="ti ti-seo"></i><p>SEO</p></div>
             </div>
+          </div>
+          <div class="loop-slider" style="--duration:40000ms; --direction:normal;"> <!--40 segundos-->
+            <div class="inner">
+              <div class="technologies"><i class="ti ti-brand-slack"></i><p>Slack</p></div>
+              <div class="technologies"><i class="ti ti-brand-adobe-photoshop"></i><p>Photoshop</p></div>
+              <div class="technologies"><i class="ti ti-brand-adobe-illustrator"></i><p>Illustrator</p></div>
+              <div class="technologies"><i class="ti ti-brand-google"></i><p>GTM</p></div>
+              <div class="technologies"><i class="ti ti-brand-google-analytics"></i><p>GA4</p></div>
+              <div class="technologies"><i class="ti ti-brand-trello"></i><p>Trello</p></div>
+              <div class="technologies"><i class="ti ti-arrow-iteration"></i><p>Scrum</p></div>
+              <div class="technologies"><i class="ti ti-layout-kanban"></i><p>Kanban</p></div>
+              <div class="technologies"><i class="ti ti-brand-notion"></i><p>Notion</p></div>
+              <div class="technologies"><i class="ti ti-arrow-autofit-width"></i><p>Responsividade</p></div>
+              <!-- duplicated content -->
+              <div class="technologies"><i class="ti ti-brand-slack"></i><p>Slack</p></div>
+              <div class="technologies"><i class="ti ti-brand-adobe-photoshop"></i><p>Photoshop</p></div>
+              <div class="technologies"><i class="ti ti-brand-adobe-illustrator"></i><p>Illustrator</p></div>
+              <div class="technologies"><i class="ti ti-brand-google"></i><p>GTM</p></div>
+              <div class="technologies"><i class="ti ti-brand-google-analytics"></i><p>GA4</p></div>
+              <div class="technologies"><i class="ti ti-brand-trello"></i><p>Trello</p></div>
+              <div class="technologies"><i class="ti ti-arrow-iteration"></i><p>Scrum</p></div>
+              <div class="technologies"><i class="ti ti-layout-kanban"></i><p>Kanban</p></div>
+              <div class="technologies"><i class="ti ti-brand-notion"></i><p>Notion</p></div>
+              <div class="technologies"><i class="ti ti-arrow-autofit-width"></i><p>Responsividade</p></div>
+            </div>
+          </div>
+          <div class="fade"></div>
+        </div>
+        <div class="tech-list mobile">
+          <div class="loop-slider" style="--duration:45000ms; --direction:normal;"> <!--45 segundos-->
+            <div class="inner">
+              <div class="technologies"><i class="ti ti-brand-html5"></i><p>HTML</p></div>
+              <div class="technologies"><i class="ti ti-brand-css3"></i><p>CSS</p></div>
+              <div class="technologies"><i class="ti ti-brand-javascript"></i><p>JavaScript</p></div>
+              <div class="technologies"><i class="ti ti-script"></i><p>jQuery</p></div>
+              <div class="technologies"><i class="ti ti-brand-php"></i><p>PHP</p></div>
+              <div class="technologies"><i class="ti ti-brand-wordpress"></i><p>WordPress</p></div>
+              <div class="technologies"><i class="ti ti-brand-bootstrap"></i><p>Bootstrap</p></div>
+              <div class="technologies"><i class="ti ti-brand-mysql"></i><p>MySQL</p></div>
+              <div class="technologies"><i class="ti ti-brand-react"></i><p>React</p></div>
+              <div class="technologies"><i class="ti ti-brand-vite"></i><p>Vite</p></div>
+              <div class="technologies"><i class="ti ti-brand-nodejs"></i><p>Node.js</p></div>
+              <div class="technologies"><i class="ti ti-brand-npm"></i><p>NPM</p></div>
+              <div class="technologies"><i class="ti ti-api"></i><p>API</p></div>
+              <div class="technologies"><i class="ti ti-json"></i><p>JSON</p></div>
+              <div class="technologies"><i class="ti ti-brand-git"></i><p>Git</p></div>
+              <div class="technologies"><i class="ti ti-brand-github"></i><p>GitHub</p></div>
+              <div class="technologies"><i class="ti ti-brand-figma"></i><p>Figma</p></div>
+              <div class="technologies"><i class="ti ti-brand-tailwind"></i><p>TailwindCSS</p></div>
+              <div class="technologies"><i class="ti ti-palette"></i><p>UI/UX</p></div>
+              <div class="technologies"><i class="ti ti-seo"></i><p>SEO</p></div>
+              <div class="technologies"><i class="ti ti-brand-slack"></i><p>Slack</p></div>
+              <div class="technologies"><i class="ti ti-brand-adobe-photoshop"></i><p>Photoshop</p></div>
+              <div class="technologies"><i class="ti ti-brand-adobe-illustrator"></i><p>Illustrator</p></div>
+              <div class="technologies"><i class="ti ti-brand-google"></i><p>GTM</p></div>
+              <div class="technologies"><i class="ti ti-brand-google-analytics"></i><p>GA4</p></div>
+              <div class="technologies"><i class="ti ti-brand-trello"></i><p>Trello</p></div>
+              <div class="technologies"><i class="ti ti-arrow-iteration"></i><p>Scrum</p></div>
+              <div class="technologies"><i class="ti ti-layout-kanban"></i><p>Kanban</p></div>
+              <div class="technologies"><i class="ti ti-brand-notion"></i><p>Notion</p></div>
+              <div class="technologies"><i class="ti ti-arrow-autofit-width"></i><p>Responsividade</p></div>              
+              <!-- duplicated content -->
+              <div class="technologies"><i class="ti ti-brand-html5"></i><p>HTML</p></div>
+              <div class="technologies"><i class="ti ti-brand-css3"></i><p>CSS</p></div>
+              <div class="technologies"><i class="ti ti-brand-javascript"></i><p>JavaScript</p></div>
+              <div class="technologies"><i class="ti ti-script"></i><p>jQuery</p></div>
+              <div class="technologies"><i class="ti ti-brand-php"></i><p>PHP</p></div>
+              <div class="technologies"><i class="ti ti-brand-wordpress"></i><p>WordPress</p></div>
+              <div class="technologies"><i class="ti ti-brand-bootstrap"></i><p>Bootstrap</p></div>
+              <div class="technologies"><i class="ti ti-brand-mysql"></i><p>MySQL</p></div>
+              <div class="technologies"><i class="ti ti-brand-react"></i><p>React</p></div>
+              <div class="technologies"><i class="ti ti-brand-vite"></i><p>Vite</p></div>
+              <div class="technologies"><i class="ti ti-brand-nodejs"></i><p>Node.js</p></div>
+              <div class="technologies"><i class="ti ti-brand-npm"></i><p>NPM</p></div>
+              <div class="technologies"><i class="ti ti-api"></i><p>API</p></div>
+              <div class="technologies"><i class="ti ti-json"></i><p>JSON</p></div>
+              <div class="technologies"><i class="ti ti-brand-git"></i><p>Git</p></div>
+              <div class="technologies"><i class="ti ti-brand-github"></i><p>GitHub</p></div>
+              <div class="technologies"><i class="ti ti-brand-figma"></i><p>Figma</p></div>
+              <div class="technologies"><i class="ti ti-brand-tailwind"></i><p>TailwindCSS</p></div>
+              <div class="technologies"><i class="ti ti-palette"></i><p>UI/UX</p></div>
+              <div class="technologies"><i class="ti ti-seo"></i><p>SEO</p></div>
+              <div class="technologies"><i class="ti ti-brand-slack"></i><p>Slack</p></div>
+              <div class="technologies"><i class="ti ti-brand-adobe-photoshop"></i><p>Photoshop</p></div>
+              <div class="technologies"><i class="ti ti-brand-adobe-illustrator"></i><p>Illustrator</p></div>
+              <div class="technologies"><i class="ti ti-brand-google"></i><p>GTM</p></div>
+              <div class="technologies"><i class="ti ti-brand-google-analytics"></i><p>GA4</p></div>
+              <div class="technologies"><i class="ti ti-brand-trello"></i><p>Trello</p></div>
+              <div class="technologies"><i class="ti ti-arrow-iteration"></i><p>Scrum</p></div>
+              <div class="technologies"><i class="ti ti-layout-kanban"></i><p>Kanban</p></div>
+              <div class="technologies"><i class="ti ti-brand-notion"></i><p>Notion</p></div>
+              <div class="technologies"><i class="ti ti-arrow-autofit-width"></i><p>Responsividade</p></div>
+            </div>
+          </div>  
+          <div class="fade"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="career" class="bg-std">
+      <div id="timeline-web">
+        <div class="tl-item">
+          <div class="tl-bg" style="background-image: url()"></div>
+          <div class="tl-year">
+            <p>2020 <i class="ti ti-separator"></i> 2023</p>
+          </div>
+          <div class="tl-wrapper">
+            <div class="tl-content">
+              <div class="tl-icon">
+                <img src="assets/img/workana-icon.png" alt="Ícone logo da Workana">
+              </div>
+              <h2>Freelance Design</h2>
+              <h3>Workana</h3>
+              <p data-i18n="career.desc-freela">Identidade visual de marca</p>
+              <p data-i18n="career.desc-freela-2">Mockup kit</p>
+              <p data-i18n="career.desc-freela-3">Design de logo</p> 
+              <p data-i18n="career.desc-freela-4">Social media</p>
+              <p data-i18n="career.desc-freela-5">Vetorização</p>
+              <p data-i18n="career.desc-freela-6">Folders, outdoor, adesivos, banners, cards</p>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-bg" style="background-image: url()"></div>
+          <div class="tl-year">
+            <p>2023 <i class="ti ti-separator"></i> 2024</p>
+          </div>
+          <div class="tl-wrapper">
+            <div class="tl-content">
+              <div class="tl-icon">
+                <img src="assets/img/crt-icon.png" alt="Ícone logo da CRT">
+              </div>
+              <h2 data-i18n="career.title-position-crt">Desenvolvedor Júnior</h2>
+              <h3 data-i18n="career.title-company-crt">CRT Comunicação</h3>
+              <p data-i18n="career.desc-crt">Colaboração com time de design, para garantir usabilidade e estilização adequada as interfaces no Figma</p>
+              <p data-i18n="career.desc-crt-2">Geração de conteúdo/funcionalidade dinâmica e manipulação de dados no lado do servidor com PHP</p>
+              <p data-i18n="career.desc-crt-3">Desenvolvimento de layouts responsivos utilizando HTML e CSS</p>
+              <p data-i18n="career.desc-crt-4">Implementação de funcionalidades interativas com Javascript e jQuery</p> 
+              <p data-i18n="career.desc-crt-5">Manipulação do banco de dados via MySQL</p>
+              <p data-i18n="career.desc-crt-6">Gerenciamento e hospedagem via WordPress</p>
+              <p data-i18n="career.desc-crt-7">Integração e consumo de API's</p>
+              <p data-i18n="career.desc-crt-8">Versionamento de código via Git</p>
+              <p data-i18n="career.desc-crt-9">Otimização de performance e SEO</p>
+              <p data-i18n="career.desc-crt-10">Manutenção e atualização continua de código</p>
+              <p data-i18n="career.desc-crt-11">Gerenciamento de métricas e dados via GTM e GA4</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="timeline-mobile">
+        <div class="tl-nav-wrapper">
+          <button class="tl-nav">2020 <i class="ti ti-separator"></i> 2023</button>
+          <button class="tl-nav active-nav-career">2023 <i class="ti ti-separator"></i> 2024</button>
         </div>
 
-        <!-- Services -->
-        <section class="services section" id="services">
-            <div data-aos="fade-down" data-aos-delay="100">
-                <h2 data-heading="Services" class="section_title">O que eu ofereço?</h2>
+        <div class="tl-wrapper-content">
+          <div class="tl-content-career">
+            <div class="tl-icon">
+              <img src="assets/img/workana-icon.png" alt="Ícone logo da Workana">
             </div>
+            <h2>Freelance Design</h2>
+            <h3>Workana</h3>
+            <p data-i18n="career.desc-freela">Identidade visual de marca</p>
+            <p data-i18n="career.desc-freela-2">Mockup kit</p>
+            <p data-i18n="career.desc-freela-3">Design de logo</p> 
+            <p data-i18n="career.desc-freela-4">Social media</p>
+            <p data-i18n="career.desc-freela-5">Vetorização</p>
+            <p data-i18n="career.desc-freela-6">Folders, outdoor, adesivos, banners, cards</p>
+          </div>
 
-            <div class="services_container container grid">
-
-                <!-- Card 1 -->
-
-                <div data-aos="fade-down" data-aos-delay="200" data-aos-duration="750">
-                    <div class="services_content">
-                        <i class="uil uil-web-grid services_icon"></i>
-                        <h3 class="services_title"><br>Desenvolvimento</br></h3>
-
-                        <span class="services_button">
-                            Ver mais <i class="uil uil-arrow-right services_button-icon"></i>
-                        </span>
-                    </div>
-                </div>
-
-                <div class="services_modal">
-                    <div class="services_modal-content">
-                        <i class="uil uil-times services_modal-close"></i>
-
-                        <h3 class="services_modal-title">Desenvolvimento</h3>
-                        <p class="services_modal-description">Desenvolvo sua página com código limpo e de acordo com seu
-                            projeto e suas necessidades, com foco em proporcionar a melhor experiência do usuário
-                            através de página moderna e conversiva.</p>
-
-                        <ul class="services_modal-services grid">
-                            <li class="services_modal-service">
-                                <i class="uil uil-check-circle services_modal-icon"></i>
-                                <p class="services_modal-info">Desenvolvimento Web:</p>
-                            </li>
-                            <p class="services_modal-examples">• E-commerce, landing page, dashboards, portfólio,
-                                aplicações, blog, marketplace e mais..</p>
-                            <li class="services_modal-service">
-                                <i class="uil uil-check-circle services_modal-icon"></i>
-                                <p class="services_modal-info">Desenvolvimento Mobile;</p>
-                            </li>
-                            <li class="services_modal-service">
-                                <i class="uil uil-check-circle services_modal-icon"></i>
-                                <p class="services_modal-info">Conceito Mobile First.</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-
-                <!-- Card 2 -->
-                <div data-aos="fade-down" data-aos-delay="400" data-aos-duration="750">
-                    <div class="services_content">
-                        <i class="uil uil-swatchbook services_icon"></i>
-                        <h3 class="services_title"><br>Design</br></h3>
-
-                        <span class="services_button">
-                            Ver mais <i class="uil uil-arrow-right services_button-icon"></i>
-                        </span>
-                    </div>
-                </div>
-
-                <div class="services_modal">
-                    <div class="services_modal-content">
-                        <i class="uil uil-times services_modal-close"></i>
-
-                        <h3 class="services_modal-title">Design</h3>
-                        <p class="services_modal-description">Modelagem e Prototipação de layout, design web e mobile.
-                            Rebranding de marcas. Criação de identidade visual e/ou redesign de aplicações.</p>
-
-                        <ul class="services_modal-services grid">
-                            <li class="services_modal-service">
-                                <i class="uil uil-check-circle services_modal-icon"></i>
-                                <p class="services_modal-info">Layout Design:</p>
-                            </li>
-                            <p class="services_modal-examples">• E-commerce, landing page, dashboards, portfólio,
-                                aplicações, blog, marketplace e mais..</p>
-                            <li class="services_modal-service">
-                                <i class="uil uil-check-circle services_modal-icon"></i>
-                                <p class="services_modal-info">Identidade Visual:</p>
-                            </li>
-                            <p class="services_modal-examples">• Logotipo, banner, card, thumbnail, mockup, ebook,
-                                panfleto, tag, adesivo, cartão de visita, anúncio, mídias sociais e mais.. </p>
-
-                            <li class="services_modal-service">
-                                <i class="uil uil-check-circle services_modal-icon"></i>
-                                <p class="services_modal-info">Design de Interface e Usuário;</p>
-                            </li>
-                            <li class="services_modal-service">
-                                <i class="uil uil-check-circle services_modal-icon"></i>
-                                <p class="services_modal-info">Psicologia das Cores;</p>
-                            </li>
-                            <li class="services_modal-service">
-                                <i class="uil uil-check-circle services_modal-icon"></i>
-                                <p class="services_modal-info">Alinhamento e escala;</p>
-                            </li>
-                            <li class="services_modal-service">
-                                <i class="uil uil-check-circle services_modal-icon"></i>
-                                <p class="services_modal-info">Tipografia.</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-
-                <div data-aos="fade-down" data-aos-delay="600" data-aos-duration="750">
-                    <div class="services_content">
-                        <i class="uil uil-shield-check services_icon"></i>
-                        <h3 class="services_title"><br>Suporte</br></h3>
-
-                        <span class="services_button">
-                            Ver mais <i class="uil uil-arrow-right services_button-icon"></i>
-                        </span>
-                    </div>
-                </div>
-
-                <div class="services_modal">
-                    <div class="services_modal-content">
-                        <i class="uil uil-times services_modal-close"></i>
-
-                        <h3 class="services_modal-title">Suporte</h3>
-                        <p class="services_modal-description">Disponibilidade em horário comercial, 5 dias por semana
-                            para
-                            qualquer eventualidade ou dúvidas. </p>
-
-                        <ul class="services_modal-services grid">
-                            <li class="services_modal-service">
-                                <i class="uil uil-check-circle services_modal-icon"></i>
-                                <p class="services_modal-info">Estruturação, Planejamento e Alinhamento de Projetos;</p>
-                            </li>
-                            <li class="services_modal-service">
-                                <i class="uil uil-check-circle services_modal-icon"></i>
-                                <p class="services_modal-info">Feedbacks;</p>
-                            </li>
-                            <li class="services_modal-service">
-                                <i class="uil uil-check-circle services_modal-icon"></i>
-                                <p class="services_modal-info">Relatórios;</p>
-                            </li>
-                            <li class="services_modal-service">
-                                <i class="uil uil-check-circle services_modal-icon"></i>
-                                <p class="services_modal-info">Segurança e Qualidade;</p>
-                            </li>
-                            <li class="services_modal-service">
-                                <i class="uil uil-check-circle services_modal-icon"></i>
-                                <p class="services_modal-info">Entrega a curto prazo com preço justo.</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+          <div class="tl-content-career active-content-career">
+            <div class="tl-icon">
+              <img src="assets/img/crt-icon.png" alt="Ícone logo da CRT">
             </div>
-            <div class="fadeBottom"></div>
-        </section>
+            <h2 data-i18n="career.title-position-crt">Desenvolvedor Júnior</h2>
+            <h3 data-i18n="career.title-company-crt">CRT Comunicação</h3>
+            <p data-i18n="career.desc-crt">Colaboração com time de design, para garantir usabilidade e estilização adequada as interfaces no Figma</p>
+            <p data-i18n="career.desc-crt-2">Geração de conteúdo/funcionalidade dinâmica e manipulação de dados no lado do servidor com PHP</p>
+            <p data-i18n="career.desc-crt-3">Desenvolvimento de layouts responsivos utilizando HTML e CSS</p>
+            <p data-i18n="career.desc-crt-4">Implementação de funcionalidades interativas com Javascript e jQuery</p> 
+            <p data-i18n="career.desc-crt-5">Manipulação do banco de dados via MySQL</p>
+            <p data-i18n="career.desc-crt-6">Gerenciamento e hospedagem via WordPress</p>
+            <p data-i18n="career.desc-crt-7">Integração e consumo de API's</p>
+            <p data-i18n="career.desc-crt-8">Versionamento de código via Git</p>
+            <p data-i18n="career.desc-crt-9">Otimização de performance e SEO</p>
+            <p data-i18n="career.desc-crt-10">Manutenção e atualização continua de código</p>
+            <p data-i18n="career.desc-crt-11">Gerenciamento de métricas e dados via GTM e GA4</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-        <!-- Contact -->
-        <section class="contact section" id="contact">
-            <div data-aos="fade-down" data-aos-delay="100">
-                <h2 data-heading="Contact" class="section_title">Contato?</h2>
+  <!-- Modal -->
+  <div id="project-modal" class="project-modal">
+    <div class="modal-content">
+      <span class="close-modal"><i class="ti ti-x"></i></span>
+      <div class="modal-desc-content">
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <nav class="nav-footer">
+      <ul class="content-nav">
+        <li class="footer-nav-btn external-link">
+          <a href="https://github.com/fcaspirro" target="_blank">
+            <i class="ti ti-brand-github"></i>
+            <span class="title">Github</span>
+          </a>
+        </li>
+        <li class="footer-nav-btn external-link">
+          <a href="https://linkedin.com/in/fabio-caspirro" target="_blank">
+            <i class="ti ti-brand-linkedin"></i>
+            <span class="title">LinkedIn</span>
+          </a>
+        </li>
+        <li class="footer-nav-btn external-link">
+          <a href="mailto:fabio_caspirro@hotmail.com?subject=Solicitação de orçamento">
+            <i class="ti ti-mail"></i>
+            <span data-i18n="contact.mail" class="title">E-mail</span>
+          </a>
+        </li>
+        <li class="footer-nav-btn external-link">
+          <a href="https://wa.me/+5511994161781" target="_blank">
+            <i class="ti ti-device-mobile"></i>
+            <span data-i18n="contact.tel" class="title">Telefone</span>
+          </a>
+        </li>
+        <li class="footer-nav-btn downloader">
+          <a href="javascript:void(0)" data-target="cv">
+            <i class="ti ti-school"></i>
+            <span data-i18n="contact.resume" class="title">CV</span>
+          </a>
+          <div class="wrapper-options" style="display: none;">
+            <div class="content-options">
+              <button type="button" name="cv_pt-br" data-url="assets/docs/cv_fabio-caspirro.pdf">pt-br</button>
+              <button type="button" name="cv_en-us" data-url="assets/docs/resume_fabio-caspirro.pdf">en-us</button>
             </div>
-
-            <div class="contact_container container grid">
-                <div class="contact_content">
-                    <div class="contact_info">
-                        <div data-aos="fade-right" data-aos-delay="200" data-aos-duration="750">
-                            <div class="contact_card">
-                                <a href="https://wa.me/5511994161781" target="_blank">
-                                    <i class="uil uil-whatsapp contact_card-icon"></i>
-                                    <h3 class="contact_card-title">Whatsapp</h3>
-                                    <span class="contact_card-data">+55 (11) 99416-1781</span>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div data-aos="fade-right" data-aos-delay="600" data-aos-duration="750">
-                            <div class="contact_card"><a href="mailto:fabio_caspirro@hotmail.com" target="_blank">
-                                    <i class="uil uil-envelope-edit contact_card-icon"></i>
-                                    <h3 class="contact_card-title">E-mail</h3>
-                                    <span class="contact_card-data">fabio_caspirro@hotmail.com</span>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div data-aos="fade-right" data-aos-delay="1000" data-aos-duration="750">
-                            <div class="contact_card"><a href="linkedin.com/in/fabio-caspirro" target="_blank">
-                                    <i class="uil uil-linkedin contact_card-icon"></i>
-                                    <h3 class="contact_card-title">Linkedin</h3>
-                                    <span class="contact_card-data">linkedin.com/in/fabio-caspirro</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contact_content">
-                    <form action="https://formsubmit.co/fabio_caspirro@hotmail.com" method="POST" class="contact_form">
-                        <input type="hidden" name="_next"
-                            value="https://fcaspirro.github.io/portfolio-fcaspirro/tks-page.html">
-                        <input type="hidden" name="_autoresponse"
-                            value="Acabei de receber sua mensagem :) - Obrigado pelo contato. Retornarei o mais rápido possível!">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_template" value="table">
-
-                        <div data-aos="fade-left" data-aos-delay="200" data-aos-duration="750">
-                            <div class="input_container">
-                                <input type="text" name="name" class="input">
-                                <label for="">Nome</label>
-                                <span>Nome</span>
-                            </div>
-                        </div>
-
-                        <div data-aos="fade-left" data-aos-delay="400" data-aos-duration="750">
-                            <div class="input_container">
-                                <input type="email" name="email" class="input">
-                                <label for="">E-mail</label>
-                                <span>E-mail</span>
-                            </div>
-                        </div>
-
-                        <div data-aos="fade-left" data-aos-delay="600" data-aos-duration="750">
-                            <div class="input_container">
-                                <input type="tel" name="tel" class="input">
-                                <label for="">Telefone</label>
-                                <span>Telefone</span>
-                            </div>
-                        </div>
-
-                        <div data-aos="fade-left" data-aos-delay="800" data-aos-duration="750">
-                            <div class="input_container textarea">
-                                <textarea name="message" id="" class="input"></textarea>
-                                <label for="">Mensagem</label>
-                                <span>Mensagem</span>
-                            </div>
-                        </div>
-                        <div data-aos="zoom-out" data-aos-delay="1000" data-aos-duration="1000">
-                            <button type="submit" class="button"><i class="uil uil-navigator button_icon"></i>
-                                Enviar
-                            </button>
-                        </div>
-                    </form>
-                </div>
+          </div>
+        </li>
+        <li class="footer-nav-btn downloader">
+          <a href="javascript:void(0)" data-target="design">
+            <i class="ti ti-palette"></i>
+            <span class="title">Design</span>
+          </a>
+          <div class="wrapper-options" style="display: none;">
+            <div class="content-options">
+              <button type="button" name="design_pt-br" data-url="assets/docs/design_pt-br.pdf">pt-br</button>
+              <button type="button" name="design_en-us" data-url="assets/docs/design_en-us.pdf">en-us</button>
             </div>
-        </section>
+          </div>
+        </li> 
+      </ul>
+    </nav>
+  </footer>
 
-        <!-- Scroll to Top -->
-        <span class="scrollTop"><i class="uil uil-angle-double-up"></i></span>
-
-        <!-- FOOTER -->
-        <footer>
-            <div class="container">
-                <div class="copy">
-                    &copy
-                    <script>
-                        document.write(new Date().getFullYear());
-                    </script> - Todos Direitos Reservados - <a href="https://www.github.com/Fcaspirro"
-                        target="_blank"><span>Fabio Caspirro</span></a>
-                </div>
-            </div>
-        </footer>
-    </main>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="main.js"></script>
 </body>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-<script>
-    AOS.init();
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-<script src="assets/js/mixitup.min.js"></script>
-
-<script src="assets/js/main.js"></script>
-
 </html>
