@@ -1188,8 +1188,8 @@ nav {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
+  gap: 0.6rem;
   border-radius: 0.6rem;
-  border: 1px solid #27272a;
 }
 
 .content-nav li {
@@ -1200,6 +1200,7 @@ nav {
   justify-content: center;
   text-align: center;
   background: #09090b;
+  border: 1px solid #27272a;
   border-radius: 0.6rem;
 }
 
@@ -1433,9 +1434,9 @@ footer {
   position: static;
   display: flex;
   width: 100%;
-  min-height: 8rem;
   align-items: center;
   justify-content: center;
+  margin-bottom: 1rem;
   z-index: 8;
 }
 
@@ -2605,6 +2606,10 @@ footer {
     left: calc(50% - (35% /2));
   }
 
+  .swiper-button-next, .swiper-button-prev {
+    --swiper-navigation-size: 1.6rem !important;
+  }
+
   .wrapper-project .devices-project .mobile-screen {
     width: 100%;
     right: auto;
@@ -2632,7 +2637,6 @@ footer {
     border: none;
     justify-content: center;
     margin-top: 2rem;
-    gap: 1rem;
   }
 
   .nav-footer .content-nav li:first-child a:hover, 
