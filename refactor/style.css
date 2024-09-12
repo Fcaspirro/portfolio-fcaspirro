@@ -1124,6 +1124,11 @@ header {
   z-index: 9;
 }
 
+.button-song {
+  background: #09090b;
+  border-radius: 50%;
+}
+
 .button-song button {
   position: relative;
   padding: 1.8rem;
@@ -1184,6 +1189,7 @@ nav {
   flex-wrap: wrap;
   margin: 0 auto;
   border: 1px solid rgba(24, 24, 27, 0.75);
+  background: #09090b;
   border-radius: 0.8rem;
 }
 
@@ -1305,6 +1311,7 @@ li#selector {
   height: 32px;
   border-radius: 0.8rem;
   border: 1px solid #27272a;
+  background: #09090b;
   transition: all .3s ease;
 }
 
@@ -1406,13 +1413,14 @@ i.ti {
 }
 
 /***** Footer *****/
-.nav-footer {
+footer {
   position: static;
   display: flex;
   width: 100%;
   min-height: 8rem;
   align-items: center;
   justify-content: center;
+  z-index: 7;
 }
 
 .wrapper-options,
@@ -1490,6 +1498,14 @@ i.ti {
 .footer-nav-btn button:active {
   border-color: #71717a;
   transition: border .3s ease;
+}
+
+.nav-footer ul.content-nav {
+  background: none;
+}
+
+.nav-footer ul.content-nav li {
+  background: #09090b;
 }
 
 /***** Home *****/
