@@ -296,7 +296,36 @@ $(".hover").mouseleave(
 $('.tl-nav').click(function() {
   $('.tl-nav').removeClass('active-nav-career');
   $(this).addClass('active-nav-career');
-  var index = $(this).index();
+  let index = $(this).index();
   $('.tl-content-career').removeClass('active-content-career');
   $('.tl-content-career').eq(index).addClass('active-content-career');
+});
+
+$('.view-desc-mobile a').on('click', function (e) {
+  e.preventDefault();
+
+  let currentSlider = $(this).closest('.swiper-slide');
+
+  let descriptionContent = currentSlider.find('.desc-project .description').html();
+  let usefulLinksContent = currentSlider.find('.desc-project .useful-links').html();
+  let techsContent = currentSlider.find('.wrapper-techs').html();
+
+  $('#project-modal .modal-desc-content').html(
+    '<div class="modal-description">' + descriptionContent + '</div>' +
+    '<h3>Links úteis</h3>' + 
+    '<div class="modal-useful-links useful-links">' + usefulLinksContent + '</div>' +
+    '<div class="modal-techs">' + techsContent + '</div>'
+  );
+
+  $('#project-modal').fadeIn();
+});
+
+$('.close-modal').on('click', function () {
+  $('#project-modal').fadeOut();
+});
+
+$(window).on('click', function (e) {
+  if ($(e.target).is('#project-modal')) {
+    $('#project-modal').fadeOut();
+  }
 });
