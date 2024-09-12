@@ -1,36 +1,18 @@
-// Config gsap
-const { gsap } = window;
-
 // Initial Loading
 window.addEventListener('load', () => {
-  gsap.set('.cursor', { opacity: 0 });
+  document.querySelector('.cursor').style.opacity = 0;
   document.querySelector('.initial-loader').style.display = 'flex';
 
   setTimeout(() => {
-    gsap.to('.initial-loader', { 
-      autoAlpha: 0, 
-      duration: 1, 
-      ease: "power1.inOut",
-      onComplete: () => {
-        document.querySelector('.initial-loader').style.display = 'none';
-        gsap.set('.cursor', { opacity: 1, duration: 1 });
-        gsap.fromTo('body', { autoAlpha: 1 }, { 
-          duration: 1, 
-          ease: "power1.inOut" 
-        });
-      }
-    });
-  }, 6000); 
-});
+    document.querySelector('.initial-loader').style.transition = 'opacity 1s ease-in-out';
+    document.querySelector('.initial-loader').style.opacity = 0;
 
-gsap.fromTo("#circle", {
-  autoAlpha: 0,        
-  opacity: 0            
-}, {
-  autoAlpha: 1,         
-  opacity: 1,          
-  duration: 6,       
-  ease: "power1.inOut"  
+    setTimeout(() => {
+      document.querySelector('.initial-loader').style.display = 'none';
+      document.querySelector('.cursor').style.transition = 'opacity 1s';
+      document.querySelector('.cursor').style.opacity = 1;
+    }, 1000);
+  }, 6000);
 });
 
 // Config cursor
@@ -48,284 +30,273 @@ document.body.addEventListener("pointermove", ({ pageX, pageY }) => {
 });
 
 document.body.addEventListener("pointerdown", () => {
-  gsap.to(cursorInner, { scale: 1.5, duration: 0.15 });
+  cursorInner.style.transform = 'scale(1.5)';
 });
 
 document.body.addEventListener("pointerup", () => {
-  gsap.to(cursorInner, { scale: 1, duration: 0.15 });
+  cursorInner.style.transform = 'scale(1)';
 });
 
 const updateCursor = () => {
-  gsap.set(cursorInner, { x: mouse.x, y: mouse.y });
-  gsap.to(cursorOuter, {
-    x: mouse.x - cursorOuterOriginalState.width / 2,
-    y: mouse.y - cursorOuterOriginalState.height / 2,
-    duration: 0.15,
-  });
+  cursorInner.style.transform = `translate(${mouse.x}px, ${mouse.y}px)`;
+  cursorOuter.style.transform = `translate(${mouse.x - cursorOuterOriginalState.width / 2}px, ${mouse.y - cursorOuterOriginalState.height / 2}px)`;
   requestAnimationFrame(updateCursor);
 };
 
 updateCursor();
 
+// Audio control
 const audio = new Audio('assets/audio/sound.mp3');
 audio.volume = 0.2;
-audio.loop = true; 
+audio.loop = true;
 
-$('.button-song button').addClass('inactive');
-$('#onSong').css('display', 'none');
+const buttonSong = document.querySelector('.button-song button');
+const onSong = document.getElementById('onSong');
+const offSong = document.getElementById('offSong');
+buttonSong.classList.add('inactive');
+onSong.style.display = 'none';
 
-$('.button-song button').on('click', function() {
-  const offSong = $('#offSong');
-  const onSong = $('#onSong');
-
-  offSong.toggle();
-  onSong.toggle();
-
-  if (offSong.is(':visible')) {
-    $(this).removeClass('active').addClass('inactive');
-    audio.pause(); 
+buttonSong.addEventListener('click', () => {
+  if (onSong.style.display === 'none') {
+    onSong.style.display = 'block';
+    offSong.style.display = 'none';
+    buttonSong.classList.add('active');
+    buttonSong.classList.remove('inactive');
+    audio.play();
   } else {
-    $(this).removeClass('inactive').addClass('active');
-    audio.play(); 
+    onSong.style.display = 'none';
+    offSong.style.display = 'block';
+    buttonSong.classList.add('inactive');
+    buttonSong.classList.remove('active');
+    audio.pause();
   }
 });
 
 // Header nav
-$('.nav-btn').on('click', function(event) {
-  event.preventDefault();
-  let targetId = $(this).data('target');
-  
-  $('.content-nav li a').removeClass('active-nav');
-  $('section').removeClass('active-section');
-  
-  $(this).addClass('active-nav');  
-  $('#' + targetId).addClass('active-section');
+const navBtns = document.querySelectorAll('.nav-btn');
+navBtns.forEach(btn => {
+  btn.addEventListener('click', (event) => {
+    event.preventDefault();
+    const targetId = btn.dataset.target;
 
-  if (targetId === 'home') {
-    $('#home').css('display', 'flex');
-    $('#about-me').css('display', 'none');
-    $('#career').css('display', 'none');
-  }
+    document.querySelectorAll('.content-nav li a').forEach(el => el.classList.remove('active-nav'));
+    document.querySelectorAll('section').forEach(el => {
+      el.classList.remove('active-section');
+      el.style.display = 'none';
+    });
 
-  if (targetId === 'about-me') {
-    $('#about-me').css('display', 'flex');
-    $('#home').css('display', 'none');
-    $('#career').css('display', 'none');
-  }
-
-  if (targetId === 'career') {
-    $('#career').css('display', 'flex');
-    $('#home').css('display', 'none');
-    $('#about-me').css('display', 'none');
-  }
+    btn.classList.add('active-nav');
+    const targetSection = document.getElementById(targetId);
+    targetSection.style.display = 'flex';
+    targetSection.classList.add('active-section');
+  });
 });
 
-// Home footer nav
-$('.footer-nav-btn').not('.downloader').on('click', function(event) {
-  let $this = $(this); 
-
-  if ($this.hasClass('external-link')) {
-    $this.addClass('active-footer-nav');
-    setTimeout(function() {
-      $this.removeClass('active-footer-nav');
-    }, 2000);
-
-    return;
+// Footer nav
+const footerNavBtns = document.querySelectorAll('.footer-nav-btn');
+footerNavBtns.forEach(btn => {
+  if (!btn.classList.contains('downloader')) {
+    btn.addEventListener('click', (event) => {
+      if (btn.classList.contains('external-link')) {
+        btn.classList.add('active-footer-nav');
+        setTimeout(() => btn.classList.remove('active-footer-nav'), 2000);
+      } else {
+        event.preventDefault();
+        btn.classList.add('active-footer-nav');
+      }
+    });
   }
-  
-  event.preventDefault();
-  $this.addClass('active-footer-nav');
 });
 
 function fadeIn(element) {
-  gsap.fromTo(element, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.12, ease: "power1.inOut" });
+  element.style.transition = 'opacity 0.12s ease-in-out';
+  element.style.opacity = 1;
 }
 
-// Função para fadeOut com GSAP
 function fadeOut(element) {
-  gsap.fromTo(element, { autoAlpha: 1 }, { autoAlpha: 0, duration: 0.12, ease: "power1.inOut" });
+  element.style.transition = 'opacity 0.12s ease-in-out';
+  element.style.opacity = 0;
 }
 
-// Home footer nav downloader
-$('.footer-nav-btn.downloader').on('click', function(event) {
-  event.preventDefault();
-  let $this = $(this);
-  let $wrapperOptions = $this.find('.wrapper-options');
-
-  if ($this.hasClass('active-downloader')) {
-    $this.removeClass('active-footer-nav active-downloader');
-    fadeOut($wrapperOptions);
-    setTimeout(() => $wrapperOptions.css('display', 'none').attr('aria-hidden', 'true'), 120);
-  } else {
-    $('.footer-nav-btn.downloader').removeClass('active-footer-nav active-downloader');
-    $('.wrapper-options').css('display', 'none').attr('aria-hidden', 'true');
-
-    $this.addClass('active-footer-nav active-downloader');
-    $wrapperOptions.css('display', 'flex').attr('aria-hidden', 'false');
-    fadeIn($wrapperOptions);
-  }
+// Downloader button logic
+const downloaderBtns = document.querySelectorAll('.footer-nav-btn.downloader');
+downloaderBtns.forEach(btn => {
+  btn.addEventListener('click', (event) => {
+    event.preventDefault();
+    const wrapperOptions = btn.querySelector('.wrapper-options');
+    if (btn.classList.contains('active-downloader')) {
+      btn.classList.remove('active-footer-nav', 'active-downloader');
+      fadeOut(wrapperOptions);
+      setTimeout(() => wrapperOptions.style.display = 'none', 120);
+    } else {
+      downloaderBtns.forEach(b => {
+        b.classList.remove('active-footer-nav', 'active-downloader');
+        b.querySelector('.wrapper-options').style.display = 'none';
+      });
+      btn.classList.add('active-footer-nav', 'active-downloader');
+      wrapperOptions.style.display = 'flex';
+      fadeIn(wrapperOptions);
+    }
+  });
 });
 
-// Download
-$('.wrapper-options button').on('click', function() {
-  let fileUrl = $(this).data('url');
-
-  if (fileUrl) {
-    window.open(fileUrl, '_blank');
-  } else {
-    console.error('Arquivo não encontrado!');
-  }
+// Download action
+document.querySelectorAll('.wrapper-options button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const fileUrl = btn.dataset.url;
+    if (fileUrl) {
+      window.open(fileUrl, '_blank');
+    } else {
+      console.error('Arquivo não encontrado!');
+    }
+  });
 });
 
-// Language update function
+// Language update
 function updateContent(langData) {
-  $('[data-i18n]').each(function() {
-    const key = $(this).data('i18n');
+  document.querySelectorAll('[data-i18n]').forEach(element => {
+    const key = element.dataset.i18n;
     const parts = key.split('.');
     let value = langData;
-
-    for (const part of parts) {
+    parts.forEach(part => {
       value = value ? value[part] : '';
-    }
-
-    $(this).text(value);
+    });
+    element.textContent = value;
   });
 }
 
-// Function to set language preference and fetch data
+// Change language
 function changeLanguage(lang) {
   localStorage.setItem('language', lang);
-  $.getJSON(`assets/languages/${lang}.json`).done(updateContent);
+  fetch(`assets/languages/${lang}.json`)
+    .then(response => response.json())
+    .then(data => updateContent(data));
 
-  // Update flag icon
-  let flagImg = '';
-  if (lang === 'pt-br') {
-    flagImg = 'assets/img/brazil-flag.png';
-  } else if (lang === 'en-us') {
-    flagImg = 'assets/img/usa-flag.png';
-  }
+  const flagImg = lang === 'pt-br' ? 'assets/img/brazil-flag.png' : 'assets/img/usa-flag.png';
+  document.getElementById('selector').querySelector('a').innerHTML = `<img src="${flagImg}" alt="Flag">`;
 
-  $('#selector a').html(`<img src="${flagImg}" alt="Flag">`);
-
-  $('.wrapper-lang').fadeOut(); 
-  $('#selector').removeClass('active'); 
+  document.querySelector('.wrapper-lang').style.display = 'none';
+  document.getElementById('selector').classList.remove('active');
 }
 
 // Handle language button clicks
-$('#language-selector button').on('click', function() {
-  const lang = $(this).attr('id').replace('lang_', '');
-  changeLanguage(lang);
+document.querySelectorAll('#language-selector button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const lang = btn.id.replace('lang_', '');
+    changeLanguage(lang);
+  });
 });
 
-// Toggle the language selector dropdown
-$('#selector').on('click', function() {
-  const wrapperLang = $('.wrapper-lang');
-  const isVisible = wrapperLang.is(':visible');
+// Toggle language selector
+document.getElementById('selector').addEventListener('click', () => {
+  const wrapperLang = document.querySelector('.wrapper-lang');
+  const isVisible = wrapperLang.style.display === 'block';
 
   if (isVisible) {
     fadeOut(wrapperLang);
-    setTimeout(() => wrapperLang.hide(), 120); 
+    setTimeout(() => wrapperLang.style.display = 'none', 120);
   } else {
-    wrapperLang.show();
+    wrapperLang.style.display = 'block';
     fadeIn(wrapperLang);
   }
 
-  $(this).toggleClass('active');
+  document.getElementById('selector').classList.toggle('active');
 });
 
-// Use event delegation for dynamically added elements
-$(document).on('click', '.content-lang button', function () {
-  $('.wrapper-lang').toggle();
-  $('#selector').removeClass('active'); 
-});
+// Initialize language
+const initialLanguage = document.documentElement.lang || 'en-us';
+document.getElementById(`lang_${initialLanguage}`).classList.add('active');
+fetch(`assets/languages/${initialLanguage}.json`)
+  .then(response => response.json())
+  .then(data => updateContent(data));
 
-// Set the initial language and update content
-const initialLanguage = $('html').attr('lang') || 'en-us';
-$(`#language-selector button#lang_${initialLanguage}`).addClass('active');
-$.getJSON(`assets/languages/${initialLanguage}.json`).done(updateContent);
+// Swiper initialization (assumindo que a biblioteca Swiper está disponível)
+const swiperContainer = document.querySelector('.swiper-container');
+if (swiperContainer) {
+  const swiper = new Swiper(swiperContainer, {
+    loop: false,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    navigation: {
+      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-button-next'
+    },
+    speed: 600,
+    on: {
+      slideChangeTransitionStart: function () {
+        const slides = document.querySelectorAll('.swiper-slide');
+        const currentSlide = slides[swiper.activeIndex];
+        const prevSlide = slides[swiper.previousIndex];
+        const activeIndex = swiper.activeIndex;
+        const totalSlides = swiper.slides.length;
 
+        slides.forEach(slide => slide.style.transition = 'none');
 
-const swiper = new Swiper('.swiper-container', {
-  loop: false,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true
-  },
-  navigation: {
-    prevEl: '.swiper-button-prev', 
-    nextEl: '.swiper-button-next'
-  },
-  speed: 600, 
-  on: {
-    slideChangeTransitionStart: function () {
-      const slides = document.querySelectorAll('.swiper-slide');
-      const currentSlide = slides[swiper.activeIndex];
-      const prevSlide = slides[swiper.previousIndex];
-      let activeIndex = this.activeIndex;
-      let totalSlides = this.slides.length;
+        prevSlide.style.transition = 'opacity 3s ease-in, transform 3s ease-in';
+        prevSlide.style.opacity = 0;
+        prevSlide.style.transform = 'scale(0.9)';
 
-      gsap.set(slides, { clearProps: "all" });
+        currentSlide.style.transition = 'opacity 3s ease-out, transform 3s ease-out';
+        currentSlide.style.opacity = 1;
+        currentSlide.style.transform = 'scale(1)';
 
-      gsap.to(prevSlide, {
-        opacity: 0,
-        scale: 0.9, 
-        duration: 3, 
-        ease: "power2.in"
-      });
-
-      gsap.fromTo(currentSlide,
-        { opacity: 0, scale: 1.1 }, 
-        { opacity: 1, scale: 1, duration: 3, ease: "power2.out" } 
-      );
-
-      if (activeIndex === totalSlides - 1) {
-        $('.info-text').fadeOut();
-      } else {
-        $('.info-text').fadeIn();
+        document.querySelector('.info-text').style.display = activeIndex === totalSlides - 1 ? 'none' : 'block';
       }
     }
-  }
+  });
+}
+
+// Hover effect
+document.querySelectorAll('.hover').forEach(el => {
+  el.addEventListener('mouseleave', () => {
+    el.classList.remove('hover');
+  });
 });
 
-$(".hover").mouseleave(
-  function () {
-    $(this).removeClass("hover");
-  }
-);
-
-$('.tl-nav').click(function() {
-  $('.tl-nav').removeClass('active-nav-career');
-  $(this).addClass('active-nav-career');
-  let index = $(this).index();
-  $('.tl-content-career').removeClass('active-content-career');
-  $('.tl-content-career').eq(index).addClass('active-content-career');
+// Timeline navigation
+const tlNavs = document.querySelectorAll('.tl-nav');
+tlNavs.forEach((nav, index) => {
+  nav.addEventListener('click', () => {
+    tlNavs.forEach(n => n.classList.remove('active-nav-career'));
+    nav.classList.add('active-nav-career');
+    const contents = document.querySelectorAll('.tl-content-career');
+    contents.forEach(content => content.classList.remove('active-content-career'));
+    contents[index].classList.add('active-content-career');
+  });
 });
 
-$('.view-desc-mobile a').on('click', function (e) {
-  e.preventDefault();
+// View description modal
+document.querySelectorAll('.view-desc-mobile a').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const currentSlider = link.closest('.swiper-slide');
+    const descriptionContent = currentSlider.querySelector('.desc-project .description').innerHTML;
+    const usefulLinksContent = currentSlider.querySelector('.desc-project .useful-links').innerHTML;
+    const techsContent = currentSlider.querySelector('.wrapper-techs').innerHTML;
 
-  let currentSlider = $(this).closest('.swiper-slide');
-
-  let descriptionContent = currentSlider.find('.desc-project .description').html();
-  let usefulLinksContent = currentSlider.find('.desc-project .useful-links').html();
-  let techsContent = currentSlider.find('.wrapper-techs').html();
-
-  $('#project-modal .modal-desc-content').html(
-    '<div class="modal-description">' + descriptionContent + '</div>' +
-    '<h3>Links úteis</h3>' + 
-    '<div class="modal-useful-links useful-links">' + usefulLinksContent + '</div>' +
-    '<div class="modal-techs">' + techsContent + '</div>'
-  );
-
-  $('#project-modal').fadeIn();
+    const modal = document.getElementById('project-modal');
+    modal.querySelector('.modal-desc-content').innerHTML = `
+      <div class="modal-description">${descriptionContent}</div>
+      <div class="modal-useful-links useful-links">${usefulLinksContent}</div>
+      <div class="modal-techs">${techsContent}</div>
+    `;
+    modal.style.display = 'block';
+  });
 });
 
-$('.close-modal').on('click', function () {
-  $('#project-modal').fadeOut();
-});
+// Close modal
+const closeModalBtn = document.querySelector('.close-modal');
+if (closeModalBtn) {
+  closeModalBtn.addEventListener('click', () => {
+    document.getElementById('project-modal').style.display = 'none';
+  });
+}
 
-$(window).on('click', function (e) {
-  if ($(e.target).is('#project-modal')) {
-    $('#project-modal').fadeOut();
+// Click outside modal to close
+window.addEventListener('click', (e) => {
+  if (e.target.id === 'project-modal') {
+    document.getElementById('project-modal').style.display = 'none';
   }
 });
