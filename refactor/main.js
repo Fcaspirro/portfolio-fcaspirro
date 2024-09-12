@@ -242,7 +242,7 @@ if (swiperContainer) {
         currentSlide.style.opacity = 1;
         currentSlide.style.transform = 'scale(1)';
 
-        document.querySelector('.info-text').style.display = activeIndex === totalSlides - 1 ? 'none' : 'block';
+        document.querySelector('.info-text').style.display = activeIndex === totalSlides - 1 ? 'none' : 'flex';
       }
     }
   });
