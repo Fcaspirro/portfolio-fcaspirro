@@ -1541,10 +1541,6 @@ footer {
   transform-style: preserve-3d; 
 }
 
-.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
-  bottom: 12vh;
-}
-
 .see-more {
   display: flex;
   align-content: center;
