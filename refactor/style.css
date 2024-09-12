@@ -1201,7 +1201,7 @@ nav {
   text-align: center;
   background: #09090b;
   border: 1px solid #27272a;
-  border-radius: 0.6rem;
+  /* border-radius: 0.6rem; */
 }
 
 .nav-footer ul.content-nav li:first-child {
@@ -1233,6 +1233,8 @@ nav {
   border: 1px solid #f4f4f5;
 }
 
+.content-nav li:first-child,
+.nav-footer ul.content-nav li:first-child,
 .content-nav li:first-child a:hover,
 .content-nav li:first-child a.active-nav,
 .content-nav li.active-footer-nav:first-child {
@@ -1243,6 +1245,10 @@ nav {
   transition: all .3s ease;
 }
 
+
+.content-nav li:last-child,
+.nav-footer ul.content-nav li:last-child,
+.content-nav li:last-child:hover,
 .content-nav li:last-child a:hover,
 .content-nav li:last-child a.active-nav,
 .content-nav li.active-footer-nav:last-child {
@@ -1529,7 +1535,7 @@ footer {
 .nav-footer ul.content-nav li {
   background: #09090b;
   border: 1px solid #27272a;
-  border-radius: 0.6rem;
+  /* border-radius: 0.6rem; */
 }
 
 /***** Home *****/
@@ -2633,28 +2639,20 @@ footer {
     border-radius: 0.6rem;
   }
 
+  .nav-footer .content-nav li:first-child, 
+  .nav-footer ul.content-nav li:first-child, 
+  .nav-footer .content-nav li:last-child, 
+  .nav-footer ul.content-nav li:last-child,
+  .nav-footer .content-nav li a:hover,
+  .nav-footer .content-nav li:first-child a:hover, 
+  .nav-footer .content-nav li:last-child a:hover {
+    border-radius: 0.6rem;
+  }
+
   .nav-footer ul.content-nav {
     border: none;
     justify-content: center;
     margin-top: 2rem;
-  }
-
-  .nav-footer .content-nav li:first-child a:hover, 
-  .nav-footer .content-nav li:first-child a.active-nav, 
-  .nav-footer .content-nav li.active-footer-nav:first-child {
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-
-  .nav-footer .content-nav li:last-child a:hover, 
-  .nav-footer .content-nav li:last-child a.active-nav, 
-  .nav-footer .content-nav li.active-footer-nav:last-child {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
   }
 
   .content-project {
@@ -2663,15 +2661,11 @@ footer {
   }
 
   header .content-nav li a {
-    width: 7rem;
+    width: 7.2rem;
   }
 
   .content-nav li a.active-nav .title {
     font-size: 1rem;
-  }
-
-  .content-nav li a:hover {
-    border-radius: 0.6rem !important;
   }
 
   /***** Modal *****/
