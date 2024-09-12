@@ -1188,6 +1188,8 @@ nav {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
+  border-radius: 0.6rem;
+  border: 1px solid #27272a;
 }
 
 .content-nav li {
@@ -1198,6 +1200,7 @@ nav {
   justify-content: center;
   text-align: center;
   background: #09090b;
+  border-radius: 0.6rem;
 }
 
 .nav-footer ul.content-nav li:first-child {
@@ -1515,6 +1518,7 @@ footer {
 
 .nav-footer ul.content-nav {
   background: none;
+  border: none;
 }
 
 .nav-footer ul.content-nav {
@@ -1523,7 +1527,7 @@ footer {
 
 .nav-footer ul.content-nav li {
   background: #09090b;
-  border: 1px solid rgba(24, 24, 27, 0.75);
+  border: 1px solid #27272a;
   border-radius: 0.6rem;
 }
 
