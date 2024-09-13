@@ -21,6 +21,7 @@ A proposta deste projeto é compartilhar meus conhecimentos, habilidades e proje
 - :eye: [Demonstração](#demonstração)
 - :dizzy: [Interface](#interface)
 - :computer: [Stacks](#stacks)
+- :globe_with_meridians: [Deploy](#deploy)
   
 ---
 
@@ -58,9 +59,17 @@ A proposta deste projeto é compartilhar meus conhecimentos, habilidades e proje
 
 ---
 
+## Deploy
+
+```bash
+  https://fcaspirro.github.io/portfolio-fcaspirro/
+```
+
+---
+
 <div align="center">
 
-## 👩🏻‍💻 Autor | <i>Author</i> <br>
+## 👩🏻‍💻 Autor <br>
 
   <table>
     <tr>
