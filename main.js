@@ -76,7 +76,7 @@ const cursor = new CursorFx(document.querySelector('.cursor'));
 
 // Audio control
 const audio = new Audio('assets/audio/sound.mp3');
-audio.volume = 0.2;
+audio.volume = 0.35;
 audio.loop = true;
 
 const buttonSong = document.querySelector('.button-song button');
