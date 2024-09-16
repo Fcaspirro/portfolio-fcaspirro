@@ -39,6 +39,9 @@
     "desc-information-3":"Estou sempre em constante evolução e aprendizado, movido pelo desejo de me superar a cada desafio.",
     "desc-information-4":"Aqui, você encontrará os projetos mais recentes e o meu comprometimento e dedicação à tecnologia."
   },
+  "tech": {
+    "responsiveness":"Responsividade"
+  },
   "career": {
     "desc-freela":"Identidade visual de marca;",
     "desc-freela-2":"Mockup kit;",
