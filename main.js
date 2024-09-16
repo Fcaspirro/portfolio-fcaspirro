@@ -204,8 +204,8 @@ function changeLanguage(lang) {
   const flagImg = lang === 'pt-br' ? 'assets/img/brazil-flag.png' : 'assets/img/usa-flag.png';
   document.getElementById('selector').querySelector('a').innerHTML = `<img src="${flagImg}" alt="Flag">`;
 
-  document.querySelector('.wrapper-lang').style.display = 'none';
-  document.getElementById('selector').classList.remove('active');
+  document.getElementById('lang_pt-br').addEventListener('click', () => changeLanguage('pt-br'));
+  document.getElementById('lang_en-us').addEventListener('click', () => changeLanguage('en-us'));
 }
 
 // Handle language button clicks
