@@ -1,5 +1,5 @@
 <h3 align="center">
-	<img width="150px" height:"75px" alt="logo Fabio Caspirro" title="logo" src="./assets/github/logo.png"/>
+	<img width="300px" alt="logo Fabio Caspirro" title="logo" src="./assets/img/fc-opengraph.png"/>
 </h3>
 
 <h5 align="center"> 
