@@ -1,5 +1,5 @@
 <h3 align="center">
-	<img width="300px" alt="logo Fabio Caspirro" title="logo" src="./assets/img/fc-opengraph.png"/>
+	<img width="300px" alt="logo Fabio Caspirro" title="logo" src="./assets/img/fc-opengraph.webp"/>
 </h3>
 
 <h5 align="center"> 
@@ -28,7 +28,7 @@ A proposta deste projeto é compartilhar meus conhecimentos, habilidades e proje
 ## Demonstração
 
  <div align="center">
-   <img width="100%" alt="Portfolio Fabio Caspirro" title="Portfolio" src="./assets/github/project.png"/> 
+   <img width="100%" alt="Portfolio Fabio Caspirro" title="Portfolio" src="./assets/github/project.webp"/> 
  </div>
   
 ---
