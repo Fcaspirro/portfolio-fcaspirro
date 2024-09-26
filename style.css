@@ -1700,6 +1700,10 @@ footer {
   background-image: linear-gradient(#84cc16, #f8fafc, #ef4444);
 }
 
+.gradient.camicado-blog {
+  background-image: linear-gradient(#e5e5e5, #f8fafc, #d4142cb3);
+}
+
 .gradient.consulta-cnpj {
   background-image: linear-gradient(#e5e7eb, #f8fafc, #71717a);
 }
