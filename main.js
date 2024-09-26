@@ -201,7 +201,7 @@ function changeLanguage(lang) {
     .then(response => response.json())
     .then(data => updateContent(data));
 
-  const flagImg = lang === 'pt-br' ? 'assets/img/brazil-flag.png' : 'assets/img/usa-flag.png';
+  const flagImg = lang === 'pt-br' ? 'assets/img/brazil-flag.webp' : 'assets/img/usa-flag.webp';
   document.getElementById('selector').querySelector('a').innerHTML = `<img src="${flagImg}" alt="Flag">`;
 
   document.getElementById('lang_pt-br').addEventListener('click', () => changeLanguage('pt-br'));
