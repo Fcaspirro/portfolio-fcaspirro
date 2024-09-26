@@ -25,6 +25,8 @@
     "desc-portfolio-kaueGodoy-2": "O projeto consta com trilha sonora, navegação personalizada com tema de games retro, e também é possível ter acesso aos jogos desenvolvidos, informações sobre os jogos e sobre o autor.",
     "desc-quizgame":"Projeto responsivo de um game quiz, trata-se de um quiz com o genêro de filmes, com o total de 6 perguntas de múltiplas escolhas com apenas uma escolha correta. Ao final, gera um resultado completo de acertos e erros.",
     "desc-quizgame-2":"Utilizado duas APIs em conjunto para funcionamento do game, uma para a coleta das perguntas e respostas, e outra, para tradução das perguntas e respostas coletadas.",
+    "desc-camicadoblog":"Página inicial e matérias de um blog com postagens automatizadas, hospedado em WordPress e integrado via PHP.",
+    "desc-camicadoblog-2":"Utilização do plugin Advanced Custom Fields (ACF) para automatização da criação de hero banners, seção de novidades, seção de anúncio e posts mais lidos.",
     "desc-consultacnpj":"Projeto responsivo para consulta de CNPJ utilizando a Brasil API, o sistema conta com a verificação de possíveis erros durante a consulta do CNPJ inserido e oferece orientações claras para o usuário caso ocorra algum problema.",
     "desc-consultacnpj-2":"Este projeto permite que os usuários insiram um CNPJ, consultem os dados da empresa correspondente e salvem essas informações, facilitando o gerenciamento de dados empresariais.",
     "desc-songz":"Projeto responsivo de uma biblioteca de músicas com com criação de playlists. Permite adicionar, editar e remover músicas com nome, artista, álbum, capa e arquivo .mp3. Futuramente, será integrado a um player de música.",
