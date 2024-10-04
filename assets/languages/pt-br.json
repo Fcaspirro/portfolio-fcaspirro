@@ -21,6 +21,8 @@
     "view-desc-mobile": "Ver detalhes do projeto",
     "useful-links": "Links úteis",
     "tech-mobile-text": "Tecnologias utilizadas no projeto:",
+    "desc-crud-task": "Gerenciamento de tarefas CRUD (Create, Read, Update e Delete) com ASP.NET Core MVC e C#.",
+    "desc-crud-task-2": "O projeto contém a home com o resumo dos status das tarefas criadas, e duas páginas internas com o gerenciamento de tarefas CRUD realizado por modal e com validação de formulário e a que mostra os detalhes das tarefas criadas.",
     "desc-portfolio-kaueGodoy": "Projeto responsivo de um portfólio pessoal, onde foi pensado inteiramente para um desenvolvedor de jogos.",
     "desc-portfolio-kaueGodoy-2": "O projeto consta com trilha sonora, navegação personalizada com tema de games retro, e também é possível ter acesso aos jogos desenvolvidos, informações sobre os jogos e sobre o autor.",
     "desc-quizgame":"Projeto responsivo de um game quiz, trata-se de um quiz com o genêro de filmes, com o total de 6 perguntas de múltiplas escolhas com apenas uma escolha correta. Ao final, gera um resultado completo de acertos e erros.",
@@ -30,9 +32,7 @@
     "desc-consultacnpj":"Projeto responsivo para consulta de CNPJ utilizando a Brasil API, o sistema conta com a verificação de possíveis erros durante a consulta do CNPJ inserido e oferece orientações claras para o usuário caso ocorra algum problema.",
     "desc-consultacnpj-2":"Este projeto permite que os usuários insiram um CNPJ, consultem os dados da empresa correspondente e salvem essas informações, facilitando o gerenciamento de dados empresariais.",
     "desc-songz":"Projeto responsivo de uma biblioteca de músicas com com criação de playlists. Permite adicionar, editar e remover músicas com nome, artista, álbum, capa e arquivo .mp3. Futuramente, será integrado a um player de música.",
-    "desc-songz-2":"As músicas ficam armazenadas no navegador, permanecendo mesmo após fechar a página. Possui busca para filtrar por nome, artista ou álbum, facilitando a organização e criação de playlists personalizadas.",
-    "desc-weatherapp": "Projeto responsivo com um dashboard de clima tempo, onde fornece informações meteorológicas precisas e em tempo real, consumindo a API do Accuweather e Mapbox.",
-    "desc-weatherapp-2": "A API do Accuweather foi utilizado para realização de todas as consultas de tempo e local, e a API do Mapbox para consulta da geolocalização de busca por cidade/ estado."
+    "desc-songz-2":"As músicas ficam armazenadas no navegador, permanecendo mesmo após fechar a página. Possui busca para filtrar por nome, artista ou álbum, facilitando a organização e criação de playlists personalizadas."
   },
   "about-me": {
     "desc-presentation":"Muito prazer e seja muito bem-vindo ao meu portfólio!",

@@ -1692,6 +1692,10 @@ footer {
   border-radius: 30% 50% 70% 30%/30% 30% 70% 70%;
 }
 
+.gradient.crud-task {
+  background-image: linear-gradient(#07C552, #0780fa, #FF9E09, #FF4141);
+}
+
 .gradient.portfolio {
   background-image: linear-gradient(#65a30d, #3b82f6, #eab308);
 }
@@ -1710,10 +1714,6 @@ footer {
 
 .gradient.songz {
   background-image: linear-gradient(#1f11ce, #f8fafc, #e52b2b);
-}
-
-.gradient.weatherapp {
-  background-image: linear-gradient(#3db1ef, #f8fafc, #FAE50B);
 }
 
 @keyframes rotate {
