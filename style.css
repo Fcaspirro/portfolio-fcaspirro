@@ -1963,6 +1963,10 @@ footer {
   gap: 4rem;
 }
 
+.desc-me {
+  max-width: 750px;
+}
+
 .desc-me .presentation {
   display: flex;
   align-items: flex-start;
