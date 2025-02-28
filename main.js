@@ -15,6 +15,16 @@ window.addEventListener('load', () => {
   }, 6000);
 });
 
+// Get Year Loading
+document.addEventListener("DOMContentLoaded", function () {
+  const yearElement = document.getElementById("me-year");
+  if (yearElement) {
+      const currentYear = new Date().getFullYear();
+      yearElement.innerHTML = `FABIO CASPIRRO ©${currentYear}`;
+  }
+});
+
+
 // Config cursor
 const shuffleArray = arr => arr.sort(() => Math.random() - 0.5);
 const lineEq = (y2, y1, x2, x1, currentVal) => {

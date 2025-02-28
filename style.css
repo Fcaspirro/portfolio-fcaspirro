@@ -1924,6 +1924,11 @@ footer {
   transition: all .3s ease;
 }
 
+.technologies:hover svg path {
+  fill: #f4f4f5;
+  transition: all .3s ease;
+}
+
 .fade {
   pointer-events: none;
   background: linear-gradient(90deg, #09090b, transparent 30%, transparent 70%, #09090b);
