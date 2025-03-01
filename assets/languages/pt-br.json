@@ -45,12 +45,6 @@
     "responsiveness":"Responsividade"
   },
   "career": {
-    "desc-freela":"Identidade visual de marca;",
-    "desc-freela-2":"Mockup kit;",
-    "desc-freela-3":"Design de logo;",
-    "desc-freela-4":"Social media;",
-    "desc-freela-5":"Vetorização;",
-    "desc-freela-6":"Folders, outdoor, adesivos, banners, cards.",
     "title-position-crt": "Desenvolvedor Júnior",
     "title-company-crt": "CRT Comunicação",
     "desc-crt":"Colaboração com time de design, para garantir usabilidade e estilização adequada as interfaces no Figma;",
@@ -63,6 +57,22 @@
     "desc-crt-8":"Versionamento de código via Git;",
     "desc-crt-9":"Otimização de performance e SEO;",
     "desc-crt-10":"Manutenção e atualização continua de código;",
-    "desc-crt-11":"Gerenciamento de métricas e dados via GTM e GA4."
+    "desc-crt-11":"Gerenciamento de métricas e dados via GTM e GA4.",  
+    "title-position-volti-digital": "Web Designer",
+    "title-company-volti-digital": "Volti Digital | Contrato PJ (Freelance)",
+    "desc-volti-digital": "Criação de wireframes completos via Figma;",
+    "desc-volti-digital-2": "Desenvolvimento de websites completos via Elementor Pro;",
+    "desc-volti-digital-3": "Gerenciamento e hospedagem via WordPress;",
+    "desc-volti-digital-4": "Otimização de performance e SEO;",
+    "desc-volti-digital-5": "Manutenção e atualização continua de código;",
+    "desc-volti-digital-6": "Integração de métricas via GTM.",
+    "title-position-confidential": "Desenvolvedor Front-end Pleno",
+    "title-company-confidential": "Empresa confidencial - segmento financeiro | Contrato PJ (tempo integral)",
+    "desc-confidential": "Construção e manutenção de interfaces responsivas usando Vue.js, Nuxt.js e Quasar;",
+    "desc-confidential-2": "Consumo de APIs via GraphQL no CMS Strapi para exibição de dados dinâmicos;",
+    "desc-confidential-3": "Estilização com TailwindCSS, PostCSS e SASS, seguindo boas práticas de UI/UX;",
+    "desc-confidential-4": "Testes automatizados com Cypress para garantir estabilidade do sistema;",
+    "desc-confidential-5": "Versionamento de código e colaboração via Git e GitHub;",
+    "desc-confidential-6": "Melhorias contínuas focadas em otimização e escalabilidade."
   }
 }

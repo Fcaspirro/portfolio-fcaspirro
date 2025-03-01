@@ -2131,6 +2131,11 @@ footer {
   display: none;
 }
 
+.tl-flex {
+  display: flex;
+  align-items: center;
+}
+
 .tl-item {
   transform: translate3d(0, 0, 0);
   position: relative;
@@ -2836,8 +2841,9 @@ footer {
   
   .tl-nav-wrapper {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.2rem;
     margin-bottom: 4rem;
   }
   
